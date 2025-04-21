@@ -1,0 +1,49 @@
+
+{
+    "player": {
+        "name": "testerName",
+        "strengthModifier": 0
+    },
+    "standardSlots": {
+        "armorSlot": {"name":"Plate Mail", "classification": "large", "description": "plate mail"},
+        "mainHand": {"name":"Claymore", "classification": "medium", "description": "+2"},
+        "rangedWeapon": {"name":"Longbow", "classification": "small", "description": "bow"},
+        "offHand": {"name": "Empty Slot", "classification": "tiny", "description": "An empty slot"},
+        "backpack": {"name": "Explorer Pack", "classification": "small", "description": "bruh"},
+        "twohandedFlag": true,
+        "rangedWeaponFlag": false,
+        "miscArmor": [{"name": "Ring of Protection", "classification": "tiny", "description": "+1 def"}]
+    },
+    "items": {
+        "largeSlots": [
+            {
+                "name": "Statue",
+                "classification": "large",
+                "description": "Statue"
+            }
+        ],
+        "mediumSlots": [
+            {
+                "name": "Tower Shield",
+                "classification": "medium",
+                "description": "tower shield"
+            }
+        ],
+        "smallSlots": [
+            {
+                "name": "Rapier",
+                "classification": "small",
+                "description": "Finesse"
+            }
+        ],
+        "tinySlots": [
+            {
+                "name": "Dagger",
+                "classification": "tiny",
+                "description": "A dagger"
+            }
+        ]
+    }
+    
+
+}

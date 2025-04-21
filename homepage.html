@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homepage.css">
+    <title>My Page</title>
+</head>
+<body>
+    <button id="newInventory">NEW INVENTORY</button>
+    <div class="initialize-menu hidden" id="initializeMenu">
+        <h6>Choose to load in a file or create a new one</h6>
+        <div class="load-json">
+            <form id="jsonForm">
+                <div style="background-color: aqua;">
+                    <label for = "jsonInput">Read a json file</label>
+                    <input type= "file" id = "jsonInput" name = "jsonInput" accept=".json" required>
+                </div>
+            </form>
+        </div>
+        <div class="new-file">
+            <form id="newInventory">
+                <div>
+                    <label for = "characterName">Character Name:</label>
+                    <input type= "text" id="characterName" name= "characterName" required>
+                    <label for = "strengthModifier">Strength Modifier:</label>
+                    <input type = "number" id = "strengthModifier" name = "strengthModifier" required>
+                    <button class = "initialize-submit" id="newInventorySubmit">SUBMIT NEW</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br><br>
+
+
+    <div>
+    <h5>Name is <span id="playerName"></span></h5>
+    <h5>Strength Modifier is<span id="strengthModifierDisplay"></span></h5>
+    </div>
+    <br><br>
+
+
+
+    <button id="addItem">Add Item</button><br>
+    <button id="cycleLeft" class="cycle-left"><<<</button>
+    <button id="cycleRight" class="cycle-right">>>></button>
+
+    <div id="menuContainer" class = "menu-container">
+        <div id="standard-Slots" class="item-container"><H1>STANDARD SLOTS</H1></div>
+        <div id="large-Slots" class="item-container hidden"><H1>LARGE SLOTS</H1></div>
+        <div id="medium-Slots" class="item-container hidden"><H1>MEDIUM SLOTS</H1></div>
+        <div id="small-Slots" class="item-container hidden"><H1>SMALL SLOTS</H1></div>
+        <div id="tiny-Slots" class="item-container hidden"><H1>TINY SLOTS</H1></div>
+    </div>
+
+   
+    <button id="removeItemBtn" class = "remove-element">remove Item(s)</button>
+    <button id="confirmRemove" class="hidden remove-element">confirm removal</button>
+    <button id="cancelRemove" class="hidden remove-element">cancel removal</button>
+
+    <div id="itemAddModal" class="modal">
+        <div class="modal-content">
+            <!--input for name here-->
+            <label for="itemName">Item Name:</label><br>
+            <input type="text" id="itemName"><br>
+
+            <!--input for classification here-->
+            <label for="itemClassification">Item Class:</label><br>
+            <select id="itemClassification">
+                <option value = "large">Large Slot</option>
+                <option value = "medium">Medium Slot</option>
+                <option value = "small">Small Slot</option>
+                <option value = "tiny">Tiny Slot</option>
+            </select><br>
+
+            <!--input for description here-->
+            <label for="itemDescription">Item Description:</label><br>
+            <input type="text" id="itemDescription"><br>
+
+            <!--save button-->
+            <button id="saveItem">Save Item</button>
+        </div>
+    </div>
+
+    <button id="saveJson">Save JSON</button>
+    <button id="saveStorage">Save Storage</button>
+
+    
+    
+   
+    <script src="logic.js" type="module"></script>
+    <script src="slots.js" type="module"></script>
+    <script src="item.js" type="module"></script>
+    
+</body>
+</html>
