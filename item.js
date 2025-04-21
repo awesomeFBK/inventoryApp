@@ -63,8 +63,7 @@ export function classify(newItem){
     } 
     //inventory full
     else {
-        console.error("full inventory!/error")
-        return
+        throw new Error("inventory is full")
     }              
 }
 

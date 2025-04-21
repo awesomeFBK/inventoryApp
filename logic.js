@@ -263,7 +263,12 @@ document.getElementById("confirmRemove").addEventListener("click", function(){
 document.getElementById("saveItem").addEventListener("click", function(){
     console.log("Save Item Pressed")
     let newItem = new Item(itemName.value, itemClassification.value, itemDescription.value)
-    classify(newItem)
+    try {
+        classify(newItem)
+    } catch(error) {
+        console.error("Inventory is Full")
+        return
+    }
     let slot = getSlotClassification(newItem.classification)
     let containerID = getContainerID(newItem.classification)
     if (slot) {
