@@ -1,0 +1,129 @@
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none
+  }
+
+.equipment-slot-image {
+  width: 75px;
+  height: 75px;
+  border: solid goldenrod 3px;
+  background-color: black;
+  margin-bottom: -15%;
+}
+
+.equipment-slot-name {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.equipment-slot-description {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.menu-container {
+  justify-content: center;
+}
+
+.standard-slot-class {
+  background-color: aquamarine;
+  border: 5px solid black;
+}
+
+.item-container {
+  background-color: beige;
+  border: 5px solid black;
+  justify-self: center;
+  padding: 1%;
+  width: 90%;
+}
+
+.item-container > div {
+  border: 2px solid black;
+  padding: 1%;
+}
+
+.armor-div {
+  grid-column: 3 / 6;
+  grid-row: 1 / span 2;
+}
+
+.mainhand-div {
+  grid-column: 1 /span 2;
+  grid-row: 1;
+}
+
+.offhand-div {
+  grid-column: 1/ span 2;
+  grid-row: 2;
+}
+
+.ranged-div {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+
+.backpack-div {
+  grid-column: 1/ span 2;
+  grid-row: 4;
+}
+
+.standard-grid {
+  display: grid;
+  background-color: red;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.standard-grid > div {
+  justify-self: center;
+  background-color: white;
+  width: 30%;
+  height: 95%;
+  align-self: center;
+}
+
+.standard-slot {
+  justify-items: center;
+}
+
+.standard-slot > p {
+  padding: 0%;
+  font-size: medium;
+}
+
