@@ -40,51 +40,12 @@
     display: none
   }
 
-<<<<<<< Updated upstream
-.equipment-slot {
-  width: 15%;
-  height: 10%;
-  padding: 10px;
-  border: 5px solid black;
-  margin: 0;  
-}
-=======
-.equipment-slot-image {
-  display: flex;
-  width: 50%;
-  height: 50%;
-  border: solid goldenrod 3px;
-  background-color: black;
-}
-
-.armor-slot-image {
-  display: flex;
-  width: 80%;
-  align-items:  center;
-  height: 75%;
-  border: solid goldenrod 3px;
-  background-color: black;
-}
-
-.equipment-slot-name {
-  font-family: 'Times New Roman', Times, serif;
-}
-
-.equipment-slot-description {
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
 .menu-container {
   justify-content: center;
 }
 
-.standard-slot-class {
-  background-color: aquamarine;
-  border: 5px solid black;
-}
-
 .item-container {
-  background-color: beige;
+  background-image: url(book_cover.jpg);
   border: 5px solid black;
   justify-self: center;
   align-self: center;
@@ -94,61 +55,45 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 
 .item-container > div {
   border: 2px solid black;
-  padding: 1%;
+  background-image: url("scroll_bg.jpg");
 }
 
-.armor-div {
-  grid-column: 3 / 6;
-  grid-row: 1 / span 2;
-  padding: 70px;
+.item-div {
+  display: flex;
+  flex-direction: row;
+  align-items: space-evenly;
+  justify-content: space-evenly;
+  background-image: url("scroll_bg.jpg");
 }
 
-.mainhand-div {
-  grid-column: 1 /span 2;
-  grid-row: 1;
-}
-
-.offhand-div {
-  grid-column: 1/ span 2;
-  grid-row: 2;
-}
-
-.ranged-div {
-  grid-column: 1 / span 2;
-  grid-row: 3;
-}
-
-.backpack-div {
-  grid-column: 1/ span 2;
-  grid-row: 4;
-}
-
-.standard-grid {
-  display: grid;
-  background: rgba(0, 0, 0, 0.8);
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-
-.standard-grid > div {
-  background: rgba(0, 0, 0, 0.7);
-  justify-self: center;
-  border: solid 2px;
-  border-color: goldenrod;
-  width: 30%;
-  height: 95%;
+.left-column, .right-column {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  flex: 1;
   padding: 5px;
+  gap: 5px;
+}
+
+.equipment-slot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 30%;
+  padding: 10px;
+  background: rgba(0,0,0,0.7);
+  border: 5px solid goldenrod;
+  margin: 0;  
   color: white;
 }
 
-.standard-slot {
-  justify-items: center;
-  align-content: center;
+.equipment-slot-image {
+  width: 100px;
+  height: 100px;
+  border: solid goldenrod 3px;
+  background-color: black;
 }
-
-.standard-slot > p {
-  padding: 0%;
-  font-size: medium;
-}
-
->>>>>>> Stashed changes

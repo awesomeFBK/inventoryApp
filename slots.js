@@ -48,16 +48,20 @@ export class StandardSlots extends Slots{
     renderStandardSlots(){
         //create the slots
         let itemDiv = document.createElement("div")//create the div that holds the data
+        itemDiv.classList.add("item-div")
+        let leftColumn = document.createElement("div")
+        let rightColumn = document.createElement("div")
+        leftColumn.classList.add("left-column")
+        rightColumn.classList.add("right-column")
+        itemDiv.appendChild(leftColumn)
+        itemDiv.appendChild(rightColumn)
 
         let armorDiv = document.createElement("div")
-<<<<<<< Updated upstream
-=======
             let armorImg = document.createElement("img")
             armorImg.src = "QuincyPortrait.webp"
-            armorImg.classList.add("armor-slot-image")
+            armorImg.classList.add("equipment-slot-image")
             armorDiv.appendChild(armorImg)
 
->>>>>>> Stashed changes
             //appends the armor name to the div
             let armorName = document.createElement("p")
             armorName.innerText = this.armorSlot.name
@@ -68,6 +72,10 @@ export class StandardSlots extends Slots{
             armorDescription.innerText = this.armorSlot.description
             armorDiv.appendChild(armorDescription)
         let mainHandDiv = document.createElement("div")
+            let mainHandImg = document.createElement("img")
+            mainHandImg.src = "Claymore_29.webp"
+            mainHandImg.classList.add("equipment-slot-image")
+            mainHandDiv.appendChild(mainHandImg)
             //appends the main hand div
             let mainName = document.createElement("p")
             mainName.innerText = this.mainHand.name
@@ -78,6 +86,10 @@ export class StandardSlots extends Slots{
             mainDescription.innerText = this.mainHand.description
             mainHandDiv.appendChild(mainDescription)        
         let offHandDiv = document.createElement("div")
+            let offHandImg = document.createElement("img")
+            offHandImg.src = "Claymore_29.webp"
+            offHandImg.classList.add("equipment-slot-image")
+            offHandDiv.appendChild(offHandImg)
             //appends the armor name to the div
             let offHandName = document.createElement("p")
             let offHandDescription = document.createElement("p")
@@ -129,16 +141,14 @@ export class StandardSlots extends Slots{
 
         let rangedWeaponButton = document.createElement("button")
         rangedWeaponButton.innerText = "Using Ranged Weapon"        
-
-        itemDiv.className = 'bg-blue-500 text-white p-4 rounded-lg'
         //append ts
-        itemDiv.appendChild(armorDiv)
-        itemDiv.appendChild(mainHandDiv)
-        itemDiv.appendChild(offHandDiv)
-        itemDiv.appendChild(rangedDiv)
-        itemDiv.appendChild(backpackDiv)
-        itemDiv.appendChild(twoHandFlagButton)
-        itemDiv.appendChild(rangedWeaponButton)
+        rightColumn.appendChild(armorDiv)
+        leftColumn.appendChild(mainHandDiv)
+        leftColumn.appendChild(offHandDiv)
+        leftColumn.appendChild(rangedDiv)
+        leftColumn.appendChild(backpackDiv)
+        rightColumn.appendChild(twoHandFlagButton)
+        rightColumn.appendChild(rangedWeaponButton)
         document.getElementById("standard-Slots").appendChild(itemDiv);
     }
 }
