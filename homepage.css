@@ -40,6 +40,7 @@
     display: none
   }
 
+<<<<<<< Updated upstream
 .equipment-slot {
   width: 15%;
   height: 10%;
@@ -47,3 +48,107 @@
   border: 5px solid black;
   margin: 0;  
 }
+=======
+.equipment-slot-image {
+  display: flex;
+  width: 50%;
+  height: 50%;
+  border: solid goldenrod 3px;
+  background-color: black;
+}
+
+.armor-slot-image {
+  display: flex;
+  width: 80%;
+  align-items:  center;
+  height: 75%;
+  border: solid goldenrod 3px;
+  background-color: black;
+}
+
+.equipment-slot-name {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.equipment-slot-description {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.menu-container {
+  justify-content: center;
+}
+
+.standard-slot-class {
+  background-color: aquamarine;
+  border: 5px solid black;
+}
+
+.item-container {
+  background-color: beige;
+  border: 5px solid black;
+  justify-self: center;
+  align-self: center;
+  padding: 1%;
+  width: 90%;
+}
+
+.item-container > div {
+  border: 2px solid black;
+  padding: 1%;
+}
+
+.armor-div {
+  grid-column: 3 / 6;
+  grid-row: 1 / span 2;
+  padding: 70px;
+}
+
+.mainhand-div {
+  grid-column: 1 /span 2;
+  grid-row: 1;
+}
+
+.offhand-div {
+  grid-column: 1/ span 2;
+  grid-row: 2;
+}
+
+.ranged-div {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+
+.backpack-div {
+  grid-column: 1/ span 2;
+  grid-row: 4;
+}
+
+.standard-grid {
+  display: grid;
+  background: rgba(0, 0, 0, 0.8);
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.standard-grid > div {
+  background: rgba(0, 0, 0, 0.7);
+  justify-self: center;
+  border: solid 2px;
+  border-color: goldenrod;
+  width: 30%;
+  height: 95%;
+  padding: 5px;
+  color: white;
+}
+
+.standard-slot {
+  justify-items: center;
+  align-content: center;
+}
+
+.standard-slot > p {
+  padding: 0%;
+  font-size: medium;
+}
+
+>>>>>>> Stashed changes

@@ -50,6 +50,14 @@ export class StandardSlots extends Slots{
         let itemDiv = document.createElement("div")//create the div that holds the data
 
         let armorDiv = document.createElement("div")
+<<<<<<< Updated upstream
+=======
+            let armorImg = document.createElement("img")
+            armorImg.src = "QuincyPortrait.webp"
+            armorImg.classList.add("armor-slot-image")
+            armorDiv.appendChild(armorImg)
+
+>>>>>>> Stashed changes
             //appends the armor name to the div
             let armorName = document.createElement("p")
             armorName.innerText = this.armorSlot.name
