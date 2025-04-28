@@ -40,22 +40,42 @@
     display: none
   }
 
+.container-label {
+  height: auto;
+  width: 300px; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-image: url(background.webp);
+  background-size: cover;
+  height: 100vh;
+  background-position: 55%;
+  color: white;
+}
 .menu-container {
   justify-content: center;
 }
 
 .item-container {
+  padding: 10px;
   background-image: url(book_cover.jpg);
+  background-size: 100% 100%;
   border: 5px solid black;
   justify-self: center;
   align-self: center;
-  padding: 1%;
-  width: 90%;
+  width: 80vw;
+  height: auto;
+  max-height: fit-content;
 }
 
 .item-container > div {
   border: 2px solid black;
   background-image: url("scroll_bg.jpg");
+  background-size: 100% 100%;
+  max-height: fit-content;
 }
 
 .item-div {

@@ -159,10 +159,11 @@ function clearSlots(){
 }
 
 function derenderSlots(){
-    document.getElementById("large-Slots").innerHTML = "Large Slots"
-    document.getElementById("medium-Slots").innerHTML = "Medium Slots"
-    document.getElementById("small-Slots").innerHTML = "Small Slots"
-    document.getElementById("tiny-Slots").innerHTML = "Tiny Slots"
+    //heres the issue
+    document.getElementById("large-Slots").innerHTML = '<img src = "container-assets/large_slots.png" class = "container-label">' 
+    document.getElementById("medium-Slots").innerHTML = '<img src = "container-assets/medium_slots.png" class = "container-label">' 
+    document.getElementById("small-Slots").innerHTML = '<img src = "container-assets/small_slots.png" class = "container-label">' 
+    document.getElementById("tiny-Slots").innerHTML = '<img src = "container-assets/tiny_slots.png" class = "container-label">' 
 }
 
 
@@ -287,8 +288,14 @@ document.getElementById("cycleLeft").addEventListener("click", function(){
         arrayPointer--
         slotArray[arrayPointer].classList.toggle("hidden")
     }
+    else {
+        slotArray[arrayPointer].classList.toggle("hidden")
+        arrayPointer = 4
+        slotArray[arrayPointer].classList.toggle("hidden")
+    }
     console.log(arrayPointer)
 })
+
 document.getElementById("cycleRight").addEventListener("click", function(){
     console.log(arrayPointer)
     if (arrayPointer < 4){
@@ -296,8 +303,14 @@ document.getElementById("cycleRight").addEventListener("click", function(){
         arrayPointer++
         slotArray[arrayPointer].classList.toggle("hidden")
     }
+    else {
+        slotArray[arrayPointer].classList.toggle("hidden")
+        arrayPointer = 0
+        slotArray[arrayPointer].classList.toggle("hidden")
+    }
     console.log(arrayPointer)
 })
+
 document.getElementById("newInventory").addEventListener("click", function(){
     document.getElementById("initializeMenu").classList.remove("hidden")
 })

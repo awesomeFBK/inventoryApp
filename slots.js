@@ -104,6 +104,10 @@ export class StandardSlots extends Slots{
             offHandDiv.appendChild(offHandDescription)
 
         let rangedDiv = document.createElement("div")
+            let rangedDivImg = document.createElement("img")
+            rangedDivImg.src = "bow.webp"
+            rangedDivImg.classList.add("equipment-slot-image")
+            rangedDiv.appendChild(rangedDivImg)
             //appends the armor name to the div
             let rangedName = document.createElement("p")
             let rangedDescription = document.createElement("p")
@@ -119,6 +123,10 @@ export class StandardSlots extends Slots{
             rangedDiv.appendChild(rangedDescription)
 
         let backpackDiv = document.createElement("div")
+            let backpackDivImg = document.createElement("img")
+            backpackDivImg.src = "backpack.webp"
+            backpackDivImg.classList.add("equipment-slot-image")
+            backpackDiv.appendChild(backpackDivImg)
             //appends the armor name to the div
             let backpackName = document.createElement("p")
             backpackName.innerText = this.backpack.name
