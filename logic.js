@@ -142,6 +142,7 @@ function loadStandard(jsonFile){
     standardSlots.rangedWeapon = jsonFile.standardSlots.rangedWeapon
     standardSlots.backpack = jsonFile.standardSlots.backpack
     standardSlots.twoHandedFlag = jsonFile.standardSlots.twoHandedFlag
+    console.log("StandardSlots.twohandedflag is", standardSlots.twoHandedFlag)
     standardSlots.rangedWeaponFlag = jsonFile.standardSlots.rangedWeaponFlag
     standardSlots.miscArmor = jsonFile.standardSlots.miscArmor
 }
@@ -205,6 +206,7 @@ function saveToStorage(){
     let smallItems = smallSlots.items
     let tinyItems = tinySlots.items
     
+
     //saves all the json stuff
     const saveData = {
         player: {name: playerName, strengthModifier},
@@ -364,6 +366,7 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 //listeners for opening and closing from localstorage
+
 
 //minimum viable product:
 
