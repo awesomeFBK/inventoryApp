@@ -205,7 +205,6 @@ function saveToStorage(){
     let mediumItems = mediumSlots.items
     let smallItems = smallSlots.items
     let tinyItems = tinySlots.items
-    
 
     //saves all the json stuff
     const saveData = {
@@ -365,7 +364,6 @@ document.addEventListener("DOMContentLoaded", function() {
     loadFromStorage()
 })
 
-//listeners for opening and closing from localstorage
 
 
 //minimum viable product:
