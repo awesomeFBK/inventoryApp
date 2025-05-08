@@ -64,44 +64,103 @@ export class StandardSlots extends Slots{
 
             //appends the armor name to the div
             let armorName = document.createElement("p")
+            armorName.contentEditable = "true"
             armorName.innerText = this.armorSlot.name
             armorDiv.appendChild(armorName)
+
+            // Save changes to localStorage when content is edited
+            armorName.addEventListener("blur", () => {
+                if (armorName.innerText.trim() === ""){
+                    armorName.innerText = "Armor Slot"
+                }
+                this.armorSlot.name = armorName.innerText; // Update the object
+            });
 
             //appends armor description to the div
             let armorDescription = document.createElement("p")
             armorDescription.innerText = this.armorSlot.description
+            armorDescription.contentEditable = "true"
             armorDiv.appendChild(armorDescription)
+
+            // Save changes to localStorage when content is edited
+            armorDescription.addEventListener("blur", () => {
+                if (armorDescription.innerText.trim() === ""){
+                    armorDescription.innerText = "Description"
+                }
+                this.armorSlot.description = armorDescription.innerText; // Update the object
+            });
+
         let mainHandDiv = document.createElement("div")
             let mainHandImg = document.createElement("img")
             mainHandImg.src = "Claymore_29.webp"
             mainHandImg.classList.add("equipment-slot-image")
             mainHandDiv.appendChild(mainHandImg)
+
             //appends the main hand div
             let mainName = document.createElement("p")
             mainName.innerText = this.mainHand.name
             mainHandDiv.appendChild(mainName)
+            mainName.contentEditable = "true"
+
+            // Save changes to localStorage when content is edited
+            mainName.addEventListener("blur", () => {
+                if (mainName.innerText.trim() === ""){
+                    mainName.innerText = "Main Hand"
+                }
+                this.mainHand.name = mainName.innerText; // Update the object
+            });
 
             //appends description to main hand div
             let mainDescription = document.createElement("p")
             mainDescription.innerText = this.mainHand.description
             mainHandDiv.appendChild(mainDescription)        
+            mainDescription.contentEditable = "true"
+            
+            // Save changes to localStorage when content is edited
+            mainDescription.addEventListener("blur", () => {
+                if (mainDescription.innerText.trim() === ""){
+                    mainDescription.innerText = "Description"
+                }
+                this.mainHand.description = mainDescription.innerText; // Update the object
+            });
+
+
         let offHandDiv = document.createElement("div")
             let offHandImg = document.createElement("img")
             offHandImg.src = "Claymore_29.webp"
             offHandImg.classList.add("equipment-slot-image")
             offHandDiv.appendChild(offHandImg)
+
             //appends the armor name to the div
             let offHandName = document.createElement("p")
             let offHandDescription = document.createElement("p")
-
-            if (this.twoHandedFlag = true) {
-                this.offHand = emptyItem
-            }
+            offHandName.contentEditable = "true"
+            offHandDescription.contentEditable = "true"
 
             offHandName.innerText = this.offHand.name
             offHandDescription.innerText = this.offHand.description
             offHandDiv.appendChild(offHandName)
             offHandDiv.appendChild(offHandDescription)
+
+            //adds an overlay on top 
+            let offHandUsed = document.createElement("div")
+            offHandUsed.id = "offHandUsed"
+            offHandUsed.classList.add("slot-used", "hidden")
+            offHandDiv.appendChild(offHandUsed)
+
+            //adds an image on top of the overlay
+            let offHandUsedLabel = document.createElement("img")
+            offHandUsedLabel.src = "overlay.png"
+            offHandUsedLabel.classList.add("slot-used-label", "hidden")
+            offHandUsedLabel.id = "offHandUsedLabel"
+            offHandDiv.append(offHandUsedLabel)
+
+            console.log("this.twoHandedFlag Value is ", this.twoHandedFlag)
+
+            if (this.twoHandedFlag == true) {
+                offHandUsed.classList.remove("hidden")
+                offHandUsedLabel.classList.remove("hidden")
+            }
 
         let rangedDiv = document.createElement("div")
             let rangedDivImg = document.createElement("img")
@@ -111,16 +170,32 @@ export class StandardSlots extends Slots{
             //appends the armor name to the div
             let rangedName = document.createElement("p")
             let rangedDescription = document.createElement("p")
-
-            if (this.rangedWeaponFlag = false) {
-                this.rangedWeapon = emptyItem
-            }
+            rangedName.contentEditable = "true"
+            rangedDescription.contentEditable = "true"
 
             rangedName.innerText = this.rangedWeapon.name
             rangedDescription.innerText = this.rangedWeapon.description
 
             rangedDiv.appendChild(rangedName)
             rangedDiv.appendChild(rangedDescription)
+
+            //adds an overlay on top 
+            let rangedUsed = document.createElement("div")
+            rangedUsed.id = "rangedUsed"
+            rangedUsed.classList.add("slot-used", "hidden")
+            rangedDiv.appendChild(rangedUsed)
+
+            //adds an image on top of the overlay
+            let rangedUsedLabel = document.createElement("img")
+            rangedUsedLabel.src = "overlay.png"
+            rangedUsedLabel.classList.add("slot-used-label", "hidden")
+            rangedUsedLabel.id = "rangedUsedLabel"
+            rangedDiv.append(rangedUsedLabel)
+
+            if (this.rangedWeaponFlag == true) {
+                rangedUsed.classList.remove("hidden")
+                rangedUsedLabel.classList.remove("hidden")
+            }
 
         let backpackDiv = document.createElement("div")
             let backpackDivImg = document.createElement("img")
@@ -131,11 +206,29 @@ export class StandardSlots extends Slots{
             let backpackName = document.createElement("p")
             backpackName.innerText = this.backpack.name
             backpackDiv.appendChild(backpackName)
+            backpackName.contentEditable = "true"
+
+            // Save changes to localStorage when content is edited
+            backpackName.addEventListener("blur", () => {
+                if (backpackName.innerText.trim() === ""){
+                    backpackName.innerText = "Backpack"
+                }
+                this.backpack.name = backpackName.innerText; // Update the object
+            });
 
             //appends armor description to the div
             let backpackDescription = document.createElement("p")
             backpackDescription.innerText = this.backpack.description
             backpackDiv.appendChild(backpackDescription)
+            backpackDescription.contentEditable = "true"
+
+            // Save changes to localStorage when content is edited
+            backpackDescription.addEventListener("blur", () => {
+                if (backpackDescription.innerText.trim() === ""){
+                    backpackDescription.innerText = "Description"
+                }
+                this.backpack.description = backpackDescription.innerText; // Update the object
+            });
 
         //classlist to turn em into square boxes
         armorDiv.classList.add("equipment-slot")
@@ -147,8 +240,54 @@ export class StandardSlots extends Slots{
         let twoHandFlagButton = document.createElement("button")
         twoHandFlagButton.innerText = "Two-Handed"
 
+        twoHandFlagButton.addEventListener("click", () => {
+            console.log("Two handed flag value is:", this.twoHandedFlag)
+            this.twoHandedFlag = !this.twoHandedFlag //toggle the flag
+            console.log("Two handed flag after togglin:", this.twoHandedFlag)
+            if (this.twoHandedFlag) {
+                let overlay = document.getElementById("offHandUsed")
+                let overlayLabel = document.getElementById("offHandUsedLabel")
+                overlay.classList.remove("hidden")
+                overlayLabel.classList.remove("hidden")
+
+                offHandName.contentEditable = "false"
+                offHandDescription.contentEditable = "false"
+            } else {
+                let overlay = document.getElementById("offHandUsed")
+                let overlayLabel = document.getElementById("offHandUsedLabel")
+                overlay.classList.add("hidden")
+                overlayLabel.classList.add("hidden")
+
+                offHandName.contentEditable = "true"
+                offHandDescription.contentEditable = "true"
+            }
+        })
+
         let rangedWeaponButton = document.createElement("button")
         rangedWeaponButton.innerText = "Using Ranged Weapon"        
+
+
+        rangedWeaponButton.addEventListener("click", () => {
+            this.rangedWeaponFlag = !this.rangedWeaponFlag //toggle the flag
+            if (this.rangedWeaponFlag) {
+                let overlay = document.getElementById("rangedUsed")
+                let overlayLabel = document.getElementById("rangedUsedLabel")
+                overlay.classList.remove("hidden")
+                overlayLabel.classList.remove("hidden")
+
+                rangedName.contentEditable = "false"
+                rangedDescription.contentEditable = "false"
+            } else {
+                let overlay = document.getElementById("rangedUsed")
+                let overlayLabel = document.getElementById("rangedUsedLabel")
+                overlay.classList.add("hidden")
+                overlayLabel.classList.add("hidden")
+
+                rangedName.contentEditable = "true"
+                rangedDescription.contentEditable = "true"
+            }
+        })
+
         //append ts
         rightColumn.appendChild(armorDiv)
         leftColumn.appendChild(mainHandDiv)
