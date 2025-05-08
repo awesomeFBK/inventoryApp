@@ -312,18 +312,26 @@ document.getElementById("cycleRight").addEventListener("click", function(){
 })
 
 document.getElementById("newInventory").addEventListener("click", function(){
-    document.getElementById("initializeMenu").classList.remove("hidden")
+    console.log("New inventory pressed")
+    document.getElementById("initializeModal").style.display = "block"
+    
+    window.onclick = function(event) { //closes if you touch outside the modal
+        if (event.target == document.getElementById("initializeModal")) {
+        document.getElementById("initializeModal").style.display = "none"
+        }
+    }
+
 })
+
 document.getElementById("jsonInput").addEventListener("change", function(event){
     loadJson(event)
-    document.getElementById("initializeMenu").classList.add("hidden")
+    document.getElementById("initializeModal").style.display = "none"
 })
+
 document.getElementById("newInventorySubmit").addEventListener("click", function(event){
     event.preventDefault()
     console.log(playerName)
     console.log(strengthModifier)
-
-
 
     playerName = document.getElementById("characterName").value
     strengthModifier = document.getElementById("strengthModifier").value
@@ -346,7 +354,7 @@ document.getElementById("newInventorySubmit").addEventListener("click", function
     document.getElementById("strengthModifierDisplay").innerText = (" " + strengthModifier)
 
 
-    document.getElementById("initializeMenu").classList.add("hidden")
+    document.getElementById("initializeModal").style.display = "none"
     calculateSlots()
     console.log(smallSlots.maxSize, mediumSlots.maxSize, largeSlots.maxSize)
 })
@@ -362,6 +370,7 @@ document.getElementById("saveStorage").addEventListener("click", function(){
 document.addEventListener("DOMContentLoaded", function() {
     loadFromStorage()
 })
+
 
 //listeners for opening and closing from localstorage
 

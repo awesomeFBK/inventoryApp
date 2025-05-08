@@ -40,6 +40,11 @@
     display: none
   }
 
+.initialize-menu {
+  background-color: white;
+  color: black;
+}
+
 .container-label {
   height: auto;
   width: 300px; 

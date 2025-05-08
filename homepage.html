@@ -8,26 +8,29 @@
 </head>
 <body>
     <button id="newInventory">NEW INVENTORY</button>
-    <div class="initialize-menu hidden" id="initializeMenu">
-        <h6>Choose to load in a file or create a new one</h6>
-        <div class="load-json">
-            <form id="jsonForm">
-                <div style="background-color: aqua;">
-                    <label for = "jsonInput">Read a json file</label>
-                    <input type= "file" id = "jsonInput" name = "jsonInput" accept=".json" required>
-                </div>
-            </form>
-        </div>
-        <div class="new-file">
-            <form id="newInventory">
-                <div>
-                    <label for = "characterName">Character Name:</label>
-                    <input type= "text" id="characterName" name= "characterName" required>
-                    <label for = "strengthModifier">Strength Modifier:</label>
-                    <input type = "number" id = "strengthModifier" name = "strengthModifier" required>
-                    <button class = "initialize-submit" id="newInventorySubmit">SUBMIT NEW</button>
-                </div>
-            </form>
+
+    <div class="modal" id="initializeModal">
+        <div class="initialize-menu" id="initializeMenu">
+            <h6>Choose to load in a file or create a new one</h6>
+            <div class="load-json">
+                <form id="jsonForm">
+                    <div>
+                        <label for = "jsonInput">Read a json file</label>
+                        <input type= "file" id = "jsonInput" name = "jsonInput" accept=".json" required>
+                    </div>
+                </form>
+            </div>
+            <div class="new-file">
+                <form id="newInventory">
+                    <div>
+                        <label for = "characterName">Character Name:</label>
+                        <input type= "text" id="characterName" name= "characterName" required>
+                        <label for = "strengthModifier">Strength Modifier:</label>
+                        <input type = "number" id = "strengthModifier" name = "strengthModifier" required>
+                        <button class = "initialize-submit" id="newInventorySubmit">SUBMIT NEW</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <br><br>
