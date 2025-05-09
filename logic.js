@@ -62,6 +62,7 @@ function loadJson(event){
 
     //reads the text file then passes it onto reader.onload when its done reading 
     reader.readAsText(file)
+
 }
 
 //loads the items and sends them into the classification function
@@ -142,7 +143,6 @@ function loadStandard(jsonFile){
     standardSlots.rangedWeapon = jsonFile.standardSlots.rangedWeapon
     standardSlots.backpack = jsonFile.standardSlots.backpack
     standardSlots.twoHandedFlag = jsonFile.standardSlots.twoHandedFlag
-    console.log("StandardSlots.twohandedflag is", standardSlots.twoHandedFlag)
     standardSlots.rangedWeaponFlag = jsonFile.standardSlots.rangedWeaponFlag
     standardSlots.miscArmor = jsonFile.standardSlots.miscArmor
 }
@@ -167,6 +167,36 @@ function derenderSlots(){
     document.getElementById("tiny-Slots").innerHTML = '<img src = "container-assets/tiny_slots.png" class = "container-label">' 
 }
 
+export function uploadImage(event, slotID){
+    return new Promise((resolve, reject) => {
+    const file = event.target.files[0]
+    if (!file){
+        console.log("file not loaded properly lol")
+        reject("No file selected")
+        return
+    }    
+
+    //creates an instance of a reader using the FileReader API
+    const reader = new FileReader() 
+
+    //when the reader loads everything, the loadAll function starts workin.
+    reader.onload = function(event) {
+        const base64String = event.target.result
+
+        if (standardSlots[slotID]) {
+            standardSlots[slotID].image = base64String //sets the image to the base64 string
+            resolve(base64String)
+        }
+        else {
+            console.error("Invalid slot ID:", slotID)
+            reject("Invalid Slot ID")
+            return
+        }
+    }
+
+    reader.readAsDataURL(file) //reads the file as a data URL
+    })
+}
 
 //function to save json file
 function saveAsJson(){

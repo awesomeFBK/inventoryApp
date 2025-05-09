@@ -1,5 +1,5 @@
 import { CoinPouch,emptyItem } from "./item.js"
-import { smallSlots, mediumSlots, largeSlots, tinySlots } from "./logic.js"
+import { smallSlots, mediumSlots, largeSlots, tinySlots, uploadImage } from "./logic.js"
 
 
 //helper function to map classifications to inventory slots
@@ -57,16 +57,41 @@ export class StandardSlots extends Slots{
         itemDiv.appendChild(rightColumn)
 
         let armorDiv = document.createElement("div")
+            //image element
             let armorImg = document.createElement("img")
-            armorImg.src = "QuincyPortrait.webp"
+            armorImg.src = this.armorSlot.image || "QuincyPortrait.webp"
             armorImg.classList.add("equipment-slot-image")
-            armorDiv.appendChild(armorImg)
+
+            //file input
+            let armorFileInput = document.createElement("input")
+            armorFileInput.type = "file"
+            armorFileInput.accept = "image/*"
+            armorFileInput.style.display = "none" // Hide the file input
+
+            //associaties both as a label
+            let armorLabel = document.createElement("label")
+            armorLabel.appendChild(armorImg)
+            armorLabel.appendChild(armorFileInput)
+            armorDiv.appendChild(armorLabel)
+
+            //event listener for hte file input
+            armorFileInput.addEventListener("change", (event) => {
+                uploadImage(event, "armorSlot")
+                    .then((base64String) => {
+                        armorImg.src = base64String
+                    })
+                    .catch((error) => {
+                        console.error("Error uploading image", error)
+                    })
+            })
+
 
             //appends the armor name to the div
             let armorName = document.createElement("p")
             armorName.contentEditable = "true"
             armorName.innerText = this.armorSlot.name
             armorDiv.appendChild(armorName)
+            
 
             // Save changes to localStorage when content is edited
             armorName.addEventListener("blur", () => {
@@ -94,7 +119,27 @@ export class StandardSlots extends Slots{
             let mainHandImg = document.createElement("img")
             mainHandImg.src = "Claymore_29.webp"
             mainHandImg.classList.add("equipment-slot-image")
-            mainHandDiv.appendChild(mainHandImg)
+
+            let mainHandFileInput = document.createElement("input")
+            mainHandFileInput.type = "file"
+            mainHandFileInput.accept = "image/*"
+            mainHandFileInput.style.display = "none" // Hide the file input
+
+            let mainHandLabel = document.createElement("label")
+            mainHandLabel.appendChild(mainHandImg)
+            mainHandLabel.appendChild(mainHandFileInput)
+            mainHandDiv.appendChild(mainHandLabel)
+
+            //event listener for hte file input
+            mainHandFileInput.addEventListener("change", (event) => {
+                uploadImage(event, "mainHand")
+                    .then((base64String) => {
+                        mainHandImg.src = base64String
+                    })
+                    .catch((error) => {
+                        console.error("Error uploading image", error)
+                    })
+            })
 
             //appends the main hand div
             let mainName = document.createElement("p")
@@ -129,7 +174,28 @@ export class StandardSlots extends Slots{
             let offHandImg = document.createElement("img")
             offHandImg.src = "Claymore_29.webp"
             offHandImg.classList.add("equipment-slot-image")
-            offHandDiv.appendChild(offHandImg)
+            
+            let offHandFileInput = document.createElement("input")
+            offHandFileInput.type = "file"
+            offHandFileInput.accept = "image/*"
+            offHandFileInput.style.display = "none" // Hide the file input
+
+            //associates both as a label
+            let offHandLabel = document.createElement("label")
+            offHandLabel.appendChild(offHandImg)
+            offHandLabel.appendChild(offHandFileInput)
+            offHandDiv.appendChild(offHandLabel)
+
+            //event listener for hte file input
+            offHandFileInput.addEventListener("change", (event) => {
+                uploadImage(event, "offHand")
+                    .then((base64String) => {
+                        offHandImg.src = base64String
+                    })
+                    .catch((error) => {
+                        console.error("Error uploading image", error)
+                    })
+            })
 
             //appends the armor name to the div
             let offHandName = document.createElement("p")
@@ -166,7 +232,29 @@ export class StandardSlots extends Slots{
             let rangedDivImg = document.createElement("img")
             rangedDivImg.src = "bow.webp"
             rangedDivImg.classList.add("equipment-slot-image")
-            rangedDiv.appendChild(rangedDivImg)
+            
+            let rangedFileInput = document.createElement("input")
+            rangedFileInput.type = "file"
+            rangedFileInput.accept = "image/*"
+            rangedFileInput.style.display = "none" // Hide the file input
+
+            //associates both as a label
+            let rangedLabel = document.createElement("label")
+            rangedLabel.appendChild(rangedDivImg)
+            rangedLabel.appendChild(rangedFileInput)
+            rangedDiv.appendChild(rangedLabel)
+
+            //event listener for hte file input
+            rangedFileInput.addEventListener("change", (event) => {
+                uploadImage(event, "rangedWeapon")
+                    .then((base64String) => {
+                        rangedDivImg.src = base64String
+                    })
+                    .catch((error) => {
+                        console.error("Error uploading image", error)
+                    })
+            })
+
             //appends the armor name to the div
             let rangedName = document.createElement("p")
             let rangedDescription = document.createElement("p")
@@ -201,7 +289,28 @@ export class StandardSlots extends Slots{
             let backpackDivImg = document.createElement("img")
             backpackDivImg.src = "backpack.webp"
             backpackDivImg.classList.add("equipment-slot-image")
-            backpackDiv.appendChild(backpackDivImg)
+
+            let backpackFileInput = document.createElement("input")
+            backpackFileInput.type = "file"
+            backpackFileInput.accept = "image/*"
+            backpackFileInput.style.display = "none" // Hide the file input
+
+            let backpackLabel = document.createElement("label")
+            backpackLabel.appendChild(backpackDivImg)
+            backpackLabel.appendChild(backpackFileInput)
+            backpackDiv.appendChild(backpackLabel)
+
+            //event listener for hte file input
+            backpackFileInput.addEventListener("change", (event) => {
+                uploadImage(event, "backpack")
+                    .then((base64String) => {
+                        backpackDivImg.src = base64String
+                    })
+                    .catch((error) => {
+                        console.error("Error uploading image", error)
+                    })
+            })
+
             //appends the armor name to the div
             let backpackName = document.createElement("p")
             backpackName.innerText = this.backpack.name

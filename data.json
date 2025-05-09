@@ -5,7 +5,7 @@
         "strengthModifier": 0
     },
     "standardSlots": {
-        "armorSlot": {"name":"Plate Mail", "classification": "large", "description": "plate mail"},
+        "armorSlot": {"image": "QuincyPortrait.webp", "name":"Plate Mail", "classification": "large", "description": "plate mail"},
         "mainHand": {"name":"Claymore", "classification": "medium", "description": "+2"},
         "rangedWeapon": {"name":"Longbow", "classification": "small", "description": "bow"},
         "offHand": {"name": "Empty Slot", "classification": "tiny", "description": "An empty slot"},
