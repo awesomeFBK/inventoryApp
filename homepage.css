@@ -1,4 +1,8 @@
-
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -37,7 +41,7 @@
   }
 
   .hidden {
-    display: none
+    display: none !important;
   }
 
 .initialize-menu {
@@ -70,17 +74,149 @@ body {
 }
 
 .character-info {
+  display: grid;
+  grid-template-rows: 50px 50px;
+  grid-template-columns: 3fr 2.5fr 150px;
+  grid-template-areas: 
+  'name remaininggrid additem'
+  'strength remaininggrid removeitem';
+  gap: 5px;
+  background-image: url("scroll_bg.jpg");
+  background-color: green;
+  position: relative;
+  height: auto;
+  min-height: 110px;
+  width: 70vw;
+  border: 5px solid black;
+  padding: 10px;
+}
+
+.character-name-div {
+  grid-area: name;
+  background-color: blue;
+  justify-items: center;
+}
+
+.strength-modifier-div {
+  grid-area: strength;
+  background-color: blue;
+  justify-items: center;
+}
+
+.remaining-label-div {
+  grid-area: remaininggrid;
   display: flex;
+  flex-direction: row;
+  background-color: green;
+  border: black 5px solid;
+  min-width: fit-content;
+  justify-content: center;
+  gap: 3%;
+  align-items: center;
+}
+
+.large-counter-div, .medium-counter-div, .small-counter-div, .remaining-label {
+  height: 100%;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  font-size: 20px;
+}
+
+.remaining-label {
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+.large-counter-div {
+  box-sizing: border-box;
+  background-color: purple;
+  overflow: hidden;
+}
+
+.medium-counter-div {
+  background-color: blue;
+  overflow: hidden;
+}
+
+.small-counter-div {
+  background-color: blue;
+  overflow: hidden;
+}
+
+.counter {
+  height: 50px;
+  aspect-ratio: 1/1;
+  border: 5px solid black;
+  text-align: center;
+  align-content: center;
+}
+
+.counter-label {
+  position: relative;
+  margin-top: 5px;
+  width: 80%;
+  height: auto;
+  background-color: black ;
+  border: solid black 3px;
+}
+.add-item-div {
+  grid-area: additem;
   background-color: green;
   justify-content: center;
-  position: relative;
   align-items: center;
-  flex-direction: column;
-  height: auto;
-  width: 60vw;
-  left: 15%;
-  right: 15%;
 }
+
+.remove-item-div {
+  grid-area: removeitem;
+  background-color: red;
+  justify-items: center;
+}
+
+.add-item {
+  width: 150px;
+  position: relative;
+  height: 100%;
+  background-color: black;
+  border: solid rgb(205, 187, 187) 3px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.add-item:hover {
+  cursor: pointer;
+  background-color: rgba(41, 40, 37, 0.5);  
+}
+
+.add-item-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}
+
+.remove-element-button {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border: solid rgb(205, 187, 187) 3px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.remove-element-button:hover {
+  cursor: pointer;
+  background-color: rgba(41, 40, 37, 0.5);  
+} 
 
 .item-container {
   position: relative;
@@ -149,9 +285,10 @@ body {
 
 .slot-used-label {
   position: absolute;
-  height: 100%;
   width: 75%;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .equipment-slot-image {
@@ -164,4 +301,33 @@ body {
 .equipment-slot-image:hover {
   cursor: pointer;
   background-color: rgba(202, 200, 189, 0.5);
+}
+
+.inventory-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+  height: fit-content;
+  padding: 10px;
+  border: solid springgreen 5px;
+}
+
+.settings-menu {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-evenly;
+  background-color: rgba(42, 36, 36, 0.7);
+  border: solid black 5px;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Could be more or less, depending on screen size */
+  min-width: 300px;
+  height: 50vh;
+
 }

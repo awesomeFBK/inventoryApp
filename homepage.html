@@ -7,7 +7,20 @@
     <title>My Page</title>
 </head>
 <body>
-    <button id="newInventory">NEW INVENTORY</button>
+
+    <button id="settingsButton">=</button>
+
+    <div class="settings-menu hidden" id="settingsMenu">
+        <button id="closeSettings" class="close-settings">X</button>
+        <img src="button-assets/optionslabel.png" class="options-label"></img>
+        <button id="newInventory">NEW INVENTORY</button>
+        <button id="saveJson">Save JSON</button>
+    </div>
+
+
+
+
+
 
     <div class="modal" id="initializeModal">
         <div class="initialize-menu" id="initializeMenu">
@@ -35,18 +48,53 @@
     </div>
     <br><br>
 
+    <div class="inventory-header">
+        <button id="cycleLeft" class="cycle-left"><<<</button>
+            <div class = "character-info">
+                <div class = "character-name-div">
+                    <h5>Name is <span id="playerName"></span></h5>
+                </div>
+                <div class = "strength-modifier-div">
+                    <h5>Strength Modifier is<span id="strengthModifierDisplay"></span></h5>
+                </div>
+                <div class = "remaining-label-div">
+                        <div class="remaining-label">
+                            <p id="remainingLabel">Remaining Slots:</p>
+                        </div>
+                        <div class = "large-counter-div">
+                            <div class="counter">
+                                <p id="largeSlotCounter">0</p>
+                            </div>
+                            <p>Large</p>
+                        </div>
+                        <div class = "medium-counter-div">
+                            <div class="counter">
+                                <p id="mediumSlotCounter">0</p>
+                            </div>
+                            <p>Medium</p>
+                        </div>
+                        <div class = "small-counter-div">
+                            <div class="counter">
+                                <p id="smallSlotCounter">0</p>
+                            </div>
+                            <p>Small</p>
+                        </div>
+                </div>
 
-    <div class = "character-info">
-    <h5>Name is <span id="playerName"></span></h5>
-    <h5>Strength Modifier is<span id="strengthModifierDisplay"></span></h5>
+                <div class = "add-item-div">
+                    <button id="addItem" class="add-item"><img src="button-assets/additem.png" class="add-item-label"></button>
+                </div>
+                <div class = "remove-item-div">
+                    <button id="removeItemBtn" class = "remove-element-button"><img src="button-assets/removeitems.png" class="add-item-label"></button>
+                </div>
+        </div>
+        <button id="cycleRight" class="cycle-right">>>></button>
     </div>
-    <br><br>
 
 
-
-    <button id="addItem">Add Item</button><br>
-    <button id="cycleLeft" class="cycle-left"><<<</button>
-    <button id="cycleRight" class="cycle-right">>>></button>
+    
+    
+   
 
     <div id="menuContainer" class = "menu-container">
         
@@ -58,7 +106,7 @@
     </div>
 
    
-    <button id="removeItemBtn" class = "remove-element">remove Item(s)</button>
+    
     <button id="confirmRemove" class="hidden remove-element">confirm removal</button>
     <button id="cancelRemove" class="hidden remove-element">cancel removal</button>
 
@@ -86,7 +134,7 @@
         </div>
     </div>
 
-    <button id="saveJson">Save JSON</button>
+    
     <button id="saveStorage">Save Storage</button>
 
     

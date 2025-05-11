@@ -1,4 +1,4 @@
-import { smallSlots, mediumSlots, largeSlots, tinySlots} from "./logic.js"
+import { smallSlots, mediumSlots, largeSlots, tinySlots, updateCounter} from "./logic.js"
 import { getSlotClassification } from "./slots.js"
 //classifier function 
 //do a re-read of this/review eventually pls
@@ -10,6 +10,7 @@ export function classify(newItem){
         largeSlots.items.push(newItem)                
         newItem.id = largeSlots.currentSize
         largeSlots.currentSize++
+        updateCounter("largeSlotCounter")
         return
     } 
     //med slots
@@ -20,12 +21,14 @@ export function classify(newItem){
             largeSlots.items.push(newItem)
             newItem.id = largeSlots.currentSize
             largeSlots.currentSize++
+            updateCounter("largeSlotCounter")
             return
         }
 
         mediumSlots.items.push(newItem)  
         newItem.id = mediumSlots.currentSize 
         mediumSlots.currentSize++ 
+        updateCounter("mediumSlotCounter")
         return
     } 
     //small slots
@@ -38,6 +41,7 @@ export function classify(newItem){
             mediumSlots.items.push(newItem)
             newItem.id = mediumSlots.currentSize
             mediumSlots.currentSize++
+            updateCounter("mediumSlotCounter")
             return
         }
         else if (smallSlots.currentSize == smallSlots.maxSize && mediumSlots.currentSize == mediumSlots.maxSize){
@@ -45,12 +49,14 @@ export function classify(newItem){
             largeSlots.items.push(newItem)
             newItem.id = largeSlots.currentSize
             largeSlots.currentSize++
+            updateCounter("largeSlotCounter")
             return
         }
         
         smallSlots.items.push(newItem) 
         newItem.id = smallSlots.currentSize
         smallSlots.currentSize++
+        updateCounter("smallSlotCounter")
         return
     } 
     //tiny slots
@@ -89,6 +95,7 @@ export class Item{
         
         name.classList.add("edit-element")
         description.classList.add("edit-element")
+        
     
         //creates the edit boxes that will be hidden
         let editName = document.createElement("input")

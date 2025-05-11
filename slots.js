@@ -1,5 +1,5 @@
 import { CoinPouch,emptyItem } from "./item.js"
-import { smallSlots, mediumSlots, largeSlots, tinySlots, uploadImage } from "./logic.js"
+import { smallSlots, mediumSlots, largeSlots, tinySlots, uploadImage, updateCounter } from "./logic.js"
 
 
 //helper function to map classifications to inventory slots
@@ -421,6 +421,7 @@ export function addItem(){ //fix this and understand the rest
 }
 
 export function removeItem(){
+    //what the fuck did i chatgpt here
     let toRemove = document.querySelectorAll(".remove-checkbox:checked")
 
     toRemove.forEach(element => {

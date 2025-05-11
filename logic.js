@@ -35,6 +35,7 @@ function calculateSlots(){
     tinySlots.maxSize = 200 //change this if needed
 
     console.log(largeSlots.items)
+
 }
 
 //loads the json file
@@ -289,6 +290,10 @@ document.getElementById("cancelRemove").addEventListener("click", toggleRemoveIt
 document.getElementById("confirmRemove").addEventListener("click", function(){
     removeItem()
     toggleRemoveItems()
+    //gng you can refactor this later lol
+    updateCounter("largeSlotCounter")
+    updateCounter("mediumSlotCounter")
+    updateCounter("smallSlotCounter")
 })
 
 //listen for the save item command
@@ -400,9 +405,42 @@ document.getElementById("saveStorage").addEventListener("click", function(){
 
 document.addEventListener("DOMContentLoaded", function() {
     loadFromStorage()
+
+    initializeCounters()
 })
 
+//  to do: fix ts
+export function updateCounter(counterID){
+    let counter = document.getElementById(counterID)
+    if (counterID == "largeSlotCounter"){
+        counter.innerText = largeSlots.maxSize - largeSlots.currentSize
+        //if inner text is 0, shade it? or make it red?
+    }
+    else if (counterID == "mediumSlotCounter"){
+        counter.innerText = mediumSlots.maxSize - mediumSlots.currentSize
+    }
+    else if (counterID == "smallSlotCounter"){
+        counter.innerText = smallSlots.maxSize - smallSlots.currentSize
+    }
+}
 
+function initializeCounters(){
+    let largeCounter = document.getElementById("largeSlotCounter")
+    let mediumCounter = document.getElementById("mediumSlotCounter")
+    let smallCounter = document.getElementById("smallSlotCounter")
+
+    largeCounter.innerText = largeSlots.maxSize - largeSlots.currentSize
+    mediumCounter.innerText = mediumSlots.maxSize - mediumSlots.currentSize
+    smallCounter.innerText = smallSlots.maxSize - smallSlots.currentSize
+}
+
+document.getElementById("settingsButton").addEventListener("click", function(){
+    document.getElementById("settingsMenu").classList.toggle("hidden")
+})
+
+document.getElementById("closeSettings").addEventListener("click", function(){
+    document.getElementById("settingsMenu").classList.toggle("hidden")
+})
 //listeners for opening and closing from localstorage
 
 //minimum viable product:
