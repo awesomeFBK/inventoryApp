@@ -81,13 +81,23 @@ async function loadAll(jsonFile){
 
         
         document.getElementById("playerName").innerText = playerName
-        document.getElementById("strengthModifierDisplay").innerText = (" " + strengthModifier)
+        if (strengthModifier < 0){
+            document.getElementById("strengthModifierDisplay").innerText = ("-" + strengthModifier)
+        }
+        else {
+            document.getElementById("strengthModifierDisplay").innerText = ("+" + strengthModifier)
+        }
+
 
         //clears the slots
         clearSlots()
 
         //calculates current slots
         calculateSlots()
+
+        if (jsonFile.player.rangedWeaponFlag == false){
+            smallSlots.maxSize += 2
+        }
 
         //populates standard slots
         loadStandard(jsonFile)
@@ -230,7 +240,7 @@ function saveAsJson(){
     link.click()
 }
 
-function saveToStorage(){
+export function saveToStorage(){
     //get the data to save
     let largeItems = largeSlots.items
     let mediumItems = mediumSlots.items
@@ -290,10 +300,12 @@ document.getElementById("cancelRemove").addEventListener("click", toggleRemoveIt
 document.getElementById("confirmRemove").addEventListener("click", function(){
     removeItem()
     toggleRemoveItems()
+    
     //gng you can refactor this later lol
     updateCounter("largeSlotCounter")
     updateCounter("mediumSlotCounter")
     updateCounter("smallSlotCounter")
+    saveToStorage()
 })
 
 //listen for the save item command
@@ -314,6 +326,8 @@ document.getElementById("saveItem").addEventListener("click", function(){
     else {
         console.error("Invalid Classification", newItem.classification)
     }
+
+    saveToStorage()
 })
 
 //event listeners for the page
@@ -387,7 +401,12 @@ document.getElementById("newInventorySubmit").addEventListener("click", function
     console.log(strengthModifier)
 
     document.getElementById("playerName").innerText = playerName
-    document.getElementById("strengthModifierDisplay").innerText = (" " + strengthModifier)
+    if (strengthModifier < 0){
+        document.getElementById("strengthModifierDisplay").innerText = ("-" + strengthModifier)
+    }
+    else {
+        document.getElementById("strengthModifierDisplay").innerText = ("+" + strengthModifier)
+    }
 
 
     document.getElementById("initializeModal").style.display = "none"
@@ -441,6 +460,7 @@ document.getElementById("settingsButton").addEventListener("click", function(){
 document.getElementById("closeSettings").addEventListener("click", function(){
     document.getElementById("settingsMenu").classList.toggle("hidden")
 })
+
 //listeners for opening and closing from localstorage
 
 //minimum viable product:

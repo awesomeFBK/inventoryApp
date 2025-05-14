@@ -1,4 +1,4 @@
-import { smallSlots, mediumSlots, largeSlots, tinySlots, updateCounter} from "./logic.js"
+import { smallSlots, mediumSlots, largeSlots, tinySlots, updateCounter, saveToStorage} from "./logic.js"
 import { getSlotClassification } from "./slots.js"
 //classifier function 
 //do a re-read of this/review eventually pls
@@ -91,86 +91,79 @@ export class Item{
         itemDiv.dataset.classification = this.classification
     
         let name = document.createElement("p")//creates a paragraph for the name
-        let description = document.createElement("p")//create the paragraph for description
-        
-        name.classList.add("edit-element")
-        description.classList.add("edit-element")
-        
-    
-        //creates the edit boxes that will be hidden
-        let editName = document.createElement("input")
-        let editDescription = document.createElement("input")
-    
-        //edit button
-        let editButton = document.createElement("button")
-        editButton.innerText = "EDIT"
-        editButton.classList.add("edit-element")
+        name.innerText = this.name
 
-        //save edit button
-        let saveEditButton = document.createElement("button")
-        saveEditButton.innerText = "SAVE EDIT"
-        saveEditButton.classList.add("hidden", "edit-element")
+        let description = document.createElement("p")//create the paragraph for description
+        description.innerText = this.description
         
+        let equipImage = document.createElement("img")
+        equipImage.src = this.image || "QuincyPortrait.webp"
+        equipImage.classList.add("item-picture")
+
+
+        name.classList.add("item-name")
+        description.classList.add("item-desc")
+
+        name.contentEditable = false
+        description.contentEditable = false
+    
         //checkbox for remove item
         let removeItemCheckbox = document.createElement("input") //create the checkbox for removing data
         removeItemCheckbox.type = "checkbox"
-        removeItemCheckbox.classList.add("hidden", "remove-element", "remove-checkbox")
+        removeItemCheckbox.classList.add("hidden", "remove-element", "remove-checkbox")//don't kill remove element
         console.log("found", removeItemCheckbox)
 
-        //shit that is displayed
-        name.innerText = this.name
-        description.innerText = this.description
-    
-        //initializes the values of the edit boxes and hides em
-        editName.value = this.name
-        editDescription.value = this.description
-        editName.classList.add("hidden", "edit-element")
-        editDescription.classList.add("hidden", "edit-element")
+        let editButton = document.createElement("button") //create the button for editing
+        editButton.innerText = "Edit"
+        editButton.classList.add("edit-button")
 
-        function toggleEdit(){
-            let parentDiv = editButton.closest(".itemDiv")
-            parentDiv.querySelectorAll(".edit-element").forEach(element => {
-                element.classList.toggle("hidden")
-            });
-        }
+        let saveButton = document.createElement("button") //create the button for saving
+        saveButton.innerText = "Save"
+        saveButton.classList.add("edit-button", "hidden")
 
         //onclick of edit button
         editButton.addEventListener("click", function() {
-            toggleEdit(editButton)
+            name.contentEditable = true
+            description.contentEditable = true
+            editButton.classList.add("hidden")
+            saveButton.classList.remove("hidden")
         })
 
-        saveEditButton.addEventListener("click", function(){
-            saveEdit()
+        console.log(this.classification)
+        //save edit
+        saveButton.addEventListener("click", function() {
+            name.contentEditable = false
+            description.contentEditable = false
+            editButton.classList.remove("hidden")
+            saveButton.classList.add("hidden")
+
+            let itemFind = getSlotClassification(itemDiv.dataset.classification)
+            console.log(itemDiv.dataset.classification)
+            console.log(itemFind)
+
+            let item = itemFind.items.find(item => item.id == itemDiv.dataset.id)
+            if (item) {
+                item.name = name.innerText
+                item.description = description.innerText
+            }
+        
+            saveToStorage()
         })
-       
-        //edit item.addEventListener
-        editName.addEventListener("keypress", function (event){
-            if (event.key === "Enter"){
-                saveEdit()
-            } 
-        })
-        editDescription.addEventListener("keypress", function (event){
-            if (event.key === "Enter"){
-                saveEdit()
-            } 
-        })
-    
-        function saveEdit(){
-            name.innerText = editName.value
-            description.innerText = editDescription.value
-            toggleEdit()
-        }
-    
+
+        let itemDivOverlay = document.createElement("div") //create the overlay for the item
+        itemDivOverlay.classList.add("slot-item-overlay")        
+        itemDiv.appendChild(itemDivOverlay)
+
         //append yo shit
+        itemDiv.appendChild(equipImage)
         itemDiv.appendChild(name)
         itemDiv.appendChild(description)
-        itemDiv.appendChild(editName)
-        itemDiv.appendChild(editDescription)
+        itemDiv.appendChild(saveButton)
         itemDiv.appendChild(editButton)
-        itemDiv.appendChild(saveEditButton)
         itemDiv.appendChild(removeItemCheckbox)
         //edit this so that it gets the element of the container
         document.getElementById(containerID).appendChild(itemDiv)
+        itemDiv.classList.add("slot-item")
     }
 
 

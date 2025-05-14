@@ -1,5 +1,5 @@
 import { CoinPouch,emptyItem } from "./item.js"
-import { smallSlots, mediumSlots, largeSlots, tinySlots, uploadImage, updateCounter } from "./logic.js"
+import { smallSlots, mediumSlots, largeSlots, tinySlots, uploadImage, updateCounter, saveToStorage } from "./logic.js"
 
 
 //helper function to map classifications to inventory slots
@@ -99,6 +99,7 @@ export class StandardSlots extends Slots{
                     armorName.innerText = "Armor Slot"
                 }
                 this.armorSlot.name = armorName.innerText; // Update the object
+                saveToStorage()
             });
 
             //appends armor description to the div
@@ -113,6 +114,7 @@ export class StandardSlots extends Slots{
                     armorDescription.innerText = "Description"
                 }
                 this.armorSlot.description = armorDescription.innerText; // Update the object
+                saveToStorage()
             });
 
         let mainHandDiv = document.createElement("div")
@@ -153,6 +155,7 @@ export class StandardSlots extends Slots{
                     mainName.innerText = "Main Hand"
                 }
                 this.mainHand.name = mainName.innerText; // Update the object
+                saveToStorage()
             });
 
             //appends description to main hand div
@@ -166,8 +169,9 @@ export class StandardSlots extends Slots{
                 if (mainDescription.innerText.trim() === ""){
                     mainDescription.innerText = "Description"
                 }
-                this.mainHand.description = mainDescription.innerText; // Update the object
-            });
+                this.mainHand.description = mainDescription.innerText;
+                saveToStorage() // Update the object
+            })
 
 
         let offHandDiv = document.createElement("div")
@@ -221,6 +225,24 @@ export class StandardSlots extends Slots{
             offHandUsedLabel.id = "offHandUsedLabel"
             offHandDiv.append(offHandUsedLabel)
 
+            // Save changes to localStorage when content is edited
+            offHandName.addEventListener("blur", () => {
+                if (offHandName.innerText.trim() === ""){
+                    offHandName.innerText = "Description"
+                }
+                this.offHand.name = offHandName.innerText;
+                saveToStorage() // Update the object
+            })            
+
+            // Save changes to localStorage when content is edited
+            offHandDescription.addEventListener("blur", () => {
+                if (offHandDescription.innerText.trim() === ""){
+                    offHandDescription.innerText = "Description"
+                }
+                this.offHand.description = offHandDescription.innerText;
+                saveToStorage() // Update the object
+            })            
+
             console.log("this.twoHandedFlag Value is ", this.twoHandedFlag)
 
             if (this.twoHandedFlag == true) {
@@ -267,6 +289,24 @@ export class StandardSlots extends Slots{
             rangedDiv.appendChild(rangedName)
             rangedDiv.appendChild(rangedDescription)
 
+            // Save changes to localStorage when content is edited
+            rangedName.addEventListener("blur", () => {
+                if (rangedName.innerText.trim() === ""){
+                    rangedName.innerText = "Ranged Weapon"
+                }
+                this.rangedWeapon.name = rangedName.innerText; // Update the object
+                saveToStorage()
+            })
+
+            // Save changes to localStorage when content is edited
+            rangedDescription.addEventListener("blur", () => {
+                if (rangedDescription.innerText.trim() === ""){
+                    rangedDescription.innerText = "Description"
+                }
+                this.rangedWeapon.description = rangedDescription.innerText; // Update the object
+                saveToStorage()
+            })
+
             //adds an overlay on top 
             let rangedUsed = document.createElement("div")
             rangedUsed.id = "rangedUsed"
@@ -280,7 +320,10 @@ export class StandardSlots extends Slots{
             rangedUsedLabel.id = "rangedUsedLabel"
             rangedDiv.append(rangedUsedLabel)
 
+            //if they are not using a ranged weapon
             if (this.rangedWeaponFlag == true) {
+                smallSlots.maxSize += 2
+                updateCounter("smallSlotCounter")
                 rangedUsed.classList.remove("hidden")
                 rangedUsedLabel.classList.remove("hidden")
             }
@@ -323,6 +366,7 @@ export class StandardSlots extends Slots{
                     backpackName.innerText = "Backpack"
                 }
                 this.backpack.name = backpackName.innerText; // Update the object
+                saveToStorage()
             });
 
             //appends armor description to the div
@@ -337,6 +381,7 @@ export class StandardSlots extends Slots{
                     backpackDescription.innerText = "Description"
                 }
                 this.backpack.description = backpackDescription.innerText; // Update the object
+                saveToStorage()
             });
 
         //classlist to turn em into square boxes
@@ -370,6 +415,8 @@ export class StandardSlots extends Slots{
                 offHandName.contentEditable = "true"
                 offHandDescription.contentEditable = "true"
             }
+
+            saveToStorage()
         })
 
         let rangedWeaponButton = document.createElement("button")
@@ -378,6 +425,7 @@ export class StandardSlots extends Slots{
 
         rangedWeaponButton.addEventListener("click", () => {
             this.rangedWeaponFlag = !this.rangedWeaponFlag //toggle the flag
+            //this means that they aren't using a ranged weapon
             if (this.rangedWeaponFlag) {
                 let overlay = document.getElementById("rangedUsed")
                 let overlayLabel = document.getElementById("rangedUsedLabel")
@@ -386,7 +434,12 @@ export class StandardSlots extends Slots{
 
                 rangedName.contentEditable = "false"
                 rangedDescription.contentEditable = "false"
-            } else {
+
+                smallSlots.maxSize += 2
+                updateCounter("smallSlotCounter")
+            } 
+            //this means that they are using a ranged weapon
+            else {
                 let overlay = document.getElementById("rangedUsed")
                 let overlayLabel = document.getElementById("rangedUsedLabel")
                 overlay.classList.add("hidden")
@@ -394,7 +447,12 @@ export class StandardSlots extends Slots{
 
                 rangedName.contentEditable = "true"
                 rangedDescription.contentEditable = "true"
+
+                smallSlots.maxSize -= 2
+                updateCounter("smallSlotCounter")
             }
+
+            saveToStorage()
         })
 
         //append ts
