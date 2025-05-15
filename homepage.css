@@ -85,10 +85,6 @@ body {
   height: 100vh;
   background-position: 55%;
   color: white;
-  flex-direction: column;
-  display: flex;
-  justify-self: center;
-  justify-items: center;
 }
 
 .menu-container {
@@ -348,6 +344,7 @@ body {
   align-items: space-evenly;
   justify-content: space-evenly;
   background-image: url("scroll_bg.jpg");
+  border: black 3px solid;
 }
 
 .left-column, .right-column {
@@ -420,17 +417,98 @@ body {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: space-between;
-  justify-content: space-evenly;
-  background-color: rgba(42, 36, 36, 0.7);
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(42, 36, 36, 1);
   border: solid black 5px;
   padding: 10px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 35%; /* Could be more or less, depending on screen size */
   min-width: 300px;
-  height: 50vh;
+  height: 40vh;
+}
 
+.close-settings {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background-color: black;
+  color: white;
+  border: solid rgb(205, 187, 187) 3px;
+  width: 30px;
+  height: 30px;
+}
+
+.close-settings:hover {
+  cursor: pointer;
+  background-color: rgba(202, 200, 189, 0.5);
+}
+
+.options-label {
+  height: fit-content;
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.options-button-div {
+  width: 300px;
+  margin-bottom: 5%;
+  background-color: rgb(117, 87, 11);
+}
+
+.options-button {
+  display: flex;
+  position: relative;
+  height: fit-content;
+  border: 2px rgb(205, 187, 187) solid;
+  background-color: black;
+  height: 75px;
+  width: 100%;
+}
+
+.option-button-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}
+
+.options-button:hover {
+  background-color: rgba(202, 200, 189, 0.3);
+  cursor: pointer;
+}
+
+.settings-button-div {
+  width: 50px;
+  aspect-ratio: 1/1;
+  position: relative;
+  left: 5px;
+}
+
+.settings-button-label {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  aspect-ratio: 1/1;
+}
+
+.settings-button-label:hover {
+  background-color: rgba(202, 200, 189, 0.3);
+  cursor: pointer;
+}
+
+.settings-button {
+  display: none;
+}
+
+.body-formatting {
+  flex-direction: column;
+  display: flex;
+  justify-self: center;
+  justify-items: center;
 }

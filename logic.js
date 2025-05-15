@@ -104,8 +104,6 @@ async function loadAll(jsonFile){
 
         //populates item slots
         loadItems(jsonFile)
-
-
         
         //renders all menus
         standardSlots.renderStandardSlots("standardSlots")
@@ -296,17 +294,6 @@ let arrayPointer = 0
 
 document.getElementById("addItem").addEventListener("click", addItem)
 document.getElementById("removeItemBtn").addEventListener("click", toggleRemoveItems)
-document.getElementById("cancelRemove").addEventListener("click", toggleRemoveItems)
-document.getElementById("confirmRemove").addEventListener("click", function(){
-    removeItem()
-    toggleRemoveItems()
-    
-    //gng you can refactor this later lol
-    updateCounter("largeSlotCounter")
-    updateCounter("mediumSlotCounter")
-    updateCounter("smallSlotCounter")
-    saveToStorage()
-})
 
 //listen for the save item command
 document.getElementById("saveItem").addEventListener("click", function(){
@@ -459,6 +446,22 @@ document.getElementById("settingsButton").addEventListener("click", function(){
 
 document.getElementById("closeSettings").addEventListener("click", function(){
     document.getElementById("settingsMenu").classList.toggle("hidden")
+})
+
+function updateStrengthModifier(){
+    let newStrength = parseInt(document.getElementById("strengthModifierDisplay").value)
+    console.log(newStrength)
+}
+
+document.getElementById("strengthModifierDisplay").addEventListener("blur", () => {
+    console.log("Strength Modifier changed")
+    strengthModifier = parseInt(document.getElementById("strengthModifierDisplay").innerText)
+
+    calculateSlots()
+    updateCounter("largeSlotCounter")
+    updateCounter("mediumSlotCounter")
+    updateCounter("smallSlotCounter")
+    saveToStorage()
 })
 
 //listeners for opening and closing from localstorage

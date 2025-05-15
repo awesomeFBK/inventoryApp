@@ -8,46 +8,17 @@
 </head>
 <body>
 
-    <button id="settingsButton">=</button>
-
-    <div class="settings-menu hidden" id="settingsMenu">
-        <button id="closeSettings" class="close-settings">X</button>
-        <img src="button-assets/optionslabel.png" class="options-label"></img>
-        <button id="newInventory">NEW INVENTORY</button>
-        <button id="saveJson">Save JSON</button>
+    <div class="settings-button-div">
+        <button id="settingsButton" class="settings-button">
+        </button>
+        <label for="settingsButton" class="settings-button-label">
+            <img src="button-assets/settingsButton.svg" class="settings-button-label"></img>
+        </label>
     </div>
 
 
 
-
-
-
-    <div class="modal" id="initializeModal">
-        <div class="initialize-menu" id="initializeMenu">
-            <h6>Choose to load in a file or create a new one</h6>
-            <div class="load-json">
-                <form id="jsonForm">
-                    <div>
-                        <label for = "jsonInput">Read a json file</label>
-                        <input type= "file" id = "jsonInput" name = "jsonInput" accept=".json" required>
-                    </div>
-                </form>
-            </div>
-            <div class="new-file">
-                <form id="newInventory">
-                    <div>
-                        <label for = "characterName">Character Name:</label>
-                        <input type= "text" id="characterName" name= "characterName" required>
-                        <label for = "strengthModifier">Strength Modifier:</label>
-                        <input type = "number" id = "strengthModifier" name = "strengthModifier" required>
-                        <button class = "initialize-submit" id="newInventorySubmit">SUBMIT NEW</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <br><br>
-
+    <div class="body-formatting">
     <div class="inventory-header">
         <button id="cycleLeft" class="cycle-left"><<<</button>
             <div class = "character-info">
@@ -55,7 +26,7 @@
                     <span id="playerName"></span>
                 </div>
                 <div class = "strength-modifier-div">
-                    <span id="strengthModifierDisplay"></span>
+                    <span id="strengthModifierDisplay" contenteditable="true"></span>
                 </div>
                 <div class = "remaining-label-div">
                         <div class="remaining-label">
@@ -110,6 +81,55 @@
     <button id="confirmRemove" class="hidden remove-element">confirm removal</button>
     <button id="cancelRemove" class="hidden remove-element">cancel removal</button>
 
+
+
+    
+    <button id="saveStorage">Save Storage Bruh</button>
+    </div>
+
+    <!-- settings menu-->
+    <div class="settings-menu hidden" id="settingsMenu">
+        <button id="closeSettings" class="close-settings">X</button>
+        <img src="button-assets/optionslabel.png" class="options-label"></img>
+        <div class="options-button-div">
+        <button id="newInventory" class="options-button">
+            <img src="button-assets/newinventory.png" class="option-button-label"></img>
+        </button>
+        </div>
+        <div class="options-button-div">
+            <button id="saveJson" class="options-button">
+                <img src="button-assets/exportinventory.png" class="option-button-label"></img>
+            </button>
+        </div>
+    </div>
+
+    <!--For loading in a new file-->
+    <div class="modal" id="initializeModal">
+        <div class="initialize-menu" id="initializeMenu">
+            <h6>Choose to load in a file or create a new one</h6>
+            <div class="load-json">
+                <form id="jsonForm">
+                    <div>
+                        <label for = "jsonInput">Read a json file</label>
+                        <input type= "file" id = "jsonInput" name = "jsonInput" accept=".json" required>
+                    </div>
+                </form>
+            </div>
+            <div class="new-file">
+                <form id="newInventory">
+                    <div>
+                        <label for = "characterName">Character Name:</label>
+                        <input type= "text" id="characterName" name= "characterName" required>
+                        <label for = "strengthModifier">Strength Modifier:</label>
+                        <input type = "number" id = "strengthModifier" name = "strengthModifier" required>
+                        <button class = "initialize-submit" id="newInventorySubmit">SUBMIT NEW</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!--For adding items-->
     <div id="itemAddModal" class="modal">
         <div class="modal-content">
             <!--input for name here-->
@@ -133,12 +153,6 @@
             <button id="saveItem">Save Item</button>
         </div>
     </div>
-
-    
-    <button id="saveStorage">Save Storage Bruh</button>
-
-    
-    
    
     <script src="logic.js" type="module"></script>
     <script src="slots.js" type="module"></script>

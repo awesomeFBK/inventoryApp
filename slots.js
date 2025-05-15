@@ -28,6 +28,7 @@ export class Slots{
         console.log("Rendering last item appended")
         let lastItem = this.items[this.items.length - 1] //gets the index of the last item in this slot
         lastItem.renderItem(containerID) //renders it
+
     }
 
 }
@@ -361,7 +362,7 @@ export class StandardSlots extends Slots{
             backpackName.contentEditable = "true"
 
             // Save changes to localStorage when content is edited
-            backpackName.addEventListener("blur", () => {
+            backpackName.addEventListener(" ", () => {
                 if (backpackName.innerText.trim() === ""){
                     backpackName.innerText = "Backpack"
                 }
