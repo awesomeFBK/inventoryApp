@@ -1,6 +1,6 @@
 import { CoinPouch,emptyItem } from "./item.js"
-import { smallSlots, mediumSlots, largeSlots, tinySlots, uploadImage, updateCounter, saveToStorage } from "./logic.js"
-
+import { smallSlots, mediumSlots, largeSlots, tinySlots, updateCounter, saveToStorage, getClassificationfromContainerID } from "./logic.js"
+import { uploadImage, uploadImageToStandard } from './utils.js';
 
 //helper function to map classifications to inventory slots
 export function getSlotClassification(classification){
@@ -37,6 +37,7 @@ export class StandardSlots extends Slots{
     constructor(){
         super(0) //run the max size as 0
         this.armorSlot = emptyItem
+        this.helmetSlot = emptyItem
         this.mainHand = emptyItem
         this.offHand = emptyItem
         this.rangedWeapon = emptyItem
@@ -50,17 +51,66 @@ export class StandardSlots extends Slots{
         //create the slots
         let itemDiv = document.createElement("div")//create the div that holds the data
         itemDiv.classList.add("item-div")
-        let leftColumn = document.createElement("div")
-        let rightColumn = document.createElement("div")
-        leftColumn.classList.add("left-column")
-        rightColumn.classList.add("right-column")
-        itemDiv.appendChild(leftColumn)
-        itemDiv.appendChild(rightColumn)
+
+        //HELMET SLOT
+
+        let helmetDiv = document.createElement("div")
+            helmetDiv.innerHTML = "<p>Helmet</p>"
+            let helmetImg = document.createElement("img")
+            helmetImg.src = this.helmetSlot.image || "empty_icons/helmet.png"
+            helmetImg.classList.add("equipment-slot-image")
+            
+            let helmetFileInput = document.createElement("input")
+            helmetFileInput.type = "file"
+            helmetFileInput.accept = "image/*"
+            helmetFileInput.style.display = "none" // Hide the file input
+
+            let helmetLabel = document.createElement("label")
+            helmetLabel.appendChild(helmetImg)
+            helmetLabel.appendChild(helmetFileInput)
+            helmetDiv.appendChild(helmetLabel)
+
+            helmetFileInput.addEventListener("change", (event) => {
+                uploadImageToStandard(event, "helmetSlot")
+                    .then((base64String) => {
+                        helmetImg.src = base64String
+                        saveToStorage()
+                    })
+            })
+
+            let helmetName = document.createElement("p")
+            helmetName.innerText = this.helmetSlot.name || "Helmet"
+            helmetName.contentEditable = "true"
+            helmetDiv.appendChild(helmetName)
+
+            helmetName.addEventListener("blur", () => {
+                if (helmetName.innerText.trim() === ""){
+                    helmetName.innerText = "Helmet"
+                }
+                this.helmetSlot.name = helmetName.innerText; // Update the object
+                saveToStorage()
+            });
+            
+            let helmetDescription = document.createElement("p")
+            helmetDescription.innerText = this.helmetSlot.description || "Description"
+            helmetDescription.contentEditable = "true"
+            helmetDiv.appendChild(helmetDescription)
+            
+            helmetDescription.addEventListener("blur", () => {
+                if (helmetDescription.innerText.trim() === ""){
+                    helmetDescription.innerText = "Description"
+                }
+                this.helmetSlot.description = helmetDescription.innerText; // Update the object
+                saveToStorage()
+            });
+        
+        //ARMOR SLOT
 
         let armorDiv = document.createElement("div")
+            armorDiv.innerHTML = "<p>Armor</p>"
             //image element
             let armorImg = document.createElement("img")
-            armorImg.src = this.armorSlot.image || "QuincyPortrait.webp"
+            armorImg.src = this.armorSlot.image || "empty_icons/armor.png"
             armorImg.classList.add("equipment-slot-image")
 
             //file input
@@ -77,23 +127,22 @@ export class StandardSlots extends Slots{
 
             //event listener for hte file input
             armorFileInput.addEventListener("change", (event) => {
-                uploadImage(event, "armorSlot")
+                uploadImageToStandard(event, "armorSlot")
                     .then((base64String) => {
                         armorImg.src = base64String
+                        saveToStorage()
                     })
                     .catch((error) => {
                         console.error("Error uploading image", error)
                     })
             })
 
-
             //appends the armor name to the div
             let armorName = document.createElement("p")
             armorName.contentEditable = "true"
-            armorName.innerText = this.armorSlot.name
+            armorName.innerText = this.armorSlot.name || "Armor Slot"
             armorDiv.appendChild(armorName)
-            
-
+        
             // Save changes to localStorage when content is edited
             armorName.addEventListener("blur", () => {
                 if (armorName.innerText.trim() === ""){
@@ -105,7 +154,7 @@ export class StandardSlots extends Slots{
 
             //appends armor description to the div
             let armorDescription = document.createElement("p")
-            armorDescription.innerText = this.armorSlot.description
+            armorDescription.innerText = this.armorSlot.description || "Description"
             armorDescription.contentEditable = "true"
             armorDiv.appendChild(armorDescription)
 
@@ -118,9 +167,12 @@ export class StandardSlots extends Slots{
                 saveToStorage()
             });
 
+        //MAIN HAND SLOT
+
         let mainHandDiv = document.createElement("div")
+            mainHandDiv.innerHTML = "<p>Main Hand</p>"
             let mainHandImg = document.createElement("img")
-            mainHandImg.src = "Claymore_29.webp"
+            mainHandImg.src = this.mainHand.image || ("empty_icons/sword.png")
             mainHandImg.classList.add("equipment-slot-image")
 
             let mainHandFileInput = document.createElement("input")
@@ -135,9 +187,10 @@ export class StandardSlots extends Slots{
 
             //event listener for hte file input
             mainHandFileInput.addEventListener("change", (event) => {
-                uploadImage(event, "mainHand")
+                uploadImageToStandard(event, "mainHand")
                     .then((base64String) => {
                         mainHandImg.src = base64String
+                        saveToStorage()
                     })
                     .catch((error) => {
                         console.error("Error uploading image", error)
@@ -146,7 +199,7 @@ export class StandardSlots extends Slots{
 
             //appends the main hand div
             let mainName = document.createElement("p")
-            mainName.innerText = this.mainHand.name
+            mainName.innerText = this.mainHand.name || "Main Hand"
             mainHandDiv.appendChild(mainName)
             mainName.contentEditable = "true"
 
@@ -161,7 +214,7 @@ export class StandardSlots extends Slots{
 
             //appends description to main hand div
             let mainDescription = document.createElement("p")
-            mainDescription.innerText = this.mainHand.description
+            mainDescription.innerText = this.mainHand.description || "Description"
             mainHandDiv.appendChild(mainDescription)        
             mainDescription.contentEditable = "true"
             
@@ -176,8 +229,9 @@ export class StandardSlots extends Slots{
 
 
         let offHandDiv = document.createElement("div")
+            offHandDiv.innerHTML = "<p>Off Hand</p>"
             let offHandImg = document.createElement("img")
-            offHandImg.src = "Claymore_29.webp"
+            offHandImg.src = this.offHand.image || ("empty_icons/shield.png")
             offHandImg.classList.add("equipment-slot-image")
             
             let offHandFileInput = document.createElement("input")
@@ -193,9 +247,10 @@ export class StandardSlots extends Slots{
 
             //event listener for hte file input
             offHandFileInput.addEventListener("change", (event) => {
-                uploadImage(event, "offHand")
+                uploadImageToStandard(event, "offHand")
                     .then((base64String) => {
                         offHandImg.src = base64String
+                        saveToStorage()
                     })
                     .catch((error) => {
                         console.error("Error uploading image", error)
@@ -208,21 +263,27 @@ export class StandardSlots extends Slots{
             offHandName.contentEditable = "true"
             offHandDescription.contentEditable = "true"
 
-            offHandName.innerText = this.offHand.name
-            offHandDescription.innerText = this.offHand.description
+            offHandName.innerText = this.offHand.name || "Off Hand"
+            offHandDescription.innerText = this.offHand.description || "Description"
             offHandDiv.appendChild(offHandName)
             offHandDiv.appendChild(offHandDescription)
 
             //adds an overlay on top 
+            let offHandOverlay = document.createElement("div")
+            offHandOverlay.id = "offHandOverlay"
+            offHandOverlay.classList.add("slot-overlay")
+            offHandDiv.appendChild(offHandOverlay)
+
+            //used overlay
             let offHandUsed = document.createElement("div")
             offHandUsed.id = "offHandUsed"
-            offHandUsed.classList.add("slot-used", "hidden")
-            offHandDiv.appendChild(offHandUsed)
+            offHandUsed.classList.add("slot-used")
+            offHandOverlay.appendChild(offHandUsed)
 
             //adds an image on top of the overlay
             let offHandUsedLabel = document.createElement("img")
             offHandUsedLabel.src = "overlay.png"
-            offHandUsedLabel.classList.add("slot-used-label", "hidden")
+            offHandUsedLabel.classList.add("slot-used-label")
             offHandUsedLabel.id = "offHandUsedLabel"
             offHandDiv.append(offHandUsedLabel)
 
@@ -251,9 +312,12 @@ export class StandardSlots extends Slots{
                 offHandUsedLabel.classList.remove("hidden")
             }
 
+        //RANGED WEAPON SLOT
+
         let rangedDiv = document.createElement("div")
+            rangedDiv.innerHTML = "<p>Ranged Weapon</p>"
             let rangedDivImg = document.createElement("img")
-            rangedDivImg.src = "bow.webp"
+            rangedDivImg.src = this.rangedWeapon.image || ("empty_icons/ranged.png")
             rangedDivImg.classList.add("equipment-slot-image")
             
             let rangedFileInput = document.createElement("input")
@@ -269,9 +333,10 @@ export class StandardSlots extends Slots{
 
             //event listener for hte file input
             rangedFileInput.addEventListener("change", (event) => {
-                uploadImage(event, "rangedWeapon")
+                uploadImageToStandard(event, "rangedWeapon")
                     .then((base64String) => {
                         rangedDivImg.src = base64String
+                        saveToStorage()
                     })
                     .catch((error) => {
                         console.error("Error uploading image", error)
@@ -284,8 +349,8 @@ export class StandardSlots extends Slots{
             rangedName.contentEditable = "true"
             rangedDescription.contentEditable = "true"
 
-            rangedName.innerText = this.rangedWeapon.name
-            rangedDescription.innerText = this.rangedWeapon.description
+            rangedName.innerText = this.rangedWeapon.name || "Ranged Weapon"
+            rangedDescription.innerText = this.rangedWeapon.description || "Description"
 
             rangedDiv.appendChild(rangedName)
             rangedDiv.appendChild(rangedDescription)
@@ -308,10 +373,19 @@ export class StandardSlots extends Slots{
                 saveToStorage()
             })
 
-            //adds an overlay on top 
+
+            //adds an overlay
+            let rangedUsedOverlay = document.createElement("div")
+            rangedUsedOverlay.id = "rangedUsedOverlay"
+            rangedUsedOverlay.classList.add("slot-overlay")
+            rangedDiv.appendChild(rangedUsedOverlay)
+
+            //adds the slot used overlay
             let rangedUsed = document.createElement("div")
             rangedUsed.id = "rangedUsed"
             rangedUsed.classList.add("slot-used", "hidden")
+
+            rangedUsedOverlay.appendChild(rangedUsed)
             rangedDiv.appendChild(rangedUsed)
 
             //adds an image on top of the overlay
@@ -329,9 +403,12 @@ export class StandardSlots extends Slots{
                 rangedUsedLabel.classList.remove("hidden")
             }
 
+        //BACKPACK SLOT
+
         let backpackDiv = document.createElement("div")
+            backpackDiv.innerHTML = "<p>Backpack</p>"
             let backpackDivImg = document.createElement("img")
-            backpackDivImg.src = "backpack.webp"
+            backpackDivImg.src = this.backpack.image || ("empty_icons/backpack.png")
             backpackDivImg.classList.add("equipment-slot-image")
 
             let backpackFileInput = document.createElement("input")
@@ -346,9 +423,11 @@ export class StandardSlots extends Slots{
 
             //event listener for hte file input
             backpackFileInput.addEventListener("change", (event) => {
-                uploadImage(event, "backpack")
+                uploadImageToStandard(event, "backpack")
                     .then((base64String) => {
                         backpackDivImg.src = base64String
+                        this.backpack.image = base64String
+                        saveToStorage()
                     })
                     .catch((error) => {
                         console.error("Error uploading image", error)
@@ -357,12 +436,12 @@ export class StandardSlots extends Slots{
 
             //appends the armor name to the div
             let backpackName = document.createElement("p")
-            backpackName.innerText = this.backpack.name
+            backpackName.innerText = this.backpack.name || "Backpack"
             backpackDiv.appendChild(backpackName)
             backpackName.contentEditable = "true"
 
             // Save changes to localStorage when content is edited
-            backpackName.addEventListener(" ", () => {
+            backpackName.addEventListener("blur", () => {
                 if (backpackName.innerText.trim() === ""){
                     backpackName.innerText = "Backpack"
                 }
@@ -372,7 +451,7 @@ export class StandardSlots extends Slots{
 
             //appends armor description to the div
             let backpackDescription = document.createElement("p")
-            backpackDescription.innerText = this.backpack.description
+            backpackDescription.innerText = this.backpack.description || "Description"
             backpackDiv.appendChild(backpackDescription)
             backpackDescription.contentEditable = "true"
 
@@ -386,15 +465,37 @@ export class StandardSlots extends Slots{
             });
 
         //classlist to turn em into square boxes
-        armorDiv.classList.add("equipment-slot")
-        mainHandDiv.classList.add("equipment-slot")
-        offHandDiv.classList.add("equipment-slot")
-        rangedDiv.classList.add("equipment-slot")
-        backpackDiv.classList.add("equipment-slot")
+        armorDiv.classList.add("equipment-slot", "armor-slot")
+        helmetDiv.classList.add("equipment-slot", "helmet-slot")
+        mainHandDiv.classList.add("equipment-slot", "main-hand-slot")
+        offHandDiv.classList.add("equipment-slot", "off-hand-slot")
+        rangedDiv.classList.add("equipment-slot", "ranged-weapon-slot")
+        backpackDiv.classList.add("equipment-slot", "backpack-slot")
+
+        //misc equipment array
+
+        let miscEquipmentDiv = document.createElement("div")
+
+
+
+
+
+
+        
+        //two handed flag button
 
         let twoHandFlagButton = document.createElement("button")
-        twoHandFlagButton.innerText = "Two-Handed"
+        twoHandFlagButton.classList.add("toggle-button")
+        
+        let twoHandedButtonImg = document.createElement("img")
+        twoHandedButtonImg.classList.add("toggle-button-image")
+        twoHandedButtonImg.src = "empty_icons/shield.png" //change this soon
 
+        twoHandFlagButton.appendChild(twoHandedButtonImg)
+
+        
+
+        
         twoHandFlagButton.addEventListener("click", () => {
             console.log("Two handed flag value is:", this.twoHandedFlag)
             this.twoHandedFlag = !this.twoHandedFlag //toggle the flag
@@ -421,50 +522,159 @@ export class StandardSlots extends Slots{
         })
 
         let rangedWeaponButton = document.createElement("button")
-        rangedWeaponButton.innerText = "Using Ranged Weapon"        
+        rangedWeaponButton.classList.add("toggle-button")
+
+        let rangedWeaponButtonImg = document.createElement("img")
+        rangedWeaponButtonImg.classList.add("toggle-button-image")
+        rangedWeaponButtonImg.src = "empty_icons/ranged.png" //change this soon
+
+        rangedWeaponButton.appendChild(rangedWeaponButtonImg)
+
+        //rannged weapon flag TRUE = they are not using a ranged weapon, add 2
+        //ranged weapon flag FALSE = they are using a ranged weapon, subtract 2 
+
 
 
         rangedWeaponButton.addEventListener("click", () => {
-            this.rangedWeaponFlag = !this.rangedWeaponFlag //toggle the flag
-            //this means that they aren't using a ranged weapon
-            if (this.rangedWeaponFlag) {
-                let overlay = document.getElementById("rangedUsed")
-                let overlayLabel = document.getElementById("rangedUsedLabel")
-                overlay.classList.remove("hidden")
-                overlayLabel.classList.remove("hidden")
-
-                rangedName.contentEditable = "false"
-                rangedDescription.contentEditable = "false"
-
-                smallSlots.maxSize += 2
-                updateCounter("smallSlotCounter")
-            } 
-            //this means that they are using a ranged weapon
+            //if they are not using a ranged weapon and decide they wanna toggle it but
+            //not enough slots, it rejects it //what the fuck is this machine feedinng me
+            //nah its cuz we're doing it backwards bruh
+            console.log("current size", smallSlots.currentSize)
+            console.log("max size", smallSlots.maxSize)
+            if (this.rangedWeaponFlag && (smallSlots.maxSize - 2) < smallSlots.currentSize) {
+                alert("You don't have enough inventory space to use a ranged weapon! Free up 2 small slots.")
+                return
+            }
             else {
-                let overlay = document.getElementById("rangedUsed")
-                let overlayLabel = document.getElementById("rangedUsedLabel")
-                overlay.classList.add("hidden")
-                overlayLabel.classList.add("hidden")
-
-                rangedName.contentEditable = "true"
-                rangedDescription.contentEditable = "true"
-
-                smallSlots.maxSize -= 2
-                updateCounter("smallSlotCounter")
+                this.rangedWeaponFlag = !this.rangedWeaponFlag //toggle the flag
+                //this means that they aren't using a ranged weapon
+                if (this.rangedWeaponFlag) {
+                    let overlay = document.getElementById("rangedUsed")
+                    let overlayLabel = document.getElementById("rangedUsedLabel")
+                    overlay.classList.remove("hidden")
+                    overlayLabel.classList.remove("hidden")
+    
+                    rangedName.contentEditable = "false"
+                    rangedDescription.contentEditable = "false"
+    
+                    smallSlots.maxSize += 2
+                    updateCounter("smallSlotCounter")
+                } 
+                //this means that they are using a ranged weapon
+                else {
+                    let overlay = document.getElementById("rangedUsed")
+                    let overlayLabel = document.getElementById("rangedUsedLabel")
+                    overlay.classList.add("hidden")
+                    overlayLabel.classList.add("hidden")
+    
+                    rangedName.contentEditable = "true"
+                    rangedDescription.contentEditable = "true"
+    
+                    smallSlots.maxSize -= 2
+                    updateCounter("smallSlotCounter")
+                }
+    
+                saveToStorage()
             }
 
-            saveToStorage()
         })
 
+        //render options
+        let name = document.createElement("div")
+        name.classList.add("name-bar")
+        name.innerText = document.getElementById("playerName").innerText
+
+        //appennd
+        let miscArray = this.renderMiscEquipment()
+
+
+
         //append ts
-        rightColumn.appendChild(armorDiv)
-        leftColumn.appendChild(mainHandDiv)
-        leftColumn.appendChild(offHandDiv)
-        leftColumn.appendChild(rangedDiv)
-        leftColumn.appendChild(backpackDiv)
-        rightColumn.appendChild(twoHandFlagButton)
-        rightColumn.appendChild(rangedWeaponButton)
+        
+        itemDiv.appendChild(helmetDiv)
+        itemDiv.appendChild(armorDiv)
+        itemDiv.appendChild(mainHandDiv)
+        itemDiv.appendChild(offHandDiv)
+        itemDiv.appendChild(rangedDiv)
+        itemDiv.appendChild(backpackDiv)
+        itemDiv.appendChild(name)
+        offHandOverlay.appendChild(twoHandFlagButton)
+        rangedUsedOverlay.appendChild(rangedWeaponButton)
+        itemDiv.appendChild(miscArray)
         document.getElementById("standard-Slots").appendChild(itemDiv);
+    }
+
+    renderMiscEquipment(){
+        //main div for the container
+        let miscEquipmentDiv = document.createElement("div")
+        miscEquipmentDiv.classList.add("misc-array-div")
+
+        //creates the div that holds stuff inside
+        let miscEquipmentContainer = document.createElement("div")
+        miscEquipmentContainer.classList.add("misc-array-container")
+
+        miscEquipmentDiv.appendChild(miscEquipmentContainer)
+
+        for (let i = 0; i < 11; i++){
+            let sampleItem = this.renderMiscItem()
+            miscEquipmentContainer.appendChild(sampleItem)
+
+        }
+
+
+
+        let utilDiv = this.renderMiscUtility()
+        miscEquipmentContainer.appendChild(utilDiv)
+
+        return miscEquipmentDiv
+    }
+
+    renderMiscItem(){
+        let miscItemDiv = document.createElement("div")
+        miscItemDiv.classList.add("misc-item-div")
+
+        let miscItem = document.createElement("div")
+        miscItem.classList.add("misc-item")
+        miscItemDiv.appendChild(miscItem)
+
+        let miscItemImage = document.createElement("img")
+        miscItemImage.classList.add("misc-image-tab")
+        miscItemImage.src =  "fuzz.jpg"
+        
+        let miscItemName = document.createElement("p")
+        miscItemName.classList.add("misc-name")
+        miscItemName.innerText = "Test Chacho"
+
+        let miscItemDesc = document.createElement("p")
+        miscItemDesc.classList.add("misc-description")
+        miscItemDesc.innerText = "YoChaCho"
+
+        miscItem.appendChild(miscItemImage)
+        miscItem.appendChild(miscItemName)
+        miscItem.appendChild(miscItemDesc)
+
+        return miscItemDiv
+    }
+
+    renderMiscUtility(){
+        let utilDiv = document.createElement("div")
+        utilDiv.classList.add("misc-item-div")
+
+        let utilDivLayout = document.createElement("div")
+        utilDivLayout.classList.add("misc-utils")
+        utilDiv.appendChild(utilDivLayout)
+
+        let addButton = document.createElement("button")
+        addButton.classList.add("add-misc")
+        addButton.innerText = "+"
+
+        let removeButton = document.createElement("button")
+        removeButton.classList.add("remove-misc")
+        removeButton.innerText = "-"
+
+        utilDivLayout.appendChild(addButton)
+        utilDivLayout.appendChild(removeButton)
+        return utilDiv
     }
 }
 
@@ -481,17 +691,27 @@ export function addItem(){ //fix this and understand the rest
 
 export function removeItem(){
     //what the fuck did i chatgpt here
+    //you need to have it find the parent container and inncrement from there
     let toRemove = document.querySelectorAll(".remove-checkbox:checked")
 
     toRemove.forEach(element => {
         let itemDiv = element.closest(".itemDiv")
         let itemID = parseInt(itemDiv.dataset.id)
-        let slot = getSlotClassification(itemDiv.dataset.classification)
-        let item = slot.items.find(item => item.id === itemID)
 
+        let containerID = itemDiv.closest(".item-container").id
+        let classification = getClassificationfromContainerID(containerID)
+        let slot = getSlotClassification(classification)
 
-        slot.items.splice(itemID, 1)
-        slot.currentSize--
-        itemDiv.remove()
+        if(slot){
+            slot.items.splice(itemID, 1)
+            slot.currentSize--
+            itemDiv.remove()
+
+            updateCounter(`${classification}SlotCounter`)
+        }
+
     })
+
+
+    saveToStorage()
 }

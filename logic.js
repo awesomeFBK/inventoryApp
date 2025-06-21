@@ -1,5 +1,6 @@
-import {Item, classify} from './item.js'
+import {emptyItem,Item, classify} from './item.js'
 import { getSlotClassification, Slots, addItem, removeItem, StandardSlots} from './slots.js';
+import { uploadImage, uploadImageToStandard } from './utils.js';
 
 //global values for the slots
 export let smallSlots  = new Slots(0), mediumSlots  = new Slots(0), largeSlots = new Slots(0), 
@@ -9,6 +10,7 @@ tinySlots = new Slots(0), standardSlots = new StandardSlots(5)
 //global value for strength modifier
 let strengthModifier = 0
 let playerName = ""
+
 
 //function to give max slots here
 //hardcoded
@@ -82,7 +84,7 @@ async function loadAll(jsonFile){
         
         document.getElementById("playerName").innerText = playerName
         if (strengthModifier < 0){
-            document.getElementById("strengthModifierDisplay").innerText = ("-" + strengthModifier)
+            document.getElementById("strengthModifierDisplay").innerText = (strengthModifier)
         }
         else {
             document.getElementById("strengthModifierDisplay").innerText = ("+" + strengthModifier)
@@ -120,25 +122,25 @@ async function loadAll(jsonFile){
 function loadItems(jsonFile){
     //could be optimized but ong who cares
     jsonFile.items.largeSlots.forEach(obj => {
-        const newItem = new Item(obj.name, obj.classification, obj.description)
+        const newItem = new Item(obj.image, obj.name, obj.classification, obj.description)
         largeSlots.items.push(newItem)
         newItem.id = largeSlots.currentSize
         largeSlots.currentSize++
     })
     jsonFile.items.mediumSlots.forEach(obj => {
-        const newItem = new Item(obj.name, obj.classification, obj.description)
+        const newItem = new Item(obj.image, obj.name, obj.classification, obj.description)
         mediumSlots.items.push(newItem)
         newItem.id = mediumSlots.currentSize
         mediumSlots.currentSize++
     })
     jsonFile.items.smallSlots.forEach(obj => {
-        const newItem = new Item(obj.name, obj.classification, obj.description)
+        const newItem = new Item(obj.image, obj.name, obj.classification, obj.description)
         smallSlots.items.push(newItem)
         newItem.id = smallSlots.currentSize
         smallSlots.currentSize++
     })
     jsonFile.items.tinySlots.forEach(obj => {
-        const newItem = new Item(obj.name, obj.classification, obj.description)
+        const newItem = new Item(obj.image, obj.name, obj.classification, obj.description)
         tinySlots.items.push(newItem)
         newItem.id = tinySlots.currentSize
         tinySlots.currentSize++
@@ -147,6 +149,7 @@ function loadItems(jsonFile){
 
 function loadStandard(jsonFile){
     standardSlots.armorSlot = jsonFile.standardSlots.armorSlot
+    standardSlots.helmetSlot = jsonFile.standardSlots.helmetSlot 
     standardSlots.mainHand = jsonFile.standardSlots.mainHand
     standardSlots.offHand = jsonFile.standardSlots.offHand
     standardSlots.rangedWeapon = jsonFile.standardSlots.rangedWeapon
@@ -157,6 +160,7 @@ function loadStandard(jsonFile){
 }
 
 function clearSlots(){
+    //update this to clear standard slots
     largeSlots.items = []
     largeSlots.currentSize = 0
     mediumSlots.items = []
@@ -165,47 +169,31 @@ function clearSlots(){
     smallSlots.currentSize = 0
     tinySlots.items = []
     tinySlots.currentSize = 0
+    clearStandardSlots()
     derenderSlots()
 }
 
 function derenderSlots(){
-    //heres the issue
+    //update this to clear standard slots
+    document.getElementById("standard-Slots").innerHTML = '<img src = "container-assets/standard_slots.png" class = "container-label">'
     document.getElementById("large-Slots").innerHTML = '<img src = "container-assets/large_slots.png" class = "container-label">' 
     document.getElementById("medium-Slots").innerHTML = '<img src = "container-assets/medium_slots.png" class = "container-label">' 
     document.getElementById("small-Slots").innerHTML = '<img src = "container-assets/small_slots.png" class = "container-label">' 
     document.getElementById("tiny-Slots").innerHTML = '<img src = "container-assets/tiny_slots.png" class = "container-label">' 
 }
 
-export function uploadImage(event, slotID){
-    return new Promise((resolve, reject) => {
-    const file = event.target.files[0]
-    if (!file){
-        console.log("file not loaded properly lol")
-        reject("No file selected")
-        return
-    }    
-
-    //creates an instance of a reader using the FileReader API
-    const reader = new FileReader() 
-
-    //when the reader loads everything, the loadAll function starts workin.
-    reader.onload = function(event) {
-        const base64String = event.target.result
-
-        if (standardSlots[slotID]) {
-            standardSlots[slotID].image = base64String //sets the image to the base64 string
-            resolve(base64String)
-        }
-        else {
-            console.error("Invalid slot ID:", slotID)
-            reject("Invalid Slot ID")
-            return
-        }
-    }
-
-    reader.readAsDataURL(file) //reads the file as a data URL
-    })
+function clearStandardSlots(){
+    standardSlots.armorSlot = emptyItem
+    standardSlots.helmetSlot = emptyItem
+    standardSlots.mainHand = emptyItem
+    standardSlots.offHand = emptyItem
+    standardSlots.rangedWeapon = emptyItem
+    standardSlots.backpack = emptyItem
+    standardSlots.twoHandedFlag = false
+    standardSlots.rangedWeaponFlag = false
+    standardSlots.miscArmor = []
 }
+
 
 //function to save json file
 function saveAsJson(){
@@ -278,6 +266,28 @@ function getContainerID(classification){
     return containerMap[classification] || null    
 }
 
+//for use in remove Item
+export function getClassificationfromContainerID(containerID){
+    const containerMap = {
+        "small-Slots": "small",
+        "medium-Slots": "medium",
+        "large-Slots": "large",
+        "tiny-Slots": "tiny",
+    }
+    return containerMap[containerID] || null
+}
+
+//for use in classify and save Item
+function getSlotsfromContainerID(containerID){
+    const containerMap = {
+        "small-Slots": smallSlots,
+        "medium-Slots": mediumSlots,
+        "large-Slots": largeSlots,
+        "tiny-Slots": tinySlots,
+    }
+    return containerMap[containerID] || null    
+}
+
 //unhides all removavle items
 function toggleRemoveItems(){ //gets all elements that are remove-able
     let hiddenElements = document.querySelectorAll(".remove-element")
@@ -295,20 +305,28 @@ let arrayPointer = 0
 document.getElementById("addItem").addEventListener("click", addItem)
 document.getElementById("removeItemBtn").addEventListener("click", toggleRemoveItems)
 
+document.getElementById("confirmRemove").addEventListener("click", function(){
+    removeItem()
+    toggleRemoveItems()
+})
+
 //listen for the save item command
 document.getElementById("saveItem").addEventListener("click", function(){
     console.log("Save Item Pressed")
-    let newItem = new Item(itemName.value, itemClassification.value, itemDescription.value)
+    let renderLocation = ""
+    let newItem = new Item("empty_icons/item.png", itemName.value, itemClassification.value, itemDescription.value)
     try {
-        classify(newItem)
+        renderLocation = classify(newItem)
     } catch(error) {
         console.error("Inventory is Full")
         return
     }
-    let slot = getSlotClassification(newItem.classification)
-    let containerID = getContainerID(newItem.classification)
+    //it needs to get the classification of where the item was placed
+    let slot = getSlotsfromContainerID(renderLocation)    
+    //change this, create a map that makes it so that 
+    
     if (slot) {
-        slot.renderLastItem(containerID)
+        slot.renderLastItem(renderLocation)
     }
     else {
         console.error("Invalid Classification", newItem.classification)
@@ -316,6 +334,8 @@ document.getElementById("saveItem").addEventListener("click", function(){
 
     saveToStorage()
 })
+
+
 
 //event listeners for the page
 document.getElementById("cycleLeft").addEventListener("click", function(){
@@ -350,11 +370,14 @@ document.getElementById("cycleRight").addEventListener("click", function(){
 
 document.getElementById("newInventory").addEventListener("click", function(){
     console.log("New inventory pressed")
-    document.getElementById("initializeModal").style.display = "block"
-    
-    window.onclick = function(event) { //closes if you touch outside the modal
-        if (event.target == document.getElementById("initializeModal")) {
-        document.getElementById("initializeModal").style.display = "none"
+    let modal = document.getElementById("initializeMenuModal")
+    modal.style.display = "block"
+    let settingsModal = document.getElementById("settingsMenuModal")
+    settingsModal.style.display = "none"
+
+    window.onclick = function(event) { //closes if you touch outside the content in the shaded region
+        if (event.target == modal) {
+            modal.style.display = "none"
         }
     }
 
@@ -362,13 +385,22 @@ document.getElementById("newInventory").addEventListener("click", function(){
 
 document.getElementById("jsonInput").addEventListener("change", function(event){
     loadJson(event)
-    document.getElementById("initializeModal").style.display = "none"
+    document.getElementById("initializeMenuModal").style.display = "none"
 })
 
 document.getElementById("newInventorySubmit").addEventListener("click", function(event){
     event.preventDefault()
     console.log(playerName)
     console.log(strengthModifier)
+
+    if(!document.getElementById("characterName").value){
+        alert("Please enter a character name")
+        return
+    }
+    if(!document.getElementById("strengthModifier").value){
+        alert("Please enter a strength modifier")
+        return
+    }
 
     playerName = document.getElementById("characterName").value
     strengthModifier = document.getElementById("strengthModifier").value
@@ -389,25 +421,26 @@ document.getElementById("newInventorySubmit").addEventListener("click", function
 
     document.getElementById("playerName").innerText = playerName
     if (strengthModifier < 0){
-        document.getElementById("strengthModifierDisplay").innerText = ("-" + strengthModifier)
+        document.getElementById("strengthModifierDisplay").innerText = strengthModifier
     }
     else {
         document.getElementById("strengthModifierDisplay").innerText = ("+" + strengthModifier)
     }
 
 
-    document.getElementById("initializeModal").style.display = "none"
+    document.getElementById("initializeMenuModal").style.display = "none"
     calculateSlots()
+    updateCounter("largeSlotCounter")
+    updateCounter("mediumSlotCounter")
+    updateCounter("smallSlotCounter")
     console.log(smallSlots.maxSize, mediumSlots.maxSize, largeSlots.maxSize)
+    standardSlots.renderStandardSlots()
 })
 
 document.getElementById("saveJson").addEventListener("click", function(){
     saveAsJson()
 })
 
-document.getElementById("saveStorage").addEventListener("click", function(){
-    saveToStorage()
-})
 
 document.addEventListener("DOMContentLoaded", function() {
     loadFromStorage()
@@ -441,21 +474,30 @@ function initializeCounters(){
 }
 
 document.getElementById("settingsButton").addEventListener("click", function(){
-    document.getElementById("settingsMenu").classList.toggle("hidden")
+    let modal = document.getElementById("settingsMenuModal")
+    modal.style.display = "block"
+
+    window.onclick = function(event) { //closes if you touch outside the modal
+        if (event.target == modal) {
+        modal.style.display = "none"
+        }
+    }
 })
 
 document.getElementById("closeSettings").addEventListener("click", function(){
-    document.getElementById("settingsMenu").classList.toggle("hidden")
+    let modal = document.getElementById("settingsMenuModal")
+    modal.style.display = "none"
 })
-
-function updateStrengthModifier(){
-    let newStrength = parseInt(document.getElementById("strengthModifierDisplay").value)
-    console.log(newStrength)
-}
 
 document.getElementById("strengthModifierDisplay").addEventListener("blur", () => {
     console.log("Strength Modifier changed")
     strengthModifier = parseInt(document.getElementById("strengthModifierDisplay").innerText)
+    if (strengthModifier < 0){
+        document.getElementById("strengthModifierDisplay").innerText = strengthModifier
+    }
+    else {
+        document.getElementById("strengthModifierDisplay").innerText = ("+" + strengthModifier)
+    }
 
     calculateSlots()
     updateCounter("largeSlotCounter")

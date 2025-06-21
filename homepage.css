@@ -66,9 +66,91 @@ p {
     display: none !important;
   }
 
+.black-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  background-color: rgba(0,0,0,0.5);
+}
+
 .initialize-menu {
-  background-color: white;
-  color: black;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3%;
+  background-color: rgba(42, 36, 36, 1);
+  border: solid black 5px;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%; /* Could be more or less, depending on screen size */
+  min-width: 500px;
+  min-height: fit-content;
+  height: 40vh;
+}
+
+#newCharacterHeader {
+  margin-top: -1.5%;
+  margin-bottom: 1.5%;
+}
+
+#orLabel {
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+
+.new-file-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid black 3px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  min-height: fit-content;
+  padding: 10px;
+}
+
+#jsonInput {
+  display: none;
+}
+
+#jsonInput + label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  border: solid rgb(205, 187, 187) 3px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#jsonInput + label:hover {
+  background-color: rgb(255, 255, 255, 0.3);
+}
+
+.initialize-submit {
+  display: none;
+}
+
+.initialize-submit + label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  border: solid rgb(205, 187, 187) 3px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.initialize-submit + label:hover {
+  background-color: rgb(255, 255, 255, 0.3);
 }
 
 .container-label {
@@ -80,11 +162,13 @@ p {
 }
 
 body {
-  background-image: url(background.webp);
+  background-image: url(bg2.webp);
   background-size: cover;
+  background-position: 30% ;
+  background-repeat: no-repeat;
   height: 100vh;
-  background-position: 55%;
   color: white;
+  overflow-y: hidden;
 }
 
 .menu-container {
@@ -99,8 +183,9 @@ body {
   'name remaininggrid additem'
   'strength remaininggrid removeitem';
   gap: 5px;
-  background-image: url("scroll_bg.jpg");
-  background-color: green;
+  background-image: url("pager2.jpeg");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
   position: relative;
   height: auto;
   min-height: 110px;
@@ -247,8 +332,9 @@ body {
 .item-container {
   position: relative;
   padding: 10px;
-  background-image: url(book_cover.jpg);
-  background-size: 100% 100%;
+  background-image: url(book_cover2.jpeg);
+  background-size: 100% auto;
+  background-repeat: repeat-y;
   border: 5px solid black;
   display: flex;
   flex-direction: column;
@@ -256,22 +342,32 @@ body {
   align-self: center;
   width: 80vw;
   height: auto;
-  max-height: fit-content;
+  max-height: 75vh;
   gap: 10px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.item-container::-webkit-scrollbar {
+  display:none;  
 }
 
 .slot-item {
   position: relative;
   border: 2px solid black;
-  background-image: url("scroll_bg.jpg");
-  background-size: 100% 100%;
+  background-image: url("pager2.jpeg");
+  background-position: top;
+  background-size: 100% auto;
+  background-repeat: repeat-y;
   height: fit-content;
   display: grid;
   grid-template-columns: 150px 1fr 30px 30px 30px;
-  grid-template-rows: 15px 60px 40px 20px 15px;
+  grid-template-rows: 15px 40px 20px 40px 20px 15px;
   grid-template-areas: 
   '. .   .removebutton removebutton'
   'picture itemname .  . .'
+  'picture itemclass . . .'
   'picture itemdesc .  . .'
   'picture itemdesc  editbutton editbutton editbutton'
   '. .  editbutton editbutton editbutton';
@@ -293,13 +389,19 @@ body {
 
 .item-picture{
   grid-area: picture;
-  background-color: lightblue;
+  background-color: rgba(0,0,0,0.5);
   align-self: center;
   justify-self: center;
   height: 100%;
+  aspect-ratio: 1/1;
   border: black 3px solid;
   box-sizing: border-box;
   z-index: 1;
+}
+
+.item-picture:hover{
+  cursor: pointer;
+  background-color: rgba(202, 200, 189, 0.5);  
 }
 
 .item-name{
@@ -307,11 +409,18 @@ body {
   grid-area: itemname;
   background-size: contain;
   align-self: flex-end; /*i want to bring this closer to the bottom*/
-  height: 50px;
+  height: 40px;
   font-size: xx-large;
   font-weight: 500;
   z-index: 1;
   border-bottom:  2px solid black;
+}
+
+.item-class{
+  display: flex;
+  grid-area: itemclass;
+  align-self: flex-start;
+  z-index: 1;
 }
 
 .item-desc{
@@ -339,23 +448,26 @@ body {
 }
 
 .item-div {
-  display: flex;
-  flex-direction: row;
-  align-items: space-evenly;
-  justify-content: space-evenly;
-  background-image: url("scroll_bg.jpg");
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 25px 1fr 25px 1fr 0.5fr;
+  grid-template-rows: 15px 50px 150px repeat(3, 25px) 150px repeat(3, 25px) 2fr;
+  grid-template-areas: 
+  '. . . . . . .'
+  '. . . helmet . . .'
+  '. main-hand . helmet . off-hand .'
+  '. main-hand . . . off-hand .'
+  '. main-hand . armor . off-hand .'
+  '. . . armor . . .'
+  '. ranged-weapon . armor . backpack .'
+  '. ranged-weapon . . .  backpack .'
+  '. ranged-weapon . name . backpack .'
+  '. . . . . . .'
+  '. misc misc misc misc misc .';
+  background-image: url("pager2.jpeg");
+  background-size: 100% auto;
+  background-repeat: repeat-y;
   border: black 3px solid;
-}
-
-.left-column, .right-column {
-  display: flex;
-  flex-direction: column;
-  background: rgba(0,0,0,0.5);
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  padding: 5px;
-  gap: 5px;
+  height: fit-content;
 }
 
 .equipment-slot {
@@ -363,15 +475,66 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  height: 30%;
-  padding: 10px;
   background: rgba(0,0,0,0.7);
-  border: solid rgb(205, 187, 187) 3px;
+  border: double rgb(205, 187, 187) 3px;
   box-shadow: 0 0 10px rgba(205, 187, 187, 0.5);
   margin: 0;  
   color: white;
-  position: relative
+  position: relative;
+}
+
+.name-bar {
+grid-area: name;
+position: relative;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+height: 100%;
+row-gap: 3;
+background-color: rgba(0,0,0,0.7);
+border: solid rgb(205, 187, 187) 3px;
+border-radius: 3px;
+}
+
+.toggle-button {
+  position: absolute;
+  aspect-ratio: 1/1;
+  align-self: flex-end;
+  background-color: rgba(0,0,0,0.7);
+  border: solid goldenrod 2px; 
+  border-radius: 3px;
+  height: 15%;
+  z-index: 2;
+  object-fit: contain;
+  pointer-events: auto;
+} 
+
+.toggle-button:hover {
+  background-color: rgba(202, 200, 189, 0.5);
+  cursor: pointer;
+} 
+
+.toggle-button-image{
+  position: absolute;
+  display: block;
+  z-index: inherit;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  left: 0;
+  top: 0;
+}
+
+.slot-overlay {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  pointer-events: none;
 }
 
 .slot-used {
@@ -382,6 +545,7 @@ body {
   right: 0;
   background-color: black;
   opacity: 0.7;
+  pointer-events: fill;
 }
 
 .slot-used-label {
@@ -404,6 +568,116 @@ body {
   background-color: rgba(202, 200, 189, 0.5);
 }
 
+
+.armor-slot {
+  grid-area: armor;
+}
+
+.helmet-slot {
+  grid-area: helmet;
+}
+
+.main-hand-slot {
+  grid-area: main-hand;
+}
+
+.off-hand-slot {
+  grid-area: off-hand;
+}
+
+.ranged-weapon-slot {
+  grid-area: ranged-weapon;
+}
+
+.backpack-slot {
+  grid-area: backpack;
+}
+
+.misc-array-div {
+  grid-area: misc;
+  background-color: rgba(0,0,0,0.5);
+  height: fit-content;
+  padding: 10px;
+  margin-bottom: 3%;
+  border: double rgb(205, 187, 187)
+}
+
+.misc-array-container {
+  background-color: rgba(0,0,0,0.5);
+  border-left: double rgb(205, 187, 187);
+  border-right: double rgb(205, 187, 187);
+  padding: 10px;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.misc-array-container::-webkit-scrollbar{
+  display:none;
+}
+
+.misc-item-div {
+
+  height: 65px;
+}
+
+.misc-item{
+  background-color: green;
+  display: grid;
+  grid-template-columns: 5px 50px 15px 1fr 5px;
+  grid-template-rows: 5px 1fr 1fr 5px;
+  grid-template-areas: 
+  '. . . . .'
+  '. image . name .'
+  '. image . desc .'
+  '. . . . .';
+  object-fit: contain;  
+}
+
+.misc-image-tab {
+  grid-area: image;
+  aspect-ratio: 1/1;
+  height: 50px;
+
+  border: solid black 3px;
+}
+
+
+.misc-name {
+  grid-area: name
+}
+
+.misc-description{
+  grid-area: desc
+}
+
+.misc-utils {
+  height: inherit;
+  display: grid;
+  grid-template-rows: 5px 1fr 1fr 5px;
+  grid-template-columns: 10px 1fr 10px 1fr 10px;
+  grid-template-areas:
+  '. . . . .'
+  '. add . remove .'
+  '. add . remove .'
+  '. . . . .';
+
+}
+
+.add-misc {
+  grid-area: add
+}
+
+.remove-misc {
+  grid-area: remove
+}
+
+
+
 .inventory-header {
   display: flex;
   flex-direction: row;
@@ -413,6 +687,10 @@ body {
   padding: 10px;
 }
 
+
+
+
+
 .settings-menu {
   z-index: 2;
   display: flex;
@@ -421,13 +699,15 @@ body {
   justify-content: space-around;
   background-color: rgba(42, 36, 36, 1);
   border: solid black 5px;
+  border-radius: 10px;
   padding: 10px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 35%; /* Could be more or less, depending on screen size */
-  min-width: 300px;
+  width: 50%; /* Could be more or less, depending on screen size */
+  min-width: 500px;
+
   height: 40vh;
 }
 
@@ -486,8 +766,9 @@ body {
 .settings-button-div {
   width: 50px;
   aspect-ratio: 1/1;
-  position: relative;
-  left: 5px;
+  position: absolute;
+  left: 10px;
+  top: 5px;
 }
 
 .settings-button-label {
@@ -511,4 +792,6 @@ body {
   display: flex;
   justify-self: center;
   justify-items: center;
+  margin-top: 20px;
 }
+

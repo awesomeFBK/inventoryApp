@@ -17,6 +17,7 @@
     "items": {
         "largeSlots": [
             {
+                "image": "fuzz.jpg",
                 "name": "Statue",
                 "classification": "large",
                 "description": "Statue"

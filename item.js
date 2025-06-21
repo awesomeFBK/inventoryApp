@@ -1,5 +1,6 @@
 import { smallSlots, mediumSlots, largeSlots, tinySlots, updateCounter, saveToStorage} from "./logic.js"
 import { getSlotClassification } from "./slots.js"
+import { uploadImage, uploadImageToStandard } from './utils.js';
 //classifier function 
 //do a re-read of this/review eventually pls
 export function classify(newItem){
@@ -11,25 +12,28 @@ export function classify(newItem){
         newItem.id = largeSlots.currentSize
         largeSlots.currentSize++
         updateCounter("largeSlotCounter")
-        return
+        return "large-Slots"
     } 
     //med slots
     else if (newItem.classification == "medium" && (largeSlots.currentSize < largeSlots.maxSize || mediumSlots.currentSize < mediumSlots.maxSize)) {   
         //if medium is taken up, ask if they wanna take a large slot
         if (mediumSlots.currentSize == mediumSlots.maxSize){
+            let choice =confirm("medium slot is full, add to large slot?")
+            if (!choice){return}
+            
             console.log("add to large slot?")
             largeSlots.items.push(newItem)
             newItem.id = largeSlots.currentSize
             largeSlots.currentSize++
             updateCounter("largeSlotCounter")
-            return
+            return "large-Slots"
         }
 
         mediumSlots.items.push(newItem)  
         newItem.id = mediumSlots.currentSize 
         mediumSlots.currentSize++ 
         updateCounter("mediumSlotCounter")
-        return
+        return "medium-Slots"
     } 
     //small slots
     else if (newItem.classification == "small" && (largeSlots.currentSize < largeSlots.maxSize|| mediumSlots.currentSize < mediumSlots.maxSize ||
@@ -37,27 +41,32 @@ export function classify(newItem){
                        
         //if small is taken up, check for med, and then check for large
         if (smallSlots.currentSize == smallSlots.maxSize && mediumSlots.currentSize != mediumSlots.maxSize){
-            console.log("add to medium slot?") //add confirmation for this 
+            let choice =confirm("small slot is full, add to medium slot?")
+            if (!choice){return}
+
+            console.log("add to medium slot?") //add confirmation for this  
             mediumSlots.items.push(newItem)
             newItem.id = mediumSlots.currentSize
             mediumSlots.currentSize++
             updateCounter("mediumSlotCounter")
-            return
+            return "medium-Slots"
         }
         else if (smallSlots.currentSize == smallSlots.maxSize && mediumSlots.currentSize == mediumSlots.maxSize){
+            let choice =confirm("small slot and medium is full, add to large slot?")
+            if (!choice){return}
             console.log("add to large slot?")
             largeSlots.items.push(newItem)
             newItem.id = largeSlots.currentSize
             largeSlots.currentSize++
             updateCounter("largeSlotCounter")
-            return
+            return "large-Slots"
         }
         
         smallSlots.items.push(newItem) 
         newItem.id = smallSlots.currentSize
         smallSlots.currentSize++
         updateCounter("smallSlotCounter")
-        return
+        return "small-Slots"
     } 
     //tiny slots
     else if (newItem.classification == "tiny") {
@@ -65,7 +74,7 @@ export function classify(newItem){
         newItem.id = tinySlots.currentSize
         tinySlots.currentSize++
         
-        return         
+        return "tiny-Slots"          
     } 
     //inventory full
     else {
@@ -74,7 +83,8 @@ export function classify(newItem){
 }
 
 export class Item{
-    constructor(name, classification, description) {
+    constructor(image, name, classification, description) {
+        this.image = image
         this.name = name
         this.classification = classification
         this.description = description
@@ -93,15 +103,44 @@ export class Item{
         let name = document.createElement("p")//creates a paragraph for the name
         name.innerText = this.name
 
+        let classification = document.createElement("p")
+        let classificationTemp = this.classification
+        classification.innerText = classificationTemp.charAt(0).toUpperCase() + classificationTemp.slice(1)
+
         let description = document.createElement("p")//create the paragraph for description
         description.innerText = this.description
-        
+
+        //image element
         let equipImage = document.createElement("img")
-        equipImage.src = this.image || "QuincyPortrait.webp"
+        equipImage.src = this.image || "empty_icons/item.png"
         equipImage.classList.add("item-picture")
 
+        //file input element
+        let itemFileInput = document.createElement("input")
+        itemFileInput.type = "file"
+        itemFileInput.accept = "image/*"
+        itemFileInput.style.display = "none" // Hide the file input
+
+        //associates both in a label
+        let itemLabel = document.createElement("label")
+        itemLabel.appendChild(equipImage)
+        itemLabel.appendChild(itemFileInput)
+
+        //event listener for image input
+        itemFileInput.addEventListener("change", (event) => {
+            uploadImage(event)
+                .then((base64String) => {
+                    equipImage.src = base64String
+                    this.image = base64String
+                    saveToStorage()
+                })
+                .catch((error) => {
+                    console.error("Error uploading image", error)
+                })
+        })
 
         name.classList.add("item-name")
+        classification.classList.add("item-class")
         description.classList.add("item-desc")
 
         name.contentEditable = false
@@ -141,7 +180,7 @@ export class Item{
             console.log(itemDiv.dataset.classification)
             console.log(itemFind)
 
-            let item = itemFind.items.find(item => item.id == itemDiv.dataset.id)
+            let item = itemFind.items.find(item => item.id == Number(itemDiv.dataset.id))
             if (item) {
                 item.name = name.innerText
                 item.description = description.innerText
@@ -155,8 +194,10 @@ export class Item{
         itemDiv.appendChild(itemDivOverlay)
 
         //append yo shit
-        itemDiv.appendChild(equipImage)
+        itemLabel.classList.add("item-picture")
+        itemDiv.appendChild(itemLabel)
         itemDiv.appendChild(name)
+        itemDiv.appendChild(classification)
         itemDiv.appendChild(description)
         itemDiv.appendChild(saveButton)
         itemDiv.appendChild(editButton)
@@ -169,7 +210,7 @@ export class Item{
 
 }
 
-export const emptyItem = new Item("Empty Slot", "tiny", "An empty slot.")
+export const emptyItem = new Item("", "", "tiny", "An empty slot.")
 
 export class CoinPouch{
     constructor() {
