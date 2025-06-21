@@ -157,6 +157,7 @@ function loadStandard(jsonFile){
     standardSlots.twoHandedFlag = jsonFile.standardSlots.twoHandedFlag
     standardSlots.rangedWeaponFlag = jsonFile.standardSlots.rangedWeaponFlag
     standardSlots.miscArmor = jsonFile.standardSlots.miscArmor
+    standardSlots.miscArmorSize = jsonFile.standardSlots.miscArmorSize
 }
 
 function clearSlots(){
@@ -192,6 +193,7 @@ function clearStandardSlots(){
     standardSlots.twoHandedFlag = false
     standardSlots.rangedWeaponFlag = false
     standardSlots.miscArmor = []
+    standardSlots.miscArmorSize = 0
 }
 
 

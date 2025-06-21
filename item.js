@@ -86,7 +86,7 @@ export class Item{
     constructor(image, name, classification, description) {
         this.image = image
         this.name = name
-        this.classification = classification
+        this.classification = classification || "none"
         this.description = description
         this.id = -1
 

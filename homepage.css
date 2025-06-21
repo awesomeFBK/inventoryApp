@@ -610,7 +610,7 @@ border-radius: 3px;
   height: 15vh;
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 10px;
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -621,38 +621,56 @@ border-radius: 3px;
 }
 
 .misc-item-div {
-
+  position: relative;
   height: 65px;
 }
 
 .misc-item{
-  background-color: green;
+  background-color: rgba(0,0,0,0.5);
   display: grid;
-  grid-template-columns: 5px 50px 15px 1fr 5px;
-  grid-template-rows: 5px 1fr 1fr 5px;
+  grid-template-columns: 5px 50px 15px 1fr 5px 40px 5px;
+  grid-template-rows: 5px 3fr 1fr 1fr 1fr 5px;
   grid-template-areas: 
-  '. . . . .'
-  '. image . name .'
-  '. image . desc .'
-  '. . . . .';
+  '. . . . . . .'
+  '. image . name . . .'
+  '. image . desc . . .'
+  '. image . desc . edit .'
+  '. image . desc . edit .'
+  '. . . . . . . ';
   object-fit: contain;  
+  border-bottom: outset rgb(205, 187, 187);
+  border-width: 3px;
 }
 
 .misc-image-tab {
   grid-area: image;
   aspect-ratio: 1/1;
   height: 50px;
-
   border: solid black 3px;
 }
 
-
 .misc-name {
-  grid-area: name
+  grid-area: name;
+  display: flex;
+  align-self: center;
+  border-bottom: solid rgb(205, 187, 187) 1px;
+  height: 24px;
 }
 
 .misc-description{
-  grid-area: desc
+  grid-area: desc;
+  font-size: small;
+  display: flex;
+  align-self: center;
+}
+
+.misc-item-edit{
+  grid-area: edit;
+  border: solid black 1px;
+}
+
+.misc-item-edit:hover{
+  cursor: pointer;
 }
 
 .misc-utils {

@@ -45,6 +45,7 @@ export class StandardSlots extends Slots{
         this.rangedWeaponFlag = true //if you are using a ranged weapon or converting it into two small slots
         this.twoHandedFlag = false //if you are using two hands
         this.miscArmor = [] //for miscallaneous enchanted items
+        this.miscArmorSize = 0 //for tracking how many enchanted items are there
     }
 
     renderStandardSlots(){
@@ -615,43 +616,84 @@ export class StandardSlots extends Slots{
 
         miscEquipmentDiv.appendChild(miscEquipmentContainer)
 
-        for (let i = 0; i < 11; i++){
-            let sampleItem = this.renderMiscItem()
-            miscEquipmentContainer.appendChild(sampleItem)
+        this.miscArmor.forEach(item => {
+            console.log(item)
+            let image = item.image
+            let name = item.name
+            let description = item.description
+            let render = this.renderMiscItem(image, name, description)
+            miscEquipmentContainer.appendChild(render)
+        })
 
-        }
-
-
-
+    
         let utilDiv = this.renderMiscUtility()
         miscEquipmentContainer.appendChild(utilDiv)
 
         return miscEquipmentDiv
     }
 
-    renderMiscItem(){
+    renderMiscItem(image, name, description){
         let miscItemDiv = document.createElement("div")
         miscItemDiv.classList.add("misc-item-div")
+        miscItemDiv.dataset.id = this.id
 
+        //overlay for the item to be appeneded
         let miscItem = document.createElement("div")
         miscItem.classList.add("misc-item")
         miscItemDiv.appendChild(miscItem)
 
+        //image
         let miscItemImage = document.createElement("img")
         miscItemImage.classList.add("misc-image-tab")
-        miscItemImage.src =  "fuzz.jpg"
+        miscItemImage.src =  "fuzz.jpg" || image
         
+        //name
         let miscItemName = document.createElement("p")
         miscItemName.classList.add("misc-name")
-        miscItemName.innerText = "Test Chacho"
+        miscItemName.innerText = name
 
+        //desc
         let miscItemDesc = document.createElement("p")
         miscItemDesc.classList.add("misc-description")
-        miscItemDesc.innerText = "YoChaCho"
+        miscItemDesc.innerText = description
+
+        //edit
+        let miscItemEdit = document.createElement("button")
+        miscItemEdit.classList.add("misc-item-edit")
+        miscItemEdit.innerText = "Edit"
+
+        //save
+        let miscItemSave = document.createElement("button")
+        miscItemSave.classList.add("misc-item-edit", "hidden")
+        miscItemSave.innerText = "Save"
+
+        //listener for the edit button
+        miscItemEdit.addEventListener("click", function(){
+            miscItemName.contentEditable = true
+            miscItemDesc.contentEditable = true
+            miscItemEdit.classList.add("hidden")
+            miscItemSave.classList.remove("hidden")
+        })
+
+        //listener for the save button
+        miscItemSave.addEventListener("click", function(){
+            miscItemName.contentEditable = false
+            miscItemDesc.contentEditable = false
+            miscItemEdit.classList.remove("hidden")
+            miscItemSave.classList.add("hidden")   
+            //saveToStorage()        
+        })
+
+        let removeItemCheckbox = document.createElement("input")
+        removeItemCheckbox.type = "checkbox"
+        removeItemCheckbox.classList.add("hidden", "remove-element", "remove-checkbox")
 
         miscItem.appendChild(miscItemImage)
         miscItem.appendChild(miscItemName)
         miscItem.appendChild(miscItemDesc)
+        miscItem.appendChild(miscItemEdit)
+        miscItem.appendChild(miscItemSave)
+        miscItem.appendChild(removeItemCheckbox)
 
         return miscItemDiv
     }
@@ -676,6 +718,20 @@ export class StandardSlots extends Slots{
         utilDivLayout.appendChild(removeButton)
         return utilDiv
     }
+
+    addMiscItem(){//the id's reset when rendered
+        let MiscItem = new Item("empty_icons/item.png", itemName.value)
+    }
+
+    saveMiscItem(){
+
+    }
+
+    removeMiscItem(){
+        
+    }
+
+    
 }
 
 export function addItem(){ //fix this and understand the rest
