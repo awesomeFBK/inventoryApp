@@ -714,6 +714,18 @@ export class StandardSlots extends Slots{
         removeButton.classList.add("remove-misc")
         removeButton.innerText = "-"
 
+        addButton.addEventListener("click", function(){
+            //open the add misc item modal
+            let modal = document.getElementById("miscItemModal")
+            modal.style.display = "block"
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none"
+                }
+            }
+        })
+
         utilDivLayout.appendChild(addButton)
         utilDivLayout.appendChild(removeButton)
         return utilDiv

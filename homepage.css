@@ -25,6 +25,7 @@ p {
   line-height: 1.7;
   
 }
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -39,32 +40,62 @@ p {
   }
 
 /* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.add-item-modal {
+    background-color: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid rgb(205, 187, 187) 3px;
+    border-radius: 3px;
+    height: 250px;
+    width: 70%; /* Could be more or less, depending on screen size */
+    display: grid;
+    grid-template-columns: 5px 1fr 1fr 5px 80px 5px;
+    grid-template-rows: 5px 1fr 1fr 1fr 30px 5px;
+    grid-template-areas:
+    '. . . . . .'
+    '. itemImage itemName itemName itemName .'
+    '. itemImage itemClass itemClass itemClass .'
+    '. itemImage itemDescription itemDescription itemDescription .'
+    '. . . . saveItem .'
+    '. . . . . .';
+
+
   }
 
   .hidden {
     display: none !important;
   }
+
+#addItemImage {
+  grid-area: itemImage;
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.add-name-div {
+  grid-area: itemName;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  width: 80%;
+  
+}
+
+.add-class-div {
+  grid-area: itemClass;
+  height: 100%;
+}
+
+.add-desc-div {
+  grid-area: itemDescription;
+}
+
+#saveItem {
+  grid-area: saveItem;
+}
 
 .black-overlay {
   position: fixed;
@@ -694,7 +725,33 @@ border-radius: 3px;
   grid-area: remove
 }
 
+.add-misc-content {
+  background-color: rgba(0,0,0,0.8);
+  border: solid rgb(205, 187, 187) 3px;
+  border-radius: 3px;
+  width: 70%;
+  height: 250px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+#addMiscLabel {
+  margin-top: -1.5%;
+  margin-bottom: 1.5%;
+}
+#miscItemName {
+  margin-top: -10px;
+}
+
+#miscItemDescription {
+  margin-top: -10px;
+}
 
 .inventory-header {
   display: flex;

@@ -136,11 +136,17 @@
 
     <!--For adding items-->
     <div id="itemAddModal" class="modal">
-        <div class="modal-content">
+        <div class="add-item-modal">
             <!--input for name here-->
-            <label for="itemName">Item Name:</label><br>
-            <input type="text" id="itemName"><br>
+            <div id="addItemImage2">
+                <img src="fuzz.jpg" id="addItemImage">
+            </div>
+            <div class = "add-name-div">
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName">
+            </div>
 
+            <div class = "add-class-div">
             <!--input for classification here-->
             <label for="itemClassification">Item Class:</label><br>
             <select id="itemClassification">
@@ -148,14 +154,29 @@
                 <option value = "medium">Medium Slot</option>
                 <option value = "small">Small Slot</option>
                 <option value = "tiny">Tiny Slot</option>
-            </select><br>
+            </select>
+            </div>
 
+            <div class = "add-desc-div">
             <!--input for description here-->
-            <label for="itemDescription">Item Description:</label><br>
-            <input type="text" id="itemDescription"><br>
+            <label for="itemDescription">Item Description:</label>
+            <input type="text" id="itemDescription">
+            </div>
 
             <!--save button-->
             <button id="saveItem">Save Item</button>
+        </div>
+    </div>
+
+    <!--For adding items to misc-->
+    <div id="miscItemModal" class="modal">
+        <div class="add-misc-content">
+            <h1 id="addMiscLabel">Add Equipment</h1>
+            <label for = "miscItemName">Item Name:</label><br>
+            <input type="text" id="miscItemName"><br>
+
+            <label for="miscItemDescription">Item Description:</label><br>
+            <input type="text" id="miscItemDescription"><br>
         </div>
     </div>
 
