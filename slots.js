@@ -1,4 +1,4 @@
-import { CoinPouch,emptyItem } from "./item.js"
+import { CoinPouch,emptyItem, Item } from "./item.js"
 import { smallSlots, mediumSlots, largeSlots, tinySlots, updateCounter, saveToStorage, getClassificationfromContainerID } from "./logic.js"
 import { uploadImage, uploadImageToStandard } from './utils.js';
 
@@ -612,9 +612,12 @@ export class StandardSlots extends Slots{
 
         //creates the div that holds stuff inside
         let miscEquipmentContainer = document.createElement("div")
+        miscEquipmentContainer.id = "miscEquipmentContainer"
         miscEquipmentContainer.classList.add("misc-array-container")
 
         miscEquipmentDiv.appendChild(miscEquipmentContainer)
+
+        this.miscArmorSize = 0
 
         this.miscArmor.forEach(item => {
             console.log(item)
@@ -622,7 +625,9 @@ export class StandardSlots extends Slots{
             let name = item.name
             let description = item.description
             let render = this.renderMiscItem(image, name, description)
+            render.id = this.miscArmorSize
             miscEquipmentContainer.appendChild(render)
+            this.miscArmorSize++
         })
 
     
@@ -635,7 +640,7 @@ export class StandardSlots extends Slots{
     renderMiscItem(image, name, description){
         let miscItemDiv = document.createElement("div")
         miscItemDiv.classList.add("misc-item-div")
-        miscItemDiv.dataset.id = this.id
+        miscItemDiv.dataset.id = this.miscArmorSize
 
         //overlay for the item to be appeneded
         let miscItem = document.createElement("div")
@@ -645,7 +650,7 @@ export class StandardSlots extends Slots{
         //image
         let miscItemImage = document.createElement("img")
         miscItemImage.classList.add("misc-image-tab")
-        miscItemImage.src =  "fuzz.jpg" || image
+        miscItemImage.src =  "empty_icons/necklace.png" || image
         
         //name
         let miscItemName = document.createElement("p")
@@ -673,6 +678,8 @@ export class StandardSlots extends Slots{
             miscItemDesc.contentEditable = true
             miscItemEdit.classList.add("hidden")
             miscItemSave.classList.remove("hidden")
+
+            removeItemButton.classList.remove("hidden")
         })
 
         //listener for the save button
@@ -681,24 +688,41 @@ export class StandardSlots extends Slots{
             miscItemDesc.contentEditable = false
             miscItemEdit.classList.remove("hidden")
             miscItemSave.classList.add("hidden")   
+
+            removeItemButton.classList.add("hidden")
             //saveToStorage()        
         })
 
-        let removeItemCheckbox = document.createElement("input")
-        removeItemCheckbox.type = "checkbox"
-        removeItemCheckbox.classList.add("hidden", "remove-element", "remove-checkbox")
+        let removeItemButton = document.createElement("button")
+        removeItemButton.innerText = "delete"
+        removeItemButton.classList.add("hidden", "deleteButton")
+
+        removeItemButton.addEventListener("click", (event) => {
+            let choice = confirm("Are you sure you want to delete this item?")
+            if (!choice){return}
+
+            let itemDiv = event.target.closest(".misc-item-div")
+            let itemID = parseInt(itemDiv.dataset.id)
+            console.log(itemID)
+            this.miscArmor.splice(itemID, 1)
+            this.miscArmorSize--
+
+            itemDiv.remove()
+            saveToStorage()
+        })
 
         miscItem.appendChild(miscItemImage)
         miscItem.appendChild(miscItemName)
         miscItem.appendChild(miscItemDesc)
         miscItem.appendChild(miscItemEdit)
         miscItem.appendChild(miscItemSave)
-        miscItem.appendChild(removeItemCheckbox)
+        miscItem.appendChild(removeItemButton)
 
         return miscItemDiv
     }
 
     renderMiscUtility(){
+        //fix this
         let utilDiv = document.createElement("div")
         utilDiv.classList.add("misc-item-div")
 
@@ -710,9 +734,6 @@ export class StandardSlots extends Slots{
         addButton.classList.add("add-misc")
         addButton.innerText = "+"
 
-        let removeButton = document.createElement("button")
-        removeButton.classList.add("remove-misc")
-        removeButton.innerText = "-"
 
         addButton.addEventListener("click", function(){
             //open the add misc item modal
@@ -723,27 +744,41 @@ export class StandardSlots extends Slots{
                 if (event.target == modal) {
                     modal.style.display = "none"
                 }
-            }
+            }            
         })
 
         utilDivLayout.appendChild(addButton)
-        utilDivLayout.appendChild(removeButton)
         return utilDiv
     }
 
-    addMiscItem(){//the id's reset when rendered
-        let MiscItem = new Item("empty_icons/item.png", itemName.value)
-    }
-
     saveMiscItem(){
+        console.log(this.miscArmorSize)
+        let MiscItem = new Item("empty_icons/necklace.png", miscItemName.value, "tiny", miscItemDescription.value)
+        MiscItem.id = this.miscArmorSize
+        try{
+            this.miscArmor.push(MiscItem)
+            this.miscArmorSize++
+        }
+        catch{
+            console.error("Not able to append")
+        }
 
+        //generation works. rendering Last doesn't. id doesn't
+
+        this.renderLastMisc()
+        saveToStorage()
     }
 
-    removeMiscItem(){
+    renderLastMisc(){
+        console.log(this.miscArmor)
+        let lastItem = this.miscArmor[this.miscArmor.length-1]
+        console.log(lastItem)
+        let render = this.renderMiscItem(lastItem.image, lastItem.name, lastItem.description)
+        let container = document.getElementById("miscEquipmentContainer")
         
-    }
+        container.insertBefore(render, container.children[container.children.length -1 ])
 
-    
+    }
 }
 
 export function addItem(){ //fix this and understand the rest

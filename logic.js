@@ -156,8 +156,14 @@ function loadStandard(jsonFile){
     standardSlots.backpack = jsonFile.standardSlots.backpack
     standardSlots.twoHandedFlag = jsonFile.standardSlots.twoHandedFlag
     standardSlots.rangedWeaponFlag = jsonFile.standardSlots.rangedWeaponFlag
-    standardSlots.miscArmor = jsonFile.standardSlots.miscArmor
-    standardSlots.miscArmorSize = jsonFile.standardSlots.miscArmorSize
+    standardSlots.miscArmorSize = 0
+    jsonFile.standardSlots.miscArmor.forEach(obj => {
+        const newItem = new Item(obj.image, obj.name, obj.classification, obj.description)
+        standardSlots.miscArmor.push(newItem)
+        newItem.id = standardSlots.miscArmorSize
+        console.log(newItem)
+        standardSlots.miscArmorSize++
+    })
 }
 
 function clearSlots(){
@@ -506,6 +512,10 @@ document.getElementById("strengthModifierDisplay").addEventListener("blur", () =
     updateCounter("mediumSlotCounter")
     updateCounter("smallSlotCounter")
     saveToStorage()
+})
+
+document.getElementById("saveMisc").addEventListener("click", () => {
+    standardSlots.saveMiscItem()
 })
 
 //listeners for opening and closing from localstorage
