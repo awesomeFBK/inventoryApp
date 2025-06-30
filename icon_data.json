@@ -1,0 +1,4542 @@
+[
+  {
+    "filename": "Adventuring Gear/Abacus.svg",
+    "name": "abacus",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Alms box.svg",
+    "name": "alms box",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Axe.svg",
+    "name": "axe",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Backpack.svg",
+    "name": "backpack",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Ball Bearing.svg",
+    "name": "ball bearing",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Ball Bearings (bag of 1000).svg",
+    "name": "ball bearings (bag of 1000)",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Ball of String.svg",
+    "name": "ball of string",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Bandage.svg",
+    "name": "bandage",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Barrel.svg",
+    "name": "barrel",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Basic Fishing Equipment.svg",
+    "name": "basic fishing equipment",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Basket.svg",
+    "name": "basket",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Bedroll.svg",
+    "name": "bedroll",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Bell.svg",
+    "name": "bell",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Blanket.svg",
+    "name": "blanket",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Block and Tackle.svg",
+    "name": "block and tackle",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Book.svg",
+    "name": "book",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Bottle.svg",
+    "name": "bottle",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Bucket.svg",
+    "name": "bucket",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Bullseye Lantern.svg",
+    "name": "bullseye lantern",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Burglar Pack.svg",
+    "name": "burglar pack",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Caltrop.svg",
+    "name": "caltrop",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Caltrops (bag of 20).svg",
+    "name": "caltrops (bag of 20)",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Candle.svg",
+    "name": "candle",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Chain.svg",
+    "name": "chain",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Chalk.svg",
+    "name": "chalk",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Chest.svg",
+    "name": "chest",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Climbers Kit.svg",
+    "name": "climbers kit",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Cloth.svg",
+    "name": "cloth",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Clothing, cold weather.svg",
+    "name": "clothing, cold weather",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Coin Pouch.svg",
+    "name": "coin pouch",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Comb.svg",
+    "name": "comb",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Common Clothes.svg",
+    "name": "common clothes",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Component Pouch.svg",
+    "name": "component pouch",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Costume Clothes.svg",
+    "name": "costume clothes",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Crampons.svg",
+    "name": "crampons",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Crossbow Bolt Case.svg",
+    "name": "crossbow bolt case",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Crowbar.svg",
+    "name": "crowbar",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Diplomat Pack.svg",
+    "name": "diplomat pack",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Dungeoneer Pack.svg",
+    "name": "dungeoneer pack",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Entertainer Pack.svg",
+    "name": "entertainer pack",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Explorer Pack.svg",
+    "name": "explorer pack",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Fine Clothes.svg",
+    "name": "fine clothes",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Fishing Tackle.svg",
+    "name": "fishing tackle",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Flask.svg",
+    "name": "flask",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Generic - Tin.svg",
+    "name": "generic   tin",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Glass Bottle.svg",
+    "name": "glass bottle",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Grappling Hook.svg",
+    "name": "grappling hook",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Hammer.svg",
+    "name": "hammer",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Hat with Feather.svg",
+    "name": "hat with feather",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Healers Kit.svg",
+    "name": "healers kit",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Hempen Rope.svg",
+    "name": "hempen rope",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Hip Flask.svg",
+    "name": "hip flask",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Hooded Lantern.svg",
+    "name": "hooded lantern",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Hourglass.svg",
+    "name": "hourglass",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Hunting Trap.svg",
+    "name": "hunting trap",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Ink Pen.svg",
+    "name": "ink pen",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Ink.svg",
+    "name": "ink",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Iron Pot.svg",
+    "name": "iron pot",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Iron Spike.svg",
+    "name": "iron spike",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Jar.svg",
+    "name": "jar",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Jug.svg",
+    "name": "jug",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Key.svg",
+    "name": "key",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Knife.svg",
+    "name": "knife",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Ladder.svg",
+    "name": "ladder",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Lamp.svg",
+    "name": "lamp",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Lock.svg",
+    "name": "lock",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Magnifying Glass.svg",
+    "name": "magnifying glass",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Mallet.svg",
+    "name": "mallet",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Manacles.svg",
+    "name": "manacles",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Map or Scroll Case.svg",
+    "name": "map or scroll case",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Merchants Scales.svg",
+    "name": "merchants scales",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Mess Kit.svg",
+    "name": "mess kit",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Miners Pick.svg",
+    "name": "miners pick",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Mirror.svg",
+    "name": "mirror",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Mortar and Pestle.svg",
+    "name": "mortar and pestle",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Needle and Thread.svg",
+    "name": "needle and thread",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Paper (one sheet).svg",
+    "name": "paper (one sheet)",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Parchment (one sheet).svg",
+    "name": "parchment (one sheet)",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Perfume.svg",
+    "name": "perfume",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Pitcher.svg",
+    "name": "pitcher",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Pitons.svg",
+    "name": "pitons",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Pole (10-foot).svg",
+    "name": "pole (10 foot)",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Portable Ram.svg",
+    "name": "portable ram",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Pouch.svg",
+    "name": "pouch",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Priests Pack.svg",
+    "name": "priests pack",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Quiver.svg",
+    "name": "quiver",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Rations (1 day).svg",
+    "name": "rations (1 day)",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Robes.svg",
+    "name": "robes",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Sack.svg",
+    "name": "sack",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Saw.svg",
+    "name": "saw",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Scholar Pack.svg",
+    "name": "scholar pack",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Sealing Wax.svg",
+    "name": "sealing wax",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Sextant.svg",
+    "name": "sextant",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Shovel.svg",
+    "name": "shovel",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Signal Whistle.svg",
+    "name": "signal whistle",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Signet Ring - Dove.svg",
+    "name": "signet ring   dove",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Signet Ring - Dragon.svg",
+    "name": "signet ring   dragon",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Signet Ring - Skull.svg",
+    "name": "signet ring   skull",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Silk Rope.svg",
+    "name": "silk rope",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Sledgehammer.svg",
+    "name": "sledgehammer",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Snowshoes.svg",
+    "name": "snowshoes",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Soap.svg",
+    "name": "soap",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Spellbook.svg",
+    "name": "spellbook",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Spyglass.svg",
+    "name": "spyglass",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Steel Mirror.svg",
+    "name": "steel mirror",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Tankard.svg",
+    "name": "tankard",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Tinderbox.svg",
+    "name": "tinderbox",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Torch.svg",
+    "name": "torch",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Traveler's Clothes.svg",
+    "name": "traveler's clothes",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Two-Person Tent.svg",
+    "name": "two person tent",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Vestments.svg",
+    "name": "vestments",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Vial.svg",
+    "name": "vial",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Waterskin.svg",
+    "name": "waterskin",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Wax Seal Stamp.svg",
+    "name": "wax seal stamp",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Whetstone.svg",
+    "name": "whetstone",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Winter Blanket.svg",
+    "name": "winter blanket",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Adventuring Gear/Wizard hat.svg",
+    "name": "wizard hat",
+    "category": "Adventuring Gear"
+  },
+  {
+    "filename": "Ammunition/Adamantine Arrow.svg",
+    "name": "adamantine arrow",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Adamantine Blowgun Needle.svg",
+    "name": "adamantine blowgun needle",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Adamantine Crossbow Bolt.svg",
+    "name": "adamantine crossbow bolt",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Adamantine Sling Bullet.svg",
+    "name": "adamantine sling bullet",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Arrow.svg",
+    "name": "arrow",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Arrows.svg",
+    "name": "arrows",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Blowgun Needle.svg",
+    "name": "blowgun needle",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Blowgun Needles.svg",
+    "name": "blowgun needles",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Crossbow Bolt.svg",
+    "name": "crossbow bolt",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Crossbow Bolts.svg",
+    "name": "crossbow bolts",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Silvered Arrow.svg",
+    "name": "silvered arrow",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Silvered Blowgun Needle.svg",
+    "name": "silvered blowgun needle",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Silvered Crossbow Bolt.svg",
+    "name": "silvered crossbow bolt",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Silvered Sling Bullet.svg",
+    "name": "silvered sling bullet",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Sling Bullet.svg",
+    "name": "sling bullet",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Sling Bullets (improvised).svg",
+    "name": "sling bullets (improvised)",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Ammunition/Sling Bullets.svg",
+    "name": "sling bullets",
+    "category": "Ammunition"
+  },
+  {
+    "filename": "Armour/Breastplate.svg",
+    "name": "breastplate",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Chain mail.svg",
+    "name": "chain mail",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Chain Shirt.svg",
+    "name": "chain shirt",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Goggles.svg",
+    "name": "goggles",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Half Plate Armour.svg",
+    "name": "half plate armour",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Hide Armour.svg",
+    "name": "hide armour",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Leather Armour.svg",
+    "name": "leather armour",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Padded Armour.svg",
+    "name": "padded armour",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Plate Armour.svg",
+    "name": "plate armour",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Ring Mail.svg",
+    "name": "ring mail",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Scale mail.svg",
+    "name": "scale mail",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Shield (Checked).svg",
+    "name": "shield (checked)",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Shield (Kite).svg",
+    "name": "shield (kite)",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Shield (round).svg",
+    "name": "shield (round)",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Spiked Armour.svg",
+    "name": "spiked armour",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Splint Armour.svg",
+    "name": "splint armour",
+    "category": "Armour"
+  },
+  {
+    "filename": "Armour/Studded Leather Armour.svg",
+    "name": "studded leather armour",
+    "category": "Armour"
+  },
+  {
+    "filename": "Books and Scrolls/Alchemical Compendium.svg",
+    "name": "alchemical compendium",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Anatomy.svg",
+    "name": "anatomy",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Atlas of Endless Horizons.svg",
+    "name": "atlas of endless horizons",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book - Black.svg",
+    "name": "book   black",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book - Blue.svg",
+    "name": "book   blue",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book - Brown.svg",
+    "name": "book   brown",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book - Gold.svg",
+    "name": "book   gold",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book - Green.svg",
+    "name": "book   green",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book - Orange.svg",
+    "name": "book   orange",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book - Purple.svg",
+    "name": "book   purple",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book - Rainbow.svg",
+    "name": "book   rainbow",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book - Red.svg",
+    "name": "book   red",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book - Silver.svg",
+    "name": "book   silver",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book - White.svg",
+    "name": "book   white",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book - Yellow.svg",
+    "name": "book   yellow",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book of Death.svg",
+    "name": "book of death",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book of Exalted Deeds.svg",
+    "name": "book of exalted deeds",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book of Lore.svg",
+    "name": "book of lore",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book of Shadows.svg",
+    "name": "book of shadows",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Book of Vile Darkness.svg",
+    "name": "book of vile darkness",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Locked Book.svg",
+    "name": "locked book",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Book - Cold.svg",
+    "name": "magic book   cold",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Book - Fire.svg",
+    "name": "magic book   fire",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Book - Necromancy.svg",
+    "name": "magic book   necromancy",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Book - Pearl.svg",
+    "name": "magic book   pearl",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Scroll - Black Ribbon.svg",
+    "name": "magic scroll   black ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Scroll - Blue Ribbon.svg",
+    "name": "magic scroll   blue ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Scroll - Bronze Ribbon.svg",
+    "name": "magic scroll   bronze ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Scroll - Gold Ribbon.svg",
+    "name": "magic scroll   gold ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Scroll - Gold.svg",
+    "name": "magic scroll   gold",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Scroll - Green Ribbon.svg",
+    "name": "magic scroll   green ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Scroll - Purple Ribbon.svg",
+    "name": "magic scroll   purple ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Scroll - Rainbow Ribbon.svg",
+    "name": "magic scroll   rainbow ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Scroll - Red Ribbon.svg",
+    "name": "magic scroll   red ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Scroll - Silver Ribbon.svg",
+    "name": "magic scroll   silver ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Scroll - Silver.svg",
+    "name": "magic scroll   silver",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Scroll - White Ribbon.svg",
+    "name": "magic scroll   white ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Magic Scroll - Yellow Ribbon.svg",
+    "name": "magic scroll   yellow ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Manual of Bodily Health.svg",
+    "name": "manual of bodily health",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Manual of Gainful Exercise.svg",
+    "name": "manual of gainful exercise",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Manual of Golems.svg",
+    "name": "manual of golems",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Manual of Quickness of Action.svg",
+    "name": "manual of quickness of action",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Plain Scroll 1.svg",
+    "name": "plain scroll 1",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Plain Scroll 2.svg",
+    "name": "plain scroll 2",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Plain Scroll 3.svg",
+    "name": "plain scroll 3",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Prayer Book.svg",
+    "name": "prayer book",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Scroll - Black Ribbon.svg",
+    "name": "scroll   black ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Scroll - Blue Ribbon.svg",
+    "name": "scroll   blue ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Scroll - Brown Ribbon.svg",
+    "name": "scroll   brown ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Scroll - Green Ribbon.svg",
+    "name": "scroll   green ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Scroll - Purple Ribbon.svg",
+    "name": "scroll   purple ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Scroll - Red Ribbon.svg",
+    "name": "scroll   red ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Scroll - White Ribbon.svg",
+    "name": "scroll   white ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Scroll - Yellow Ribbon.svg",
+    "name": "scroll   yellow ribbon",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Tome of Clear Thought.svg",
+    "name": "tome of clear thought",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Tome of Leadership and Influence.svg",
+    "name": "tome of leadership and influence",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Books and Scrolls/Tome of Understanding.svg",
+    "name": "tome of understanding",
+    "category": "Books and Scrolls"
+  },
+  {
+    "filename": "Food and Drink/Ale (gallon).svg",
+    "name": "ale (gallon)",
+    "category": "Food and Drink"
+  },
+  {
+    "filename": "Food and Drink/Ale (Mug).svg",
+    "name": "ale (mug)",
+    "category": "Food and Drink"
+  },
+  {
+    "filename": "Food and Drink/Apple.svg",
+    "name": "apple",
+    "category": "Food and Drink"
+  },
+  {
+    "filename": "Food and Drink/Bottle of Wine.svg",
+    "name": "bottle of wine",
+    "category": "Food and Drink"
+  },
+  {
+    "filename": "Food and Drink/Chunk of Meat.svg",
+    "name": "chunk of meat",
+    "category": "Food and Drink"
+  },
+  {
+    "filename": "Food and Drink/Common Wine (Pitcher).svg",
+    "name": "common wine (pitcher)",
+    "category": "Food and Drink"
+  },
+  {
+    "filename": "Food and Drink/Fine Wine (Bottle).svg",
+    "name": "fine wine (bottle)",
+    "category": "Food and Drink"
+  },
+  {
+    "filename": "Food and Drink/Herb.svg",
+    "name": "herb",
+    "category": "Food and Drink"
+  },
+  {
+    "filename": "Food and Drink/Hunk of Cheese.svg",
+    "name": "hunk of cheese",
+    "category": "Food and Drink"
+  },
+  {
+    "filename": "Food and Drink/Loaf of Bread.svg",
+    "name": "loaf of bread",
+    "category": "Food and Drink"
+  },
+  {
+    "filename": "Gaming Sets/Board Game.svg",
+    "name": "board game",
+    "category": "Gaming Sets"
+  },
+  {
+    "filename": "Gaming Sets/Dice Set.svg",
+    "name": "dice set",
+    "category": "Gaming Sets"
+  },
+  {
+    "filename": "Gaming Sets/Dragonchess Set.svg",
+    "name": "dragonchess set",
+    "category": "Gaming Sets"
+  },
+  {
+    "filename": "Gaming Sets/Playing Card.svg",
+    "name": "playing card",
+    "category": "Gaming Sets"
+  },
+  {
+    "filename": "Gaming Sets/Three-Dragon Ante Set.svg",
+    "name": "three dragon ante set",
+    "category": "Gaming Sets"
+  },
+  {
+    "filename": "Instruments/Bagpipes.svg",
+    "name": "bagpipes",
+    "category": "Instruments"
+  },
+  {
+    "filename": "Instruments/Bassoon.svg",
+    "name": "bassoon",
+    "category": "Instruments"
+  },
+  {
+    "filename": "Instruments/Drum.svg",
+    "name": "drum",
+    "category": "Instruments"
+  },
+  {
+    "filename": "Instruments/Dulcimer.svg",
+    "name": "dulcimer",
+    "category": "Instruments"
+  },
+  {
+    "filename": "Instruments/Flute.svg",
+    "name": "flute",
+    "category": "Instruments"
+  },
+  {
+    "filename": "Instruments/Horn.svg",
+    "name": "horn",
+    "category": "Instruments"
+  },
+  {
+    "filename": "Instruments/Lute.svg",
+    "name": "lute",
+    "category": "Instruments"
+  },
+  {
+    "filename": "Instruments/Lyre.svg",
+    "name": "lyre",
+    "category": "Instruments"
+  },
+  {
+    "filename": "Instruments/Pan Flute.svg",
+    "name": "pan flute",
+    "category": "Instruments"
+  },
+  {
+    "filename": "Instruments/Shawm.svg",
+    "name": "shawm",
+    "category": "Instruments"
+  },
+  {
+    "filename": "Instruments/Tambourine.svg",
+    "name": "tambourine",
+    "category": "Instruments"
+  },
+  {
+    "filename": "Instruments/Viol.svg",
+    "name": "viol",
+    "category": "Instruments"
+  },
+  {
+    "filename": "Instruments/Wargong.svg",
+    "name": "wargong",
+    "category": "Instruments"
+  },
+  {
+    "filename": "Magical Items/Abracadabrus.svg",
+    "name": "abracadabrus",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Alchemy Jug.svg",
+    "name": "alchemy jug",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Amulet of Health.svg",
+    "name": "amulet of health",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Amulet of Proof against Detection and Location.svg",
+    "name": "amulet of proof against detection and location",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Amulet of the Planes.svg",
+    "name": "amulet of the planes",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Animated Shield.svg",
+    "name": "animated shield",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Arrow-Catching Shield.svg",
+    "name": "arrow catching shield",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Bag of Devouring.svg",
+    "name": "bag of devouring",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Bag of Holding - Small.svg",
+    "name": "bag of holding   small",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Bag of Holding.svg",
+    "name": "bag of holding",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Bag of Tricks - Gray.svg",
+    "name": "bag of tricks   gray",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Bag of Tricks - Rust.svg",
+    "name": "bag of tricks   rust",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Bag of Tricks - Tan.svg",
+    "name": "bag of tricks   tan",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Bead of Force.svg",
+    "name": "bead of force",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Belt of Dwarvenkind.svg",
+    "name": "belt of dwarvenkind",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Boots of Elvenkind.svg",
+    "name": "boots of elvenkind",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Boots of Levitation.svg",
+    "name": "boots of levitation",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Boots of Speed.svg",
+    "name": "boots of speed",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Boots of the Winterlands.svg",
+    "name": "boots of the winterlands",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Bowl of Commanding Water Elementals.svg",
+    "name": "bowl of commanding water elementals",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Bracers of Archery.svg",
+    "name": "bracers of archery",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Bracers of Defense.svg",
+    "name": "bracers of defense",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Broom of Flying.svg",
+    "name": "broom of flying",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Cap of Water Breathing.svg",
+    "name": "cap of water breathing",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Cape of the Mountebank.svg",
+    "name": "cape of the mountebank",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Cauldron of Plenty.svg",
+    "name": "cauldron of plenty",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Charlatans Die.svg",
+    "name": "charlatans die",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Circlet of Blasting.svg",
+    "name": "circlet of blasting",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Cloak of Arachnida.svg",
+    "name": "cloak of arachnida",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Cloak of Elvenkind.svg",
+    "name": "cloak of elvenkind",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Cloak of Invisibility.svg",
+    "name": "cloak of invisibility",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Cloak of Protection.svg",
+    "name": "cloak of protection",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Cloak of the Bat.svg",
+    "name": "cloak of the bat",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Cloak of the Manta Ray.svg",
+    "name": "cloak of the manta ray",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Clockwork Amulet.svg",
+    "name": "clockwork amulet",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Cube of Force.svg",
+    "name": "cube of force",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Cubic Gate.svg",
+    "name": "cubic gate",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Daerns Instant Fortress.svg",
+    "name": "daerns instant fortress",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Decanter of Endless Water.svg",
+    "name": "decanter of endless water",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Deck of Illusions.svg",
+    "name": "deck of illusions",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Deck of Many Things.svg",
+    "name": "deck of many things",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Driftglobe.svg",
+    "name": "driftglobe",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Dust of Disappearance.svg",
+    "name": "dust of disappearance",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Dust of Dryness.svg",
+    "name": "dust of dryness",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Dust of Sneezing and Choking.svg",
+    "name": "dust of sneezing and choking",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ear Horn of Hearing.svg",
+    "name": "ear horn of hearing",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Efreeti Bottle.svg",
+    "name": "efreeti bottle",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Elemental Gem - Blue Sapphire.svg",
+    "name": "elemental gem   blue sapphire",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Elemental Gem - Emerald.svg",
+    "name": "elemental gem   emerald",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Elemental Gem - Red Corundum.svg",
+    "name": "elemental gem   red corundum",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Elemental Gem - Yellow Diamond.svg",
+    "name": "elemental gem   yellow diamond",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Eversmoking Bottle.svg",
+    "name": "eversmoking bottle",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Eyes of Charming.svg",
+    "name": "eyes of charming",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Eyes of Minute Seeing.svg",
+    "name": "eyes of minute seeing",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Eyes of the Eagle.svg",
+    "name": "eyes of the eagle",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Faerie Dust.svg",
+    "name": "faerie dust",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Gauntlets of Ogre Power.svg",
+    "name": "gauntlets of ogre power",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Gem of Brightness.svg",
+    "name": "gem of brightness",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Gem of Seeing.svg",
+    "name": "gem of seeing",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Gloves of Missile Snaring.svg",
+    "name": "gloves of missile snaring",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Gloves of Swimming and Climbing.svg",
+    "name": "gloves of swimming and climbing",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Gloves of Thievery.svg",
+    "name": "gloves of thievery",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Goggles of Night.svg",
+    "name": "goggles of night",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Hat of Disguise.svg",
+    "name": "hat of disguise",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Hat of Wizardry.svg",
+    "name": "hat of wizardry",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Headband of Intellect.svg",
+    "name": "headband of intellect",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Hewards Handy Haversack.svg",
+    "name": "hewards handy haversack",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Horseshoes of Speed.svg",
+    "name": "horseshoes of speed",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ingot of the Skold Rune.svg",
+    "name": "ingot of the skold rune",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Absorption.svg",
+    "name": "ioun stone   absorption",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Agility.svg",
+    "name": "ioun stone   agility",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Awareness.svg",
+    "name": "ioun stone   awareness",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Fortitude.svg",
+    "name": "ioun stone   fortitude",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Greater Absorption.svg",
+    "name": "ioun stone   greater absorption",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Insight.svg",
+    "name": "ioun stone   insight",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Intellect.svg",
+    "name": "ioun stone   intellect",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Leadership.svg",
+    "name": "ioun stone   leadership",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Mastery.svg",
+    "name": "ioun stone   mastery",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Protection.svg",
+    "name": "ioun stone   protection",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Regeneration.svg",
+    "name": "ioun stone   regeneration",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Reserve.svg",
+    "name": "ioun stone   reserve",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Strength.svg",
+    "name": "ioun stone   strength",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ioun Stone - Sustenance.svg",
+    "name": "ioun stone   sustenance",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Iron Flask.svg",
+    "name": "iron flask",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Lantern of Revealing.svg",
+    "name": "lantern of revealing",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Lantern of Tracking.svg",
+    "name": "lantern of tracking",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Lock of Trickery.svg",
+    "name": "lock of trickery",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Mantle of Spell Resistance.svg",
+    "name": "mantle of spell resistance",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Masters Amulet.svg",
+    "name": "masters amulet",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Medallion of Thoughts.svg",
+    "name": "medallion of thoughts",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Mystery Key.svg",
+    "name": "mystery key",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Necklace of Adaptation.svg",
+    "name": "necklace of adaptation",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Necklace of Fireballs.svg",
+    "name": "necklace of fireballs",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Necklace of Prayer Beads.svg",
+    "name": "necklace of prayer beads",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Pearl of Power.svg",
+    "name": "pearl of power",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Perfume of Bewitching.svg",
+    "name": "perfume of bewitching",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Periapt of Health.svg",
+    "name": "periapt of health",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Periapt of Proof against Poison.svg",
+    "name": "periapt of proof against poison",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Periapt of Wound Closure.svg",
+    "name": "periapt of wound closure",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Pipes of Haunting.svg",
+    "name": "pipes of haunting",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Pipes of the Sewers.svg",
+    "name": "pipes of the sewers",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Acid Resistance.svg",
+    "name": "ring of acid resistance",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Cold Resistance.svg",
+    "name": "ring of cold resistance",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Fire Resistance.svg",
+    "name": "ring of fire resistance",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Force Resistance.svg",
+    "name": "ring of force resistance",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Jumping.svg",
+    "name": "ring of jumping",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Lightning Resistance.svg",
+    "name": "ring of lightning resistance",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Mind Shielding.svg",
+    "name": "ring of mind shielding",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Necrotic Resistance.svg",
+    "name": "ring of necrotic resistance",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Poison Resistance.svg",
+    "name": "ring of poison resistance",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Psychic Resistance.svg",
+    "name": "ring of psychic resistance",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Radiant Resistance.svg",
+    "name": "ring of radiant resistance",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Swimming.svg",
+    "name": "ring of swimming",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Thunder Resistance.svg",
+    "name": "ring of thunder resistance",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Ring of Water Walking.svg",
+    "name": "ring of water walking",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Robe of Eyes.svg",
+    "name": "robe of eyes",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Robe of Scintillating Colors.svg",
+    "name": "robe of scintillating colors",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Robe of Stars.svg",
+    "name": "robe of stars",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Robe of the Archmagi - Evil.svg",
+    "name": "robe of the archmagi   evil",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Robe of the Archmagi - Good.svg",
+    "name": "robe of the archmagi   good",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Robe of the Archmagi - Neutral.svg",
+    "name": "robe of the archmagi   neutral",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Robe of Useful Items.svg",
+    "name": "robe of useful items",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Rope of Climbing.svg",
+    "name": "rope of climbing",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Scarab of Protection.svg",
+    "name": "scarab of protection",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Sending Stones.svg",
+    "name": "sending stones",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Sentinel Shield.svg",
+    "name": "sentinel shield",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Sphere of Annihilation - Glowing.svg",
+    "name": "sphere of annihilation   glowing",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Sphere of Annihilation.svg",
+    "name": "sphere of annihilation",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/Wind Fan.svg",
+    "name": "wind fan",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Magical Items/_Notice_.svg",
+    "name": " notice ",
+    "category": "Magical Items"
+  },
+  {
+    "filename": "Mount and Tack/Axe Beak - Deed.svg",
+    "name": "axe beak   deed",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Bit and bridle.svg",
+    "name": "bit and bridle",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Camel - Deed.svg",
+    "name": "camel   deed",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Donkey - Deed.svg",
+    "name": "donkey   deed",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Draft Horse - Deed.svg",
+    "name": "draft horse   deed",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Elephant - Deed.svg",
+    "name": "elephant   deed",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Exotic Saddle.svg",
+    "name": "exotic saddle",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Feed (per day).svg",
+    "name": "feed (per day)",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Mastiff - Deed.svg",
+    "name": "mastiff   deed",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Mule - Deed.svg",
+    "name": "mule   deed",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Pony - Deed.svg",
+    "name": "pony   deed",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Riding Horse - Deed.svg",
+    "name": "riding horse   deed",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Riding Saddle.svg",
+    "name": "riding saddle",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Saddlebags.svg",
+    "name": "saddlebags",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Sled Dog - Deed.svg",
+    "name": "sled dog   deed",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Stabling (per day).svg",
+    "name": "stabling (per day)",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Tauntaun - Deed.svg",
+    "name": "tauntaun   deed",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Tauntaun.svg",
+    "name": "tauntaun",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Mount and Tack/Warhorse - Deed.svg",
+    "name": "warhorse   deed",
+    "category": "Mount and Tack"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Acid (vial).svg",
+    "name": "acid (vial)",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Alchemist's Fire (flask).svg",
+    "name": "alchemist's fire (flask)",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Antitoxin (vial).svg",
+    "name": "antitoxin (vial)",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Assassins Blood.svg",
+    "name": "assassins blood",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Basic Poison (vial).svg",
+    "name": "basic poison (vial)",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Blood.svg",
+    "name": "blood",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Bottle - Empty.svg",
+    "name": "bottle   empty",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Bottle of Water.svg",
+    "name": "bottle of water",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Burnt Othur Fumes.svg",
+    "name": "burnt othur fumes",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Carrion Crawler Mucus.svg",
+    "name": "carrion crawler mucus",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Drow Poison.svg",
+    "name": "drow poison",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Elixir of Health.svg",
+    "name": "elixir of health",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Essence of Ether.svg",
+    "name": "essence of ether",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Flask.svg",
+    "name": "flask",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Glass Bottle.svg",
+    "name": "glass bottle",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Holy Water (flask).svg",
+    "name": "holy water (flask)",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Malice.svg",
+    "name": "malice",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Midnight Tears.svg",
+    "name": "midnight tears",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Oil (flask).svg",
+    "name": "oil (flask)",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Oil of Etherealness.svg",
+    "name": "oil of etherealness",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Oil of Sharpness.svg",
+    "name": "oil of sharpness",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Oil of Slipperiness.svg",
+    "name": "oil of slipperiness",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Oil of Taggit.svg",
+    "name": "oil of taggit",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Pale Tincture.svg",
+    "name": "pale tincture",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Philter of Love.svg",
+    "name": "philter of love",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Acid Resistance.svg",
+    "name": "potion of acid resistance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Animal Friendship.svg",
+    "name": "potion of animal friendship",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Bludgeoning Resistance.svg",
+    "name": "potion of bludgeoning resistance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Clairvoyance.svg",
+    "name": "potion of clairvoyance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Climbing.svg",
+    "name": "potion of climbing",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Cloud Giant Strength.svg",
+    "name": "potion of cloud giant strength",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Cold Resistance.svg",
+    "name": "potion of cold resistance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Diminution.svg",
+    "name": "potion of diminution",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Fire Breath.svg",
+    "name": "potion of fire breath",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Fire Giant Strength.svg",
+    "name": "potion of fire giant strength",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Fire Resistance.svg",
+    "name": "potion of fire resistance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Flying.svg",
+    "name": "potion of flying",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Force Resistance.svg",
+    "name": "potion of force resistance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Frost Giant Strength.svg",
+    "name": "potion of frost giant strength",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Gaseous Form.svg",
+    "name": "potion of gaseous form",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Giant Strength.svg",
+    "name": "potion of giant strength",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Greater Healing.svg",
+    "name": "potion of greater healing",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Growth.svg",
+    "name": "potion of growth",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Healing.svg",
+    "name": "potion of healing",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Heroism.svg",
+    "name": "potion of heroism",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Hill Giant Strength.svg",
+    "name": "potion of hill giant strength",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Invisibility.svg",
+    "name": "potion of invisibility",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Invulnerability.svg",
+    "name": "potion of invulnerability",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Lightning Resistance.svg",
+    "name": "potion of lightning resistance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Longevity.svg",
+    "name": "potion of longevity",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Mind Reading.svg",
+    "name": "potion of mind reading",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Necrotic Resistance.svg",
+    "name": "potion of necrotic resistance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Piercing Resistance.svg",
+    "name": "potion of piercing resistance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Poison Resistance.svg",
+    "name": "potion of poison resistance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Poison.svg",
+    "name": "potion of poison",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Psychic Resistance.svg",
+    "name": "potion of psychic resistance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Radiant Resistance.svg",
+    "name": "potion of radiant resistance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Slashing Resistance.svg",
+    "name": "potion of slashing resistance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Speed.svg",
+    "name": "potion of speed",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Stone Giant Strength.svg",
+    "name": "potion of stone giant strength",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Storm Giant Strength.svg",
+    "name": "potion of storm giant strength",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Superior Healing.svg",
+    "name": "potion of superior healing",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Supreme Healing.svg",
+    "name": "potion of supreme healing",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Thunder Resistance.svg",
+    "name": "potion of thunder resistance",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Vitality.svg",
+    "name": "potion of vitality",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Potion of Water Breathing.svg",
+    "name": "potion of water breathing",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Purple Worm Poison.svg",
+    "name": "purple worm poison",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Serpent Venom.svg",
+    "name": "serpent venom",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Sovereign Glue.svg",
+    "name": "sovereign glue",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Torpor.svg",
+    "name": "torpor",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Truth Serum.svg",
+    "name": "truth serum",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Universal Solvent.svg",
+    "name": "universal solvent",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Vial (empty).svg",
+    "name": "vial (empty)",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Wyvern Poison.svg",
+    "name": "wyvern poison",
+    "category": "Potions, Poisions, Bottles, and Vials"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bottle - Black.svg",
+    "name": "bottle   black",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bottle - Blue.svg",
+    "name": "bottle   blue",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bottle - Brown.svg",
+    "name": "bottle   brown",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bottle - Clear.svg",
+    "name": "bottle   clear",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bottle - Glowing.svg",
+    "name": "bottle   glowing",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bottle - Green.svg",
+    "name": "bottle   green",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bottle - Purple.svg",
+    "name": "bottle   purple",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bottle - Red.svg",
+    "name": "bottle   red",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bottle - White.svg",
+    "name": "bottle   white",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bottle - Yellow.svg",
+    "name": "bottle   yellow",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bubbling Vial - Black.svg",
+    "name": "bubbling vial   black",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bubbling Vial - Blue.svg",
+    "name": "bubbling vial   blue",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bubbling Vial - Brown.svg",
+    "name": "bubbling vial   brown",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bubbling Vial - Clear.svg",
+    "name": "bubbling vial   clear",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bubbling Vial - Green.svg",
+    "name": "bubbling vial   green",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bubbling Vial - Purple.svg",
+    "name": "bubbling vial   purple",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bubbling Vial - Rainbow.svg",
+    "name": "bubbling vial   rainbow",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bubbling Vial - Red.svg",
+    "name": "bubbling vial   red",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bubbling Vial - White.svg",
+    "name": "bubbling vial   white",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Bubbling Vial - Yellow.svg",
+    "name": "bubbling vial   yellow",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Corked Vial - Black.svg",
+    "name": "corked vial   black",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Corked Vial - Blue.svg",
+    "name": "corked vial   blue",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Corked Vial - Brown.svg",
+    "name": "corked vial   brown",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Corked Vial - Clear.svg",
+    "name": "corked vial   clear",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Corked Vial - Green.svg",
+    "name": "corked vial   green",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Corked Vial - Purple.svg",
+    "name": "corked vial   purple",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Corked Vial - Rainbow.svg",
+    "name": "corked vial   rainbow",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Corked Vial - Red.svg",
+    "name": "corked vial   red",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Corked Vial - White.svg",
+    "name": "corked vial   white",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Corked Vial - Yellow.svg",
+    "name": "corked vial   yellow",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Glass Bottle - Black.svg",
+    "name": "glass bottle   black",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Glass Bottle - Blue.svg",
+    "name": "glass bottle   blue",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Glass Bottle - Brown.svg",
+    "name": "glass bottle   brown",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Glass Bottle - Green.svg",
+    "name": "glass bottle   green",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Glass Bottle - Purple.svg",
+    "name": "glass bottle   purple",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Glass Bottle - Red.svg",
+    "name": "glass bottle   red",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Glass Bottle - White.svg",
+    "name": "glass bottle   white",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Glass Bottle - Yellow.svg",
+    "name": "glass bottle   yellow",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Glass Bottle of Water.svg",
+    "name": "glass bottle of water",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Huge Bottle - Black.svg",
+    "name": "huge bottle   black",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Huge Bottle - Blue.svg",
+    "name": "huge bottle   blue",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Huge Bottle - Brown.svg",
+    "name": "huge bottle   brown",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Huge Bottle - Green.svg",
+    "name": "huge bottle   green",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Huge Bottle - Purple.svg",
+    "name": "huge bottle   purple",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Huge Bottle - Red.svg",
+    "name": "huge bottle   red",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Huge Bottle - Water.svg",
+    "name": "huge bottle   water",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Huge Bottle - White.svg",
+    "name": "huge bottle   white",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Huge Bottle - Yellow.svg",
+    "name": "huge bottle   yellow",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - Black.svg",
+    "name": "potion   black",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - Blue.svg",
+    "name": "potion   blue",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - Brown.svg",
+    "name": "potion   brown",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - Clear.svg",
+    "name": "potion   clear",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - Glowing.svg",
+    "name": "potion   glowing",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - Gold.svg",
+    "name": "potion   gold",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - Green.svg",
+    "name": "potion   green",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - Pearly Sheen.svg",
+    "name": "potion   pearly sheen",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - Purple.svg",
+    "name": "potion   purple",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - Rainbow.svg",
+    "name": "potion   rainbow",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - Red.svg",
+    "name": "potion   red",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - Silver.svg",
+    "name": "potion   silver",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - White.svg",
+    "name": "potion   white",
+    "category": "Generic"
+  },
+  {
+    "filename": "Potions, Poisions, Bottles, and Vials/Generic/Potion - Yellow.svg",
+    "name": "potion   yellow",
+    "category": "Generic"
+  },
+  {
+    "filename": "Siege Equipment/Ballista.svg",
+    "name": "ballista",
+    "category": "Siege Equipment"
+  },
+  {
+    "filename": "Siege Equipment/Cauldron (Hot Oil).svg",
+    "name": "cauldron (hot oil)",
+    "category": "Siege Equipment"
+  },
+  {
+    "filename": "Siege Equipment/Mangonel.svg",
+    "name": "mangonel",
+    "category": "Siege Equipment"
+  },
+  {
+    "filename": "Siege Equipment/Ram.svg",
+    "name": "ram",
+    "category": "Siege Equipment"
+  },
+  {
+    "filename": "Siege Equipment/Siege Tower.svg",
+    "name": "siege tower",
+    "category": "Siege Equipment"
+  },
+  {
+    "filename": "Siege Equipment/Trebuchet.svg",
+    "name": "trebuchet",
+    "category": "Siege Equipment"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Acorn.svg",
+    "name": "acorn",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Amber Rod.svg",
+    "name": "amber rod",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Amulet.svg",
+    "name": "amulet",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Bag of sand.svg",
+    "name": "bag of sand",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Blocks of Incense.svg",
+    "name": "blocks of incense",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Bone Dust.svg",
+    "name": "bone dust",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Brimstone.svg",
+    "name": "brimstone",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Carved Bones.svg",
+    "name": "carved bones",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Cencer.svg",
+    "name": "cencer",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Ceremonial Dagger.svg",
+    "name": "ceremonial dagger",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Clay Model of a Ziggurat.svg",
+    "name": "clay model of a ziggurat",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Crystal Ball.svg",
+    "name": "crystal ball",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Crystal Rod.svg",
+    "name": "crystal rod",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Crystal.svg",
+    "name": "crystal",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Crystalised Tear.svg",
+    "name": "crystalised tear",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Diamond Dust.svg",
+    "name": "diamond dust",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Druidic Focus.svg",
+    "name": "druidic focus",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Emblem.svg",
+    "name": "emblem",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Emerald Dust.svg",
+    "name": "emerald dust",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Eyelash Encased in Gum Arabic (Invisibility).svg",
+    "name": "eyelash encased in gum arabic (invisibility)",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Forked Twig.svg",
+    "name": "forked twig",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Gem-Encrusted Bowl (Heros Feast).svg",
+    "name": "gem encrusted bowl (heros feast)",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Gilded Acorn (Summon Beast).svg",
+    "name": "gilded acorn (summon beast)",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Gilded Flower (Summon Fey).svg",
+    "name": "gilded flower (summon fey)",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Gilded Skull (Summon Undead).svg",
+    "name": "gilded skull (summon undead)",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Glass Eye.svg",
+    "name": "glass eye",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Glass Rod.svg",
+    "name": "glass rod",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Gold Dust.svg",
+    "name": "gold dust",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Gold-Inlaid Vial (Summon Elemental).svg",
+    "name": "gold inlaid vial (summon elemental)",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Golden Sickle.svg",
+    "name": "golden sickle",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Graveyard Dirt.svg",
+    "name": "graveyard dirt",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Gum Arabic.svg",
+    "name": "gum arabic",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Herbs.svg",
+    "name": "herbs",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Holy Amulet.svg",
+    "name": "holy amulet",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Holy Symbol.svg",
+    "name": "holy symbol",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Honeycomb.svg",
+    "name": "honeycomb",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Hourglass filled with Diamond Dust (Time Ravage).svg",
+    "name": "hourglass filled with diamond dust (time ravage)",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Jade Circlet (Shapechange).svg",
+    "name": "jade circlet (shapechange)",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Jade Dust.svg",
+    "name": "jade dust",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Jeweled Horn.svg",
+    "name": "jeweled horn",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Orb.svg",
+    "name": "orb",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Piece of Cork.svg",
+    "name": "piece of cork",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Platinum Cord.svg",
+    "name": "platinum cord",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Platinum-Inlaid Vial (Summon Aberration).svg",
+    "name": "platinum inlaid vial (summon aberration)",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Powdered Chrysolite.svg",
+    "name": "powdered chrysolite",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Powdered Iron.svg",
+    "name": "powdered iron",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Rod.svg",
+    "name": "rod",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Ruby Dust.svg",
+    "name": "ruby dust",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Ruby Vial with Human Blood (Summon Fiend).svg",
+    "name": "ruby vial with human blood (summon fiend)",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Sapphire Dust.svg",
+    "name": "sapphire dust",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Shamrock.svg",
+    "name": "shamrock",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Silver Cage.svg",
+    "name": "silver cage",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Silver Dust.svg",
+    "name": "silver dust",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Silver Mirror (Sanctuary).svg",
+    "name": "silver mirror (sanctuary)",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Silver Rod.svg",
+    "name": "silver rod",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Silver Wire.svg",
+    "name": "silver wire",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Skull of an Enemy.svg",
+    "name": "skull of an enemy",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Sprig of Mistletoe.svg",
+    "name": "sprig of mistletoe",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Staff.svg",
+    "name": "staff",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Stone and Metal Lockbox (Summon Construct).svg",
+    "name": "stone and metal lockbox (summon construct)",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Totem.svg",
+    "name": "totem",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Tuning Fork.svg",
+    "name": "tuning fork",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Twig.svg",
+    "name": "twig",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Wand.svg",
+    "name": "wand",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Wooden Staff.svg",
+    "name": "wooden staff",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Spell Components and Spellcasting foci/Yew Wand.svg",
+    "name": "yew wand",
+    "category": "Spell Components and Spellcasting foci"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Alchemists Supplies.svg",
+    "name": "alchemists supplies",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Artisan Tools.svg",
+    "name": "artisan tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Brewer Supplies.svg",
+    "name": "brewer supplies",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Calligrapher Supplies.svg",
+    "name": "calligrapher supplies",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Carpenter Tools.svg",
+    "name": "carpenter tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Cartographer Tools.svg",
+    "name": "cartographer tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Cobbler Tools.svg",
+    "name": "cobbler tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Cook Utensils.svg",
+    "name": "cook utensils",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Disguise Kit.svg",
+    "name": "disguise kit",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Forgery Kit.svg",
+    "name": "forgery kit",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Glassblower Tools.svg",
+    "name": "glassblower tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Herbalism Kit.svg",
+    "name": "herbalism kit",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Jeweler Tools.svg",
+    "name": "jeweler tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Leatherworker Tools.svg",
+    "name": "leatherworker tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Lockpicks.svg",
+    "name": "lockpicks",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Mason Tools.svg",
+    "name": "mason tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Navigators Tools.svg",
+    "name": "navigators tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Painter Supplies.svg",
+    "name": "painter supplies",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Poisoners Kit.svg",
+    "name": "poisoners kit",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Potter Tools.svg",
+    "name": "potter tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Smith Tools.svg",
+    "name": "smith tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Thieves Tools.svg",
+    "name": "thieves tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Tinker Tools.svg",
+    "name": "tinker tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Weaver Tools.svg",
+    "name": "weaver tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Tools, Kits, and Artisan Tools/Woodcarver Tools.svg",
+    "name": "woodcarver tools",
+    "category": "Tools, Kits, and Artisan Tools"
+  },
+  {
+    "filename": "Trade Good/Adamantine Bar.svg",
+    "name": "adamantine bar",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Adamantine Ore.svg",
+    "name": "adamantine ore",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Brick.svg",
+    "name": "brick",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Canvas.svg",
+    "name": "canvas",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Chicken - Deed.svg",
+    "name": "chicken   deed",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Cinnamon.svg",
+    "name": "cinnamon",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Cloves.svg",
+    "name": "cloves",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Copper Bar.svg",
+    "name": "copper bar",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Copper Ore.svg",
+    "name": "copper ore",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Cotton Cloth.svg",
+    "name": "cotton cloth",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Cow - Deed.svg",
+    "name": "cow   deed",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Electrum Bar.svg",
+    "name": "electrum bar",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Flour.svg",
+    "name": "flour",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Ginger.svg",
+    "name": "ginger",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Goat - Deed.svg",
+    "name": "goat   deed",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Gold Bar.svg",
+    "name": "gold bar",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Gold Ore.svg",
+    "name": "gold ore",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Hay.svg",
+    "name": "hay",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Iron Bar.svg",
+    "name": "iron bar",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Iron Ore.svg",
+    "name": "iron ore",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Linen.svg",
+    "name": "linen",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Log of Wood.svg",
+    "name": "log of wood",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Ox - Deed.svg",
+    "name": "ox   deed",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Pepper.svg",
+    "name": "pepper",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Pig - Deed.svg",
+    "name": "pig   deed",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Platinum Bar.svg",
+    "name": "platinum bar",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Saffron.svg",
+    "name": "saffron",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Salt.svg",
+    "name": "salt",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Sheep - Deed.svg",
+    "name": "sheep   deed",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Silk.svg",
+    "name": "silk",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Silver Bar.svg",
+    "name": "silver bar",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Silver Ore.svg",
+    "name": "silver ore",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Trade Good/Wheat.svg",
+    "name": "wheat",
+    "category": "Trade Good"
+  },
+  {
+    "filename": "Treasure/Alexandrite.svg",
+    "name": "alexandrite",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Amber Nugget.svg",
+    "name": "amber nugget",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Amber with trapped Mosquito.svg",
+    "name": "amber with trapped mosquito",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Amber.svg",
+    "name": "amber",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Amethyst.svg",
+    "name": "amethyst",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Aquamarine.svg",
+    "name": "aquamarine",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Azurite.svg",
+    "name": "azurite",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Banded Agate.svg",
+    "name": "banded agate",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Bead - Amber.svg",
+    "name": "bead   amber",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Bead - Aquamarine.svg",
+    "name": "bead   aquamarine",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Bead - Quartz.svg",
+    "name": "bead   quartz",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Bead - Topaz.svg",
+    "name": "bead   topaz",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Bejeweled Drinking Horn.svg",
+    "name": "bejeweled drinking horn",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Black Opal.svg",
+    "name": "black opal",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Black Sapphire.svg",
+    "name": "black sapphire",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Black Velvet Mask with Silver.svg",
+    "name": "black velvet mask with silver",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Bloodstone.svg",
+    "name": "bloodstone",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Blue Quartz.svg",
+    "name": "blue quartz",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Blue Sapphire.svg",
+    "name": "blue sapphire",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Blue Spinel.svg",
+    "name": "blue spinel",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Brass Mug with Jade Inlay.svg",
+    "name": "brass mug with jade inlay",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Bronze crown.svg",
+    "name": "bronze crown",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Carnelian.svg",
+    "name": "carnelian",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Carved Bone Statuette.svg",
+    "name": "carved bone statuette",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Carved Harp Of Exotic Wood With Ivory Inlay And Zircon Gemstones.svg",
+    "name": "carved harp of exotic wood with ivory inlay and zircon gemstones",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Carved Ivory Statuette.svg",
+    "name": "carved ivory statuette",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Ceremonial Electrum Dagger with Black Pearl.svg",
+    "name": "ceremonial electrum dagger with black pearl",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Chalcedony.svg",
+    "name": "chalcedony",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Chardalyn Crystal.svg",
+    "name": "chardalyn crystal",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Chardalyn Dragon Figurine.svg",
+    "name": "chardalyn dragon figurine",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Chardalyn Nugget.svg",
+    "name": "chardalyn nugget",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Chipped statuette of Thrym.svg",
+    "name": "chipped statuette of thrym",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Chrysoberyl.svg",
+    "name": "chrysoberyl",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Chrysolite.svg",
+    "name": "chrysolite",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Chrysoprase.svg",
+    "name": "chrysoprase",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Citrine.svg",
+    "name": "citrine",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Coins - Copper.svg",
+    "name": "coins   copper",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Coins - Gold.svg",
+    "name": "coins   gold",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Coins - Silver.svg",
+    "name": "coins   silver",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Conch Shell.svg",
+    "name": "conch shell",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Cool-looking piece of fossilised skull.svg",
+    "name": "cool looking piece of fossilised skull",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Copper (cp).svg",
+    "name": "copper (cp)",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Copper Chalice with Silver Filigree.svg",
+    "name": "copper chalice with silver filigree",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Copper Chalice.svg",
+    "name": "copper chalice",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Coral.svg",
+    "name": "coral",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Diamond - Blue.svg",
+    "name": "diamond   blue",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Diamond - Brown.svg",
+    "name": "diamond   brown",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Diamond - Canary.svg",
+    "name": "diamond   canary",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Diamond - Pink.svg",
+    "name": "diamond   pink",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Diamond - White.svg",
+    "name": "diamond   white",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Electrum (ep).svg",
+    "name": "electrum (ep)",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Electrum Chain with Bloodstone Pendant.svg",
+    "name": "electrum chain with bloodstone pendant",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Electrum Ring.svg",
+    "name": "electrum ring",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Emerald.svg",
+    "name": "emerald",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Engraved Bone Dice.svg",
+    "name": "engraved bone dice",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Eye Agate.svg",
+    "name": "eye agate",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Fire Opal.svg",
+    "name": "fire opal",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Garnet.svg",
+    "name": "garnet",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Generic Treasure.svg",
+    "name": "generic treasure",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Gold (gp).svg",
+    "name": "gold (gp)",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Gold Chain with Fire Opal.svg",
+    "name": "gold chain with fire opal",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Gold Circlet with Aquamarines.svg",
+    "name": "gold circlet with aquamarines",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Gold Crown.svg",
+    "name": "gold crown",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Gold Cup Set with Emeralds.svg",
+    "name": "gold cup set with emeralds",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Gold Idol.svg",
+    "name": "gold idol",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Gold Jewelry Box with Platinum Filigree.svg",
+    "name": "gold jewelry box with platinum filigree",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Gold Music Box.svg",
+    "name": "gold music box",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Gold Ring With Black Pearl.svg",
+    "name": "gold ring with black pearl",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Gold Ring with Bloodstone.svg",
+    "name": "gold ring with bloodstone",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Gold Ring.svg",
+    "name": "gold ring",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Hematite.svg",
+    "name": "hematite",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Impure Amber.svg",
+    "name": "impure amber",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Jacinth.svg",
+    "name": "jacinth",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Jade Game Board.svg",
+    "name": "jade game board",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Jade.svg",
+    "name": "jade",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Jasper.svg",
+    "name": "jasper",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Jet.svg",
+    "name": "jet",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Jewel-Encrusted Dagger.svg",
+    "name": "jewel encrusted dagger",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Jeweled Gold Crown.svg",
+    "name": "jeweled gold crown",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Jeweled Platinum Ring.svg",
+    "name": "jeweled platinum ring",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Jewelled Chalice.svg",
+    "name": "jewelled chalice",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Lapis Lazuli.svg",
+    "name": "lapis lazuli",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Malachite.svg",
+    "name": "malachite",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Moon Rock.svg",
+    "name": "moon rock",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Moonstone.svg",
+    "name": "moonstone",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Moss Agate.svg",
+    "name": "moss agate",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Necklace String of Pink Pearls.svg",
+    "name": "necklace string of pink pearls",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Obsidian - Polished.svg",
+    "name": "obsidian   polished",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Obsidian.svg",
+    "name": "obsidian",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Onyx.svg",
+    "name": "onyx",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Opal.svg",
+    "name": "opal",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Painted Gold War Mask.svg",
+    "name": "painted gold war mask",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Pearl - Black.svg",
+    "name": "pearl   black",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Pearl - Pink.svg",
+    "name": "pearl   pink",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Pearl - White.svg",
+    "name": "pearl   white",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Pearl - Yellow.svg",
+    "name": "pearl   yellow",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Peridot - Carved in the Shape of a Leaf.svg",
+    "name": "peridot   carved in the shape of a leaf",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Peridot.svg",
+    "name": "peridot",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Platinum (pp).svg",
+    "name": "platinum (pp)",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Platinum Ring.svg",
+    "name": "platinum ring",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Quartz.svg",
+    "name": "quartz",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Rhodochrosite.svg",
+    "name": "rhodochrosite",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Ruby.svg",
+    "name": "ruby",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Sardonyx.svg",
+    "name": "sardonyx",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Silk Robe with Gold Embroidery.svg",
+    "name": "silk robe with gold embroidery",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Silver (sp).svg",
+    "name": "silver (sp)",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Silver Chalice with Moonstones.svg",
+    "name": "silver chalice with moonstones",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Silver Coffer.svg",
+    "name": "silver coffer",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Silver Crown.svg",
+    "name": "silver crown",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Silver Ewer.svg",
+    "name": "silver ewer",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Silver Necklace with a Gemstone Pendant.svg",
+    "name": "silver necklace with a gemstone pendant",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Silver Nuggets.svg",
+    "name": "silver nuggets",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Silver Ring.svg",
+    "name": "silver ring",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Silver-plated Steel Longsword.svg",
+    "name": "silver plated steel longsword",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Spinel.svg",
+    "name": "spinel",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Star rose quartz.svg",
+    "name": "star rose quartz",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Star Ruby.svg",
+    "name": "star ruby",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Star Sapphire.svg",
+    "name": "star sapphire",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Tiger Eye.svg",
+    "name": "tiger eye",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Topaz.svg",
+    "name": "topaz",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Tourmaline.svg",
+    "name": "tourmaline",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Turquoise.svg",
+    "name": "turquoise",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/White Tiger Pelt.svg",
+    "name": "white tiger pelt",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Yellow Sapphire.svg",
+    "name": "yellow sapphire",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Zircon.svg",
+    "name": "zircon",
+    "category": "Treasure"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Brilliant Gem - Black.svg",
+    "name": "brilliant gem   black",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Brilliant Gem - Blue.svg",
+    "name": "brilliant gem   blue",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Brilliant Gem - Clear.svg",
+    "name": "brilliant gem   clear",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Brilliant Gem - Green.svg",
+    "name": "brilliant gem   green",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Brilliant Gem - Orange.svg",
+    "name": "brilliant gem   orange",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Brilliant Gem - Purple.svg",
+    "name": "brilliant gem   purple",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Brilliant Gem - Rainbow.svg",
+    "name": "brilliant gem   rainbow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Brilliant Gem - Red.svg",
+    "name": "brilliant gem   red",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Brilliant Gem - White.svg",
+    "name": "brilliant gem   white",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Brilliant Gem - Yellow.svg",
+    "name": "brilliant gem   yellow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Diamond Cut Gem - Black.svg",
+    "name": "diamond cut gem   black",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Diamond Cut Gem - Blue.svg",
+    "name": "diamond cut gem   blue",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Diamond Cut Gem - Clear.svg",
+    "name": "diamond cut gem   clear",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Diamond Cut Gem - Green.svg",
+    "name": "diamond cut gem   green",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Diamond Cut Gem - Orange.svg",
+    "name": "diamond cut gem   orange",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Diamond Cut Gem - Purple.svg",
+    "name": "diamond cut gem   purple",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Diamond Cut Gem - Rainbow.svg",
+    "name": "diamond cut gem   rainbow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Diamond Cut Gem - Red.svg",
+    "name": "diamond cut gem   red",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Diamond Cut Gem - White.svg",
+    "name": "diamond cut gem   white",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Diamond Cut Gem - Yellow.svg",
+    "name": "diamond cut gem   yellow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Long Hexagon Gem - Black.svg",
+    "name": "long hexagon gem   black",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Long Hexagon Gem - Blue.svg",
+    "name": "long hexagon gem   blue",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Long Hexagon Gem - Clear.svg",
+    "name": "long hexagon gem   clear",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Long Hexagon Gem - Green.svg",
+    "name": "long hexagon gem   green",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Long Hexagon Gem - Orange.svg",
+    "name": "long hexagon gem   orange",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Long Hexagon Gem - Purple.svg",
+    "name": "long hexagon gem   purple",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Long Hexagon Gem - Rainbow.svg",
+    "name": "long hexagon gem   rainbow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Long Hexagon Gem - Red.svg",
+    "name": "long hexagon gem   red",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Long Hexagon Gem - White.svg",
+    "name": "long hexagon gem   white",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Long Hexagon Gem - Yellow.svg",
+    "name": "long hexagon gem   yellow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Oval Gem - Black.svg",
+    "name": "oval gem   black",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Oval Gem - Blue.svg",
+    "name": "oval gem   blue",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Oval Gem - Clear.svg",
+    "name": "oval gem   clear",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Oval Gem - Green.svg",
+    "name": "oval gem   green",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Oval Gem - Orange.svg",
+    "name": "oval gem   orange",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Oval Gem - Purple.svg",
+    "name": "oval gem   purple",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Oval Gem - Rainbow.svg",
+    "name": "oval gem   rainbow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Oval Gem - Red.svg",
+    "name": "oval gem   red",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Oval Gem - White.svg",
+    "name": "oval gem   white",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Oval Gem - Yellow.svg",
+    "name": "oval gem   yellow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Precious Stone - Black.svg",
+    "name": "precious stone   black",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Precious Stone - Blue.svg",
+    "name": "precious stone   blue",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Precious Stone - Brown.svg",
+    "name": "precious stone   brown",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Precious Stone - Clear.svg",
+    "name": "precious stone   clear",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Precious Stone - Green.svg",
+    "name": "precious stone   green",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Precious Stone - Orange.svg",
+    "name": "precious stone   orange",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Precious Stone - Purple.svg",
+    "name": "precious stone   purple",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Precious Stone - Rainbow.svg",
+    "name": "precious stone   rainbow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Precious Stone - Red.svg",
+    "name": "precious stone   red",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Precious Stone - White.svg",
+    "name": "precious stone   white",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Precious Stone - Yellow.svg",
+    "name": "precious stone   yellow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Rectangle Gem - Black.svg",
+    "name": "rectangle gem   black",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Rectangle Gem - Blue.svg",
+    "name": "rectangle gem   blue",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Rectangle Gem - Clear.svg",
+    "name": "rectangle gem   clear",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Rectangle Gem - Green.svg",
+    "name": "rectangle gem   green",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Rectangle Gem - Orange.svg",
+    "name": "rectangle gem   orange",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Rectangle Gem - Purple.svg",
+    "name": "rectangle gem   purple",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Rectangle Gem - Rainbow.svg",
+    "name": "rectangle gem   rainbow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Rectangle Gem - Red.svg",
+    "name": "rectangle gem   red",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Rectangle Gem - White.svg",
+    "name": "rectangle gem   white",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Rectangle Gem - Yellow.svg",
+    "name": "rectangle gem   yellow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Round Gem - Black.svg",
+    "name": "round gem   black",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Round Gem - Blue.svg",
+    "name": "round gem   blue",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Round Gem - Clear.svg",
+    "name": "round gem   clear",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Round Gem - Green.svg",
+    "name": "round gem   green",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Round Gem - Orange.svg",
+    "name": "round gem   orange",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Round Gem - Purple.svg",
+    "name": "round gem   purple",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Round Gem - Rainbow.svg",
+    "name": "round gem   rainbow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Round Gem - Red.svg",
+    "name": "round gem   red",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Round Gem - White.svg",
+    "name": "round gem   white",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Treasure/Gems - generic/Round Gem - Yellow.svg",
+    "name": "round gem   yellow",
+    "category": "Gems - generic"
+  },
+  {
+    "filename": "Vehicles/Airship - Deed.svg",
+    "name": "airship   deed",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Airship.svg",
+    "name": "airship",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Carriage.svg",
+    "name": "carriage",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Cart.svg",
+    "name": "cart",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Chariot - Deed.svg",
+    "name": "chariot   deed",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Dogsled.svg",
+    "name": "dogsled",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Galley - Deed.svg",
+    "name": "galley   deed",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Keelboat - Deed.svg",
+    "name": "keelboat   deed",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Longship - Deed.svg",
+    "name": "longship   deed",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Rowboat - Deed.svg",
+    "name": "rowboat   deed",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Rowboat.svg",
+    "name": "rowboat",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Sailing Ship - Deed.svg",
+    "name": "sailing ship   deed",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Sled - Deed.svg",
+    "name": "sled   deed",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Sled.svg",
+    "name": "sled",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Wagon - Deed.svg",
+    "name": "wagon   deed",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Vehicles/Warship - Deed.svg",
+    "name": "warship   deed",
+    "category": "Vehicles"
+  },
+  {
+    "filename": "Weapons/Battleaxe.svg",
+    "name": "battleaxe",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Blowgun.svg",
+    "name": "blowgun",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Club.svg",
+    "name": "club",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Dagger.svg",
+    "name": "dagger",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Dart.svg",
+    "name": "dart",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Flail.svg",
+    "name": "flail",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Glaive.svg",
+    "name": "glaive",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Grapple.svg",
+    "name": "grapple",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Greataxe.svg",
+    "name": "greataxe",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Greatclub.svg",
+    "name": "greatclub",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Greatsword.svg",
+    "name": "greatsword",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Halberd.svg",
+    "name": "halberd",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Hand Crossbow.svg",
+    "name": "hand crossbow",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Handaxe.svg",
+    "name": "handaxe",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Heavy Crossbow.svg",
+    "name": "heavy crossbow",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Javelin Stack.svg",
+    "name": "javelin stack",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Javelin.svg",
+    "name": "javelin",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Lance.svg",
+    "name": "lance",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Light Crossbow.svg",
+    "name": "light crossbow",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Light Hammer.svg",
+    "name": "light hammer",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Longbow.svg",
+    "name": "longbow",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Longsword.svg",
+    "name": "longsword",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Mace.svg",
+    "name": "mace",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Maul.svg",
+    "name": "maul",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Morningstar.svg",
+    "name": "morningstar",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Net.svg",
+    "name": "net",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Pike.svg",
+    "name": "pike",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Quarterstaff.svg",
+    "name": "quarterstaff",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Rapier.svg",
+    "name": "rapier",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Scimitar.svg",
+    "name": "scimitar",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Scythe.svg",
+    "name": "scythe",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Shortbow.svg",
+    "name": "shortbow",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Shortsword.svg",
+    "name": "shortsword",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Sickle.svg",
+    "name": "sickle",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Sling.svg",
+    "name": "sling",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Slingshot.svg",
+    "name": "slingshot",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Spear.svg",
+    "name": "spear",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Staff.svg",
+    "name": "staff",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Trident.svg",
+    "name": "trident",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Unarmed Strike.svg",
+    "name": "unarmed strike",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/War Axe.svg",
+    "name": "war axe",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/War Pick.svg",
+    "name": "war pick",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Warhammer.svg",
+    "name": "warhammer",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Whip.svg",
+    "name": "whip",
+    "category": "Weapons"
+  },
+  {
+    "filename": "Weapons/Wooden Staff.svg",
+    "name": "wooden staff",
+    "category": "Weapons"
+  }
+]

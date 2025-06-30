@@ -870,3 +870,36 @@ border-radius: 3px;
   margin-top: 20px;
 }
 
+.icon-grid {
+  z-index: 2;
+  display: block;
+  background-color: rgba(42, 36, 36, 1);
+  border: solid black 5px;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%; /* Could be more or less, depending on screen size */
+  min-width: 500px;
+  overflow-y: scroll;
+
+  height: 40vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.icon-grid::-webkit-scrollbar{
+  display:none;
+}
+
+
+.item-icon {
+  aspect-ratio: 1/1;
+  height: 50px;
+}
+
+.item-icon:hover {
+  background-color: rgb(205, 187, 187, 0.3);
+  cursor: pointer;
+}

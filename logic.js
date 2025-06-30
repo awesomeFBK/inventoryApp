@@ -262,6 +262,42 @@ function loadFromStorage(){
     loadAll(loadData)
 }
 
+//Fetches the mapping of the icon data
+function fetchIconData(){
+    return fetch("icon_data.json")
+        .then(res => res.json())
+        .catch(err => {
+            console.error("failed to load data", err)
+            return []
+        })
+}
+
+
+function renderGrid(iconList){
+    const gridContainer = document.getElementById("iconGrid")
+    gridContainer.innerHTML = "" //clears the container
+
+    iconList.forEach(icon => {
+        const img = document.createElement("img")
+        img.src = `./Library/${icon.filename}`
+        img.alt = icon.name
+        img.title = icon.name
+        img.classList.add("item-icon")
+        gridContainer.appendChild(img)
+    })
+    
+}
+
+var clusterize = new Clusterize
+
+
+
+
+
+
+
+
+
 //for save items
 function getContainerID(classification){
     //function to map classification to containerID name here
@@ -451,6 +487,10 @@ document.getElementById("saveJson").addEventListener("click", function(){
 
 
 document.addEventListener("DOMContentLoaded", function() {
+    fetchIconData().then(iconData => {
+        renderGrid(iconData)
+    })
+
     loadFromStorage()
 
     initializeCounters()
@@ -516,6 +556,16 @@ document.getElementById("strengthModifierDisplay").addEventListener("blur", () =
 
 document.getElementById("saveMisc").addEventListener("click", () => {
     standardSlots.saveMiscItem()
+})
+
+document.getElementById("testGrid").addEventListener("click", function(){
+    let modal = document.getElementById("iconGridModal")
+    modal.style.display = "block"
+
+    window.onclick = function(event) { //closes if you touch outside the modal
+        if (event.target == modal) {
+        modal.style.display = "none"
+    }}
 })
 
 //listeners for opening and closing from localstorage

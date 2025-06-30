@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="homepage.css" rel="stylesheet">
+    <link href="./clusterize.css" rel="stylesheet">
     <title>My Page</title>
 </head>
 <body>
@@ -87,6 +88,7 @@
     
     <button id="confirmRemove" class="hidden remove-element">confirm removal</button>
     <button id="cancelRemove" class="hidden remove-element">cancel removal</button>
+    <button id="testGrid">Test Grid</button>
 
 
 
@@ -182,7 +184,13 @@
         </div>
     </div>
 
-   
+    <div id="iconGridModal" class="modal">
+        <div id="iconGrid" class="icon-grid">
+            <p>bruh</p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/clusterize.js/clusterize.min.js"></script>
     <script src="logic.js" type="module"></script>
     <script src="slots.js" type="module"></script>
     <script src="item.js" type="module"></script>
