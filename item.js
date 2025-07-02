@@ -1,4 +1,16 @@
-import { smallSlots, mediumSlots, largeSlots, tinySlots, updateCounter, saveToStorage} from "./logic.js"
+import { 
+    smallSlots, 
+    mediumSlots, 
+    largeSlots, 
+    tinySlots, 
+    updateCounter, 
+    saveToStorage, 
+    setImageReference, 
+    imageReference,
+    setItemReference,
+    itemReference,
+    replaceImage,
+    getSlotsfromContainerID} from "./logic.js"
 import { getSlotClassification } from "./slots.js"
 import { uploadImage, uploadImageToStandard } from './utils.js';
 //classifier function 
@@ -12,6 +24,7 @@ export function classify(newItem){
         newItem.id = largeSlots.currentSize
         largeSlots.currentSize++
         updateCounter("largeSlotCounter")
+        saveToStorage()
         return "large-Slots"
     } 
     //med slots
@@ -26,6 +39,7 @@ export function classify(newItem){
             newItem.id = largeSlots.currentSize
             largeSlots.currentSize++
             updateCounter("largeSlotCounter")
+            saveToStorage()
             return "large-Slots"
         }
 
@@ -33,6 +47,7 @@ export function classify(newItem){
         newItem.id = mediumSlots.currentSize 
         mediumSlots.currentSize++ 
         updateCounter("mediumSlotCounter")
+        saveToStorage()
         return "medium-Slots"
     } 
     //small slots
@@ -49,6 +64,7 @@ export function classify(newItem){
             newItem.id = mediumSlots.currentSize
             mediumSlots.currentSize++
             updateCounter("mediumSlotCounter")
+            saveToStorage()
             return "medium-Slots"
         }
         else if (smallSlots.currentSize == smallSlots.maxSize && mediumSlots.currentSize == mediumSlots.maxSize){
@@ -59,6 +75,7 @@ export function classify(newItem){
             newItem.id = largeSlots.currentSize
             largeSlots.currentSize++
             updateCounter("largeSlotCounter")
+            saveToStorage()
             return "large-Slots"
         }
         
@@ -66,6 +83,7 @@ export function classify(newItem){
         newItem.id = smallSlots.currentSize
         smallSlots.currentSize++
         updateCounter("smallSlotCounter")
+        saveToStorage()
         return "small-Slots"
     } 
     //tiny slots
@@ -73,7 +91,7 @@ export function classify(newItem){
         tinySlots.items.push(newItem)       
         newItem.id = tinySlots.currentSize
         tinySlots.currentSize++
-        
+        saveToStorage()
         return "tiny-Slots"          
     } 
     //inventory full
@@ -89,7 +107,6 @@ export class Item{
         this.classification = classification || "none"
         this.description = description
         this.id = -1
-
     }
     
     renderItem(containerID){
@@ -116,9 +133,7 @@ export class Item{
         equipImage.classList.add("item-picture")
 
         //file input element
-        let itemFileInput = document.createElement("input")
-        itemFileInput.type = "file"
-        itemFileInput.accept = "image/*"
+        let itemFileInput = document.createElement("button")
         itemFileInput.style.display = "none" // Hide the file input
 
         //associates both in a label
@@ -127,16 +142,16 @@ export class Item{
         itemLabel.appendChild(itemFileInput)
 
         //event listener for image input
-        itemFileInput.addEventListener("change", (event) => {
-            uploadImage(event)
-                .then((base64String) => {
-                    equipImage.src = base64String
-                    this.image = base64String
-                    saveToStorage()
-                })
-                .catch((error) => {
-                    console.error("Error uploading image", error)
-                })
+        itemFileInput.addEventListener("click", async (event) => {
+            try {
+                const selectedIcon = await replaceImage();
+                equipImage.src = selectedIcon;
+                this.image = selectedIcon;
+                saveToStorage();
+            } catch (e) {
+                // User cancelled or closed modal
+                console.log("Icon selection cancelled");
+            }
         })
 
         name.classList.add("item-name")
@@ -176,14 +191,19 @@ export class Item{
             editButton.classList.remove("hidden")
             saveButton.classList.add("hidden")
 
-            let itemFind = getSlotClassification(itemDiv.dataset.classification)
-            console.log(itemDiv.dataset.classification)
-            console.log(itemFind)
+            //this doesn't work cuz ur getting the slot classification of the item itself
+            let parentContainer = itemDiv.closest('.item-container')
+            console.log(parentContainer.id)
+            let itemFind = getSlotsfromContainerID(parentContainer.id)
+            //returns small-slots = getSlotsfromContainerID to get Slots
+            console.log("dataset.classification is" + itemDiv.dataset.classification)
+            console.log("itemFind is " + itemFind)
 
             let item = itemFind.items.find(item => item.id == Number(itemDiv.dataset.id))
             if (item) {
                 item.name = name.innerText
                 item.description = description.innerText
+                saveToStorage()
             }
         
             saveToStorage()

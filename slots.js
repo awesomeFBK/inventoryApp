@@ -792,21 +792,31 @@ export function addItem(){ //fix this and understand the rest
     }
 }
 
+function reassignID(slot){
+    slot.items.forEach((item, i) => {
+        item.id = i
+    })
+}
+
 export function removeItem(){
     //what the fuck did i chatgpt here
     //you need to have it find the parent container and inncrement from there
     let toRemove = document.querySelectorAll(".remove-checkbox:checked")
+
+    let slotSet = new Set()
 
     toRemove.forEach(element => {
         let itemDiv = element.closest(".itemDiv")
         let itemID = parseInt(itemDiv.dataset.id)
 
         let containerID = itemDiv.closest(".item-container").id
-        let classification = getClassificationfromContainerID(containerID)
-        let slot = getSlotClassification(classification)
+        let classification = getClassificationfromContainerID(containerID) //this allows you to update counter
+        let slot = getSlotClassification(classification) //this gets the slot and deletes em
 
         if(slot){
-            slot.items.splice(itemID, 1)
+            slotSet.add(slot)
+            let toDelete = slot.items.findIndex(item => item.id === itemID)
+            slot.items.splice(toDelete, 1)
             slot.currentSize--
             itemDiv.remove()
 
@@ -815,6 +825,10 @@ export function removeItem(){
 
     })
 
+    slotSet.forEach(slot => reassignID(slot))
+    slotSet.clear()
+
 
     saveToStorage()
 }
+

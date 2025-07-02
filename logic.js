@@ -11,6 +11,19 @@ tinySlots = new Slots(0), standardSlots = new StandardSlots(5)
 let strengthModifier = 0
 let playerName = ""
 
+//global value for current referenced item for a file change
+export var imageReference = null
+export var itemReference = null
+
+//set imageReference function
+export function setImageReference(reference){
+    imageReference = reference
+}
+
+export function setItemReference(reference){
+    itemReference = reference
+}
+
 
 //function to give max slots here
 //hardcoded
@@ -275,28 +288,96 @@ function fetchIconData(){
 
 function renderGrid(iconList){
     const gridContainer = document.getElementById("iconGrid")
-    gridContainer.innerHTML = "" //clears the container
 
-    iconList.forEach(icon => {
-        const img = document.createElement("img")
-        img.src = `./Library/${icon.filename}`
-        img.alt = icon.name
-        img.title = icon.name
-        img.classList.add("item-icon")
-        gridContainer.appendChild(img)
+    let iconNavBar = document.getElementById("iconNavBar") //navigation bar of the different tabs
+    
+    Object.keys(iconList).forEach(category => {
+
+        let iconCategory = document.createElement("button")
+        iconCategory.innerText = category
+        iconCategory.classList.add("tablinks")
+        console.log(category)
+        iconCategory.onclick = function(event){
+            openCategory(event, category)
+        }
+        iconNavBar.appendChild(iconCategory)
+
+        let iconCategoryDiv = document.createElement("div")
+        iconCategoryDiv.id = category //make the id the category name
+        iconCategoryDiv.classList.add("icon-category-div", "tabcontent")
+
+        let iconContainer = document.createElement("div")
+        iconContainer.id = category
+        iconContainer.classList.add("icon-category-container")
+        iconCategoryDiv.appendChild(iconContainer)
+
+        
+        gridContainer.appendChild(iconCategoryDiv)
+
+        const itemIcons = iconList[category]
+
+        renderCategory(itemIcons, iconContainer)
+
     })
     
 }
 
-var clusterize = new Clusterize
+function renderCategory(itemIcons, iconCategoryDiv){
+    itemIcons.forEach(icon => {
+        let img = document.createElement("img")
+        img.src = icon.filename
+        img.title = icon.item_name
+        img.alt = icon.item_name
+        img.loading = "lazy"
+        img.classList.add("item-icon")
+        iconCategoryDiv.appendChild(img)
+    })
+}
+
+export function replaceImage(){
+    return new Promise((resolve, reject) => {
+        let modal = document.getElementById("iconGridModal");
+        modal.style.display = "block";
+
+        function onIconClick(event) {
+            if (event.target.classList.contains("item-icon")) {
+                modal.removeEventListener("click", onIconClick)
+                closeIconMenu()
+                resolve(event.target.src) //returns this as the result of the promise
+            }
+        }
+
+        modal.addEventListener("click", onIconClick)
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.removeEventListener("click", onIconClick);
+                modal.style.display = "none";
+                reject("cancelled"); //cancelles
+            }
+        };
+    })
+    
+}
 
 
 
+function openCategory(evt, categoryName){
+    var i, tabcontent, tablinks
 
+    tabcontent = document.getElementsByClassName("tabcontent")
+    for (i=0; i<tabcontent.length; i++){
+        tabcontent[i].style.display = "none"
+    }
 
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");}
 
-
-
+    console.log(categoryName)
+    document.getElementById(categoryName).style.display = "flex";
+    evt.currentTarget.className += " active";
+}    
 
 //for save items
 function getContainerID(classification){
@@ -322,7 +403,7 @@ export function getClassificationfromContainerID(containerID){
 }
 
 //for use in classify and save Item
-function getSlotsfromContainerID(containerID){
+export function getSlotsfromContainerID(containerID){
     const containerMap = {
         "small-Slots": smallSlots,
         "medium-Slots": mediumSlots,
@@ -491,6 +572,7 @@ document.addEventListener("DOMContentLoaded", function() {
         renderGrid(iconData)
     })
 
+
     loadFromStorage()
 
     initializeCounters()
@@ -567,6 +649,22 @@ document.getElementById("testGrid").addEventListener("click", function(){
         modal.style.display = "none"
     }}
 })
+
+function openIconMenu() {
+    let modal = document.getElementById("iconGridModal")
+    modal.style.display = "block"
+
+    window.onclick = function(event) { //closes if you touch outside the modal
+        if (event.target == modal) {
+        modal.style.display = "none"
+    }}    
+}
+
+function closeIconMenu() {
+    let modal = document.getElementById("iconGridModal")
+    modal.style.display = "none"
+}
+
 
 //listeners for opening and closing from localstorage
 

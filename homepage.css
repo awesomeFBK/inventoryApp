@@ -17,6 +17,16 @@ body {
     font-weight: 100;
 }
 
+button {
+  font-family: "Aldine721BT", serif; /* Fallback to serif if the font fails to load */
+  color: white;
+  text-shadow: 
+    -1px -1px 0 black, /* Top-left shadow */
+    1px -1px 0 black,  /* Top-right shadow */
+    -1px 1px 0 black,  /* Bottom-left shadow */
+    1px 1px 0 black;   /* Bottom-right shadow */
+    font-weight: 100;
+}
 
 
 p {
@@ -872,7 +882,7 @@ border-radius: 3px;
 
 .icon-grid {
   z-index: 2;
-  display: block;
+  display: grid;
   background-color: rgba(42, 36, 36, 1);
   border: solid black 5px;
   border-radius: 10px;
@@ -880,26 +890,87 @@ border-radius: 3px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%; /* Could be more or less, depending on screen size */
+  width: 60%; /* Could be more or less, depending on screen size */
   min-width: 500px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 50vh;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  'select icons'
+  'select icons';
+}
 
-  height: 40vh;
+.icon-grid::-webkit-scrollbar {
+  display:none;  
+}
+
+
+.icon-nav-bar {
+  grid-area: select;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  border-right: 3px black solid;
+  overflow-y: scroll;
+  width: 100%;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-.icon-grid::-webkit-scrollbar{
-  display:none;
+
+.icon-nav-bar::-webkit-scrollbar {
+  display:none;  
 }
 
+.icon-nav-bar button {
+  flex: 0 0 auto;
+  height: 50px;
+  cursor: pointer;
+  background-image: url("pager.jpeg");
+  background-size: contain;
+  background-color: rgba(0,0,0,0.4);
+  font-size: large;
+  font-weight: 500;
+  width: 100%;
+  border: 1px black solid;
+}
+
+.icon-nav-bar button:hover {
+  width: 90%;
+}
 
 .item-icon {
   aspect-ratio: 1/1;
-  height: 50px;
+  width: 64px !important;
 }
 
 .item-icon:hover {
   background-color: rgb(205, 187, 187, 0.3);
   cursor: pointer;
+}
+
+.icon-category-div {
+  grid-area: icons;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(118, 99, 99, 0.697);
+}
+
+.icon-category-div::-webkit-scrollbar {
+  display:none;  
+}
+
+.icon-category-container {
+  display: block;
+  width: 100%;
+  overflow-y: auto;
+}
+
+
+
+.tabcontent {
+  display: none;
 }
