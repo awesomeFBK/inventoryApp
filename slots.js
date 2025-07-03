@@ -1,5 +1,13 @@
 import { CoinPouch,emptyItem, Item } from "./item.js"
-import { smallSlots, mediumSlots, largeSlots, tinySlots, updateCounter, saveToStorage, getClassificationfromContainerID } from "./logic.js"
+import { 
+    smallSlots, 
+    mediumSlots, 
+    largeSlots, 
+    tinySlots, 
+    updateCounter, 
+    saveToStorage, 
+    getClassificationfromContainerID,
+    replaceImage } from "./logic.js"
 import { uploadImage, uploadImageToStandard } from './utils.js';
 
 //helper function to map classifications to inventory slots
@@ -62,8 +70,6 @@ export class StandardSlots extends Slots{
             helmetImg.classList.add("equipment-slot-image")
             
             let helmetFileInput = document.createElement("input")
-            helmetFileInput.type = "file"
-            helmetFileInput.accept = "image/*"
             helmetFileInput.style.display = "none" // Hide the file input
 
             let helmetLabel = document.createElement("label")
@@ -71,12 +77,16 @@ export class StandardSlots extends Slots{
             helmetLabel.appendChild(helmetFileInput)
             helmetDiv.appendChild(helmetLabel)
 
-            helmetFileInput.addEventListener("change", (event) => {
-                uploadImageToStandard(event, "helmetSlot")
-                    .then((base64String) => {
-                        helmetImg.src = base64String
-                        saveToStorage()
-                    })
+            helmetFileInput.addEventListener("click", async (event) => {
+                try {
+                    const selectedIcon = await replaceImage();
+                    helmetImg.src = selectedIcon;
+                    this.helmetSlot.image = selectedIcon;
+                    saveToStorage();
+                } catch (e) {
+                    // User cancelled or closed modal
+                    console.log("Icon selection cancelled");
+                }
             })
 
             let helmetName = document.createElement("p")
@@ -115,9 +125,7 @@ export class StandardSlots extends Slots{
             armorImg.classList.add("equipment-slot-image")
 
             //file input
-            let armorFileInput = document.createElement("input")
-            armorFileInput.type = "file"
-            armorFileInput.accept = "image/*"
+            let armorFileInput = document.createElement("button")
             armorFileInput.style.display = "none" // Hide the file input
 
             //associaties both as a label
@@ -127,15 +135,16 @@ export class StandardSlots extends Slots{
             armorDiv.appendChild(armorLabel)
 
             //event listener for hte file input
-            armorFileInput.addEventListener("change", (event) => {
-                uploadImageToStandard(event, "armorSlot")
-                    .then((base64String) => {
-                        armorImg.src = base64String
-                        saveToStorage()
-                    })
-                    .catch((error) => {
-                        console.error("Error uploading image", error)
-                    })
+            armorFileInput.addEventListener("click", async (event) => {
+                try {
+                    const selectedIcon = await replaceImage();
+                    armorImg.src = selectedIcon;
+                    this.armorSlot.image = selectedIcon;
+                    saveToStorage();
+                } catch (e) {
+                    // User cancelled or closed modal
+                    console.log("Icon selection cancelled");
+                }
             })
 
             //appends the armor name to the div
@@ -176,9 +185,7 @@ export class StandardSlots extends Slots{
             mainHandImg.src = this.mainHand.image || ("empty_icons/sword.png")
             mainHandImg.classList.add("equipment-slot-image")
 
-            let mainHandFileInput = document.createElement("input")
-            mainHandFileInput.type = "file"
-            mainHandFileInput.accept = "image/*"
+            let mainHandFileInput = document.createElement("button")
             mainHandFileInput.style.display = "none" // Hide the file input
 
             let mainHandLabel = document.createElement("label")
@@ -187,15 +194,16 @@ export class StandardSlots extends Slots{
             mainHandDiv.appendChild(mainHandLabel)
 
             //event listener for hte file input
-            mainHandFileInput.addEventListener("change", (event) => {
-                uploadImageToStandard(event, "mainHand")
-                    .then((base64String) => {
-                        mainHandImg.src = base64String
-                        saveToStorage()
-                    })
-                    .catch((error) => {
-                        console.error("Error uploading image", error)
-                    })
+            mainHandFileInput.addEventListener("click", async (event) => {
+                try {
+                    const selectedIcon = await replaceImage();
+                    mainHandImg.src = selectedIcon;
+                    this.mainHand.image = selectedIcon;
+                    saveToStorage();
+                } catch (e) {
+                    // User cancelled or closed modal
+                    console.log("Icon selection cancelled");
+                }
             })
 
             //appends the main hand div
@@ -235,9 +243,7 @@ export class StandardSlots extends Slots{
             offHandImg.src = this.offHand.image || ("empty_icons/shield.png")
             offHandImg.classList.add("equipment-slot-image")
             
-            let offHandFileInput = document.createElement("input")
-            offHandFileInput.type = "file"
-            offHandFileInput.accept = "image/*"
+            let offHandFileInput = document.createElement("button")
             offHandFileInput.style.display = "none" // Hide the file input
 
             //associates both as a label
@@ -247,15 +253,16 @@ export class StandardSlots extends Slots{
             offHandDiv.appendChild(offHandLabel)
 
             //event listener for hte file input
-            offHandFileInput.addEventListener("change", (event) => {
-                uploadImageToStandard(event, "offHand")
-                    .then((base64String) => {
-                        offHandImg.src = base64String
-                        saveToStorage()
-                    })
-                    .catch((error) => {
-                        console.error("Error uploading image", error)
-                    })
+            offHandFileInput.addEventListener("click", async (event) => {
+                try {
+                    const selectedIcon = await replaceImage();
+                    offHandImg.src = selectedIcon;
+                    this.offHand.image = selectedIcon;
+                    saveToStorage();
+                } catch (e) {
+                    // User cancelled or closed modal
+                    console.log("Icon selection cancelled");
+                }
             })
 
             //appends the armor name to the div
@@ -321,9 +328,7 @@ export class StandardSlots extends Slots{
             rangedDivImg.src = this.rangedWeapon.image || ("empty_icons/ranged.png")
             rangedDivImg.classList.add("equipment-slot-image")
             
-            let rangedFileInput = document.createElement("input")
-            rangedFileInput.type = "file"
-            rangedFileInput.accept = "image/*"
+            let rangedFileInput = document.createElement("button")
             rangedFileInput.style.display = "none" // Hide the file input
 
             //associates both as a label
@@ -333,15 +338,16 @@ export class StandardSlots extends Slots{
             rangedDiv.appendChild(rangedLabel)
 
             //event listener for hte file input
-            rangedFileInput.addEventListener("change", (event) => {
-                uploadImageToStandard(event, "rangedWeapon")
-                    .then((base64String) => {
-                        rangedDivImg.src = base64String
-                        saveToStorage()
-                    })
-                    .catch((error) => {
-                        console.error("Error uploading image", error)
-                    })
+            rangedFileInput.addEventListener("click", async (event) => {
+                try {
+                    const selectedIcon = await replaceImage();
+                    rangedDivImg.src = selectedIcon;
+                    this.rangedWeapon.image = selectedIcon;
+                    saveToStorage();
+                } catch (e) {
+                    // User cancelled or closed modal
+                    console.log("Icon selection cancelled");
+                }
             })
 
             //appends the armor name to the div
@@ -413,8 +419,6 @@ export class StandardSlots extends Slots{
             backpackDivImg.classList.add("equipment-slot-image")
 
             let backpackFileInput = document.createElement("input")
-            backpackFileInput.type = "file"
-            backpackFileInput.accept = "image/*"
             backpackFileInput.style.display = "none" // Hide the file input
 
             let backpackLabel = document.createElement("label")
@@ -423,16 +427,16 @@ export class StandardSlots extends Slots{
             backpackDiv.appendChild(backpackLabel)
 
             //event listener for hte file input
-            backpackFileInput.addEventListener("change", (event) => {
-                uploadImageToStandard(event, "backpack")
-                    .then((base64String) => {
-                        backpackDivImg.src = base64String
-                        this.backpack.image = base64String
-                        saveToStorage()
-                    })
-                    .catch((error) => {
-                        console.error("Error uploading image", error)
-                    })
+            backpackFileInput.addEventListener("click", async (event) => {
+                try {
+                    const selectedIcon = await replaceImage();
+                    backpackDivImg.src = selectedIcon;
+                    this.backpack.image = selectedIcon;
+                    saveToStorage();
+                } catch (e) {
+                    // User cancelled or closed modal
+                    console.log("Icon selection cancelled");
+                }
             })
 
             //appends the armor name to the div
@@ -621,10 +625,7 @@ export class StandardSlots extends Slots{
 
         this.miscArmor.forEach(item => {
             console.log(item)
-            let image = item.image
-            let name = item.name
-            let description = item.description
-            let render = this.renderMiscItem(image, name, description)
+            let render = this.renderMiscItem(item)
             render.id = this.miscArmorSize
             miscEquipmentContainer.appendChild(render)
             this.miscArmorSize++
@@ -637,7 +638,7 @@ export class StandardSlots extends Slots{
         return miscEquipmentDiv
     }
 
-    renderMiscItem(image, name, description){
+    renderMiscItem(item){
         let miscItemDiv = document.createElement("div")
         miscItemDiv.classList.add("misc-item-div")
         miscItemDiv.dataset.id = this.miscArmorSize
@@ -650,17 +651,42 @@ export class StandardSlots extends Slots{
         //image
         let miscItemImage = document.createElement("img")
         miscItemImage.classList.add("misc-image-tab")
-        miscItemImage.src =  "empty_icons/necklace.png" || image
+        miscItemImage.src =   item.image || "empty_icons/necklace.png"
+
+        //button for the image
+        let miscItemImageChange = document.createElement("button")
+        miscItemImageChange.style.display = "none"
+
+        //label for the image
+        let miscItemImageLabel = document.createElement("label")
+        miscItemImageLabel.appendChild(miscItemImage)
+        miscItemImageLabel.appendChild(miscItemImageChange)
+        miscItemImageLabel.classList.add("misc-image-tab")
+
+        //event listener for the label
+        miscItemImageLabel.addEventListener("click", async (event) => {
+            try {
+                const selectedIcon = await replaceImage();
+                miscItemImage.src = selectedIcon;
+                item.image = selectedIcon;
+                saveToStorage();
+            } catch (e) {
+                // User cancelled or closed modal
+                console.log("Icon selection cancelled");
+            }
+        })        
+        
+
         
         //name
         let miscItemName = document.createElement("p")
         miscItemName.classList.add("misc-name")
-        miscItemName.innerText = name
+        miscItemName.innerText = item.name
 
         //desc
         let miscItemDesc = document.createElement("p")
         miscItemDesc.classList.add("misc-description")
-        miscItemDesc.innerText = description
+        miscItemDesc.innerText = item.description
 
         //edit
         let miscItemEdit = document.createElement("button")
@@ -686,11 +712,15 @@ export class StandardSlots extends Slots{
         miscItemSave.addEventListener("click", function(){
             miscItemName.contentEditable = false
             miscItemDesc.contentEditable = false
+            console.log(miscItemName.innerText)
+            console.log(miscItemDesc.innerText)
             miscItemEdit.classList.remove("hidden")
             miscItemSave.classList.add("hidden")   
 
             removeItemButton.classList.add("hidden")
-            //saveToStorage()        
+            item.name = miscItemName.innerText
+            item.description = miscItemDesc.innerText
+            saveToStorage()        
         })
 
         let removeItemButton = document.createElement("button")
@@ -711,7 +741,7 @@ export class StandardSlots extends Slots{
             saveToStorage()
         })
 
-        miscItem.appendChild(miscItemImage)
+        miscItem.appendChild(miscItemImageLabel)
         miscItem.appendChild(miscItemName)
         miscItem.appendChild(miscItemDesc)
         miscItem.appendChild(miscItemEdit)
