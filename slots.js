@@ -726,8 +726,8 @@ export class StandardSlots extends Slots{
         })
 
         let removeItemButton = document.createElement("button")
-        removeItemButton.innerText = "delete"
-        removeItemButton.classList.add("hidden", "deleteButton")
+        removeItemButton.innerText = "X"
+        removeItemButton.classList.add("hidden", "misc-delete-button")
 
         removeItemButton.addEventListener("click", (event) => {
             let choice = confirm("Are you sure you want to delete this item?")
@@ -785,6 +785,8 @@ export class StandardSlots extends Slots{
 
     saveMiscItem(){
         console.log(this.miscArmorSize)
+        let miscItemName = document.getElementById("miscItemName")
+        let miscItemDescription = document.getElementById("miscItemDescription")
         let MiscItem = new Item("empty_icons/necklace.png", miscItemName.value, "tiny", miscItemDescription.value)
         MiscItem.id = this.miscArmorSize
         try{
@@ -805,7 +807,7 @@ export class StandardSlots extends Slots{
         console.log(this.miscArmor)
         let lastItem = this.miscArmor[this.miscArmor.length-1]
         console.log(lastItem)
-        let render = this.renderMiscItem(lastItem.image, lastItem.name, lastItem.description)
+        let render = this.renderMiscItem(lastItem)
         let container = document.getElementById("miscEquipmentContainer")
         
         container.insertBefore(render, container.children[container.children.length -1 ])

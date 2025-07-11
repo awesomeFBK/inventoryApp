@@ -431,7 +431,7 @@ body {
   grid-template-columns: 150px 1fr 30px 30px 30px;
   grid-template-rows: 15px 40px 20px 40px 20px 15px;
   grid-template-areas: 
-  '. .   .removebutton removebutton'
+  '. .   . . .'
   'picture itemname .  . .'
   'picture itemclass . . .'
   'picture itemdesc .  . .'
@@ -508,7 +508,11 @@ body {
 }
 
 .remove-checkbox{
-  grid-area: removebutton;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  aspect-ratio: 1/1;
+  width: 20px;
   background-color: red;
   z-index: 1;
 }
@@ -760,6 +764,14 @@ border-radius: 3px;
 
 }
 
+.misc-delete-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  aspect-ratio: 1/1;
+  width: 20px;
+}
+
 .add-misc {
   grid-area: add
 }
@@ -778,23 +790,39 @@ border-radius: 3px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 5px 150px 10px 1fr 5px;
+  grid-template-rows: 10px 1fr 1fr 30px 10px;
+  grid-template-areas:
+  '. . . . .'
+  '. itemImage . itemName  .'
+  '. itemImage . itemDescription  .'
+  '. . . . .'
+  '. . . . .';
 }
 
 #addMiscLabel {
   margin-top: -1.5%;
   margin-bottom: 1.5%;
 }
+
 #miscItemName {
-  margin-top: -10px;
+  grid-area: itemName;
 }
 
 #miscItemDescription {
-  margin-top: -10px;
+  grid-area: itemDescription;
 }
+
+.add-misc-item-image {
+  grid-area: itemImage;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  box-sizing: border-box;
+}
+
 
 .inventory-header {
   display: flex;
