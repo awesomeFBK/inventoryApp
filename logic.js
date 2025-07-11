@@ -349,13 +349,16 @@ export function replaceImage(){
 
         modal.addEventListener("click", onIconClick)
 
-        window.onclick = function(event) {
+        //so that the window click stuff isn't overwritten
+        function onWindowClick(event) {
             if (event.target == modal) {
                 modal.removeEventListener("click", onIconClick);
+                window.removeEventListener("click", onWindowClick)
                 modal.style.display = "none";
                 reject("cancelled"); //cancelles
             }
-        };
+        }
+        window.addEventListener("click", onWindowClick)
     })
     
 }
@@ -439,7 +442,7 @@ document.getElementById("confirmRemove").addEventListener("click", function(){
 document.getElementById("saveItem").addEventListener("click", function(){
     console.log("Save Item Pressed")
     let renderLocation = ""
-    let newItem = new Item("empty_icons/item.png", itemName.value, itemClassification.value, itemDescription.value)
+    let newItem = new Item(imageReference, itemName.value, itemClassification.value, itemDescription.value)
     try {
         renderLocation = classify(newItem)
     } catch(error) {
@@ -458,9 +461,35 @@ document.getElementById("saveItem").addEventListener("click", function(){
     }
 
     saveToStorage()
+
+    //clear the fields
+    document.getElementById("itemName").value = ""
+    document.getElementById("itemDescription").value = ""
+    document.getElementById("itemClassification").selectedIndex = 0
+
+    //close the menu
+    document.getElementById("itemAddModal").style.display = "none"
+
+    //resets the image after
+    imageReference = null
+    document.getElementById("addItemImage").src = "empty_icons/item.png"
+
+
+
 })
 
-
+//event listener for opening the replace image menu in addItem
+document.getElementById("addItemImageLabel").addEventListener("click", async function(){
+    try {
+        const selectedIcon = await replaceImage();
+        imageReference = selectedIcon;
+        document.getElementById("addItemImage").src = selectedIcon;
+        saveToStorage();
+    } catch (e) {
+        // User cancelled or closed modal
+        console.log("Icon selection cancelled");
+    }
+})
 
 //event listeners for the page
 document.getElementById("cycleLeft").addEventListener("click", function(){

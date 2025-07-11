@@ -51,7 +51,7 @@ p {
 
 /* Modal Content/Box */
 .add-item-modal {
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(42, 36, 36, 1);
     position: fixed;
     top: 50%;
     left: 50%;
@@ -59,17 +59,18 @@ p {
     border: solid rgb(205, 187, 187) 3px;
     border-radius: 3px;
     height: 250px;
-    width: 70%; /* Could be more or less, depending on screen size */
+    min-width: 550px;
+    width: 40%; /* Could be more or less, depending on screen size */
     display: grid;
-    grid-template-columns: 5px 1fr 1fr 5px 80px 5px;
-    grid-template-rows: 5px 1fr 1fr 1fr 30px 5px;
+    grid-template-columns: 10px 210px 15px 1fr 5px 80px 10px;
+    grid-template-rows: 10px 1fr 1fr 1fr 30px 10px;
     grid-template-areas:
-    '. . . . . .'
-    '. itemImage itemName itemName itemName .'
-    '. itemImage itemClass itemClass itemClass .'
-    '. itemImage itemDescription itemDescription itemDescription .'
-    '. . . . saveItem .'
-    '. . . . . .';
+    '. . . . . . .'
+    '. itemImage . itemName itemName itemName .'
+    '. itemImage . itemClass itemClass itemClass .'
+    '. itemImage . itemDescription itemDescription itemDescription .'
+    '. . . . . saveItem .'
+    '. . . . . . .';
 
 
   }
@@ -79,10 +80,25 @@ p {
   }
 
 #addItemImage {
-  grid-area: itemImage;
-  height: 50px;
-  width: 50px;
+  height: 100%;
   object-fit: contain;
+  aspect-ratio: 1/1;
+}
+
+.add-item-image {
+  grid-area: itemImage;
+  display: flex;
+  align-items: end;
+  border: solid rgb(205, 187, 187) 3px;
+  justify-self: center;
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+.add-item-image:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .add-name-div {
@@ -90,17 +106,26 @@ p {
   display:flex;
   flex-direction: column;
   align-content: center;
-  width: 80%;
-  
+  justify-content: center;
+  width: 90%;
+  height: 100%;
 }
 
 .add-class-div {
   grid-area: itemClass;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
 }
 
 .add-desc-div {
   grid-area: itemDescription;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
 }
 
 #saveItem {
@@ -687,11 +712,10 @@ border-radius: 3px;
   grid-area: image;
   aspect-ratio: 1/1;
   background-color: rgba(0,0,0,0.5);
-  align-self: center;
-  justify-self: center;
-  height: 50px;
-  border: black 3px solid;
+  height: 100%;
+  object-fit: contain ;
   box-sizing: border-box;
+  border: 1px solid black;
 }
 
 .misc-image-tab:hover {

@@ -102,7 +102,7 @@ export function classify(newItem){
 
 export class Item{
     constructor(image, name, classification, description) {
-        this.image = image
+        this.image = image || "empty_icons/item.png"
         this.name = name
         this.classification = classification || "none"
         this.description = description

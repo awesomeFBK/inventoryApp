@@ -139,9 +139,10 @@
     <div id="itemAddModal" class="modal">
         <div class="add-item-modal">
             <!--input for name here-->
-            <div id="addItemImage2">
-                <img src="fuzz.jpg" id="addItemImage">
-            </div>
+            <label id="addItemImageLabel" class="add-item-image">
+                <img src="empty_icons\item.png" id="addItemImage">
+                <button id="addItemImageButton" style = "display:none;"></button>
+            </label>
             <div class = "add-name-div">
             <label for="itemName">Item Name:</label>
             <input type="text" id="itemName">
@@ -149,7 +150,7 @@
 
             <div class = "add-class-div">
             <!--input for classification here-->
-            <label for="itemClassification">Item Class:</label><br>
+            <label for="itemClassification">Item Class:</label>
             <select id="itemClassification">
                 <option value = "large">Large Slot</option>
                 <option value = "medium">Medium Slot</option>

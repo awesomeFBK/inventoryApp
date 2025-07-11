@@ -7,7 +7,9 @@ import {
     updateCounter, 
     saveToStorage, 
     getClassificationfromContainerID,
-    replaceImage } from "./logic.js"
+    replaceImage, 
+    imageReference,
+    setImageReference} from "./logic.js"
 import { uploadImage, uploadImageToStandard } from './utils.js';
 
 //helper function to map classifications to inventory slots
@@ -815,11 +817,27 @@ export function addItem(){ //fix this and understand the rest
     let modal = document.getElementById("itemAddModal")
     modal.style.display = "block"
 
-    window.onclick = function(event) { //closes if you touch outside the modal
+
+    function onWindowClick(event) {
         if (event.target == modal) {
-        modal.style.display = "none"
+            window.removeEventListener("click", onWindowClick)
+            setImageReference(null)
+            document.getElementById("addItemImage").src = "empty_icons/item.png"
+            modal.style.display = "none";
         }
     }
+
+    window.addEventListener("click", onWindowClick)
+    
+    /*
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            setImageReference(null)
+            document.getElementById("addItemImage").src = "empty_icons/item.png"
+            modal.style.display = "none";
+        }        
+    }
+    */
 }
 
 function reassignID(slot){
