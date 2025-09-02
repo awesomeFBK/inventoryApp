@@ -173,16 +173,22 @@
     <!--For adding items to misc-->
     <div id="miscItemModal" class="modal">
         <div class="add-misc-content">
+            <div class = "misc-item-image-div">
             <label id="addItemImageLabel" class="add-misc-item-image">
                 <img src="empty_icons\item.png" id="addMiscItemImage">
                 <button id="addItemImageButton" style = "display:none;"></button>
             </label>
-            <h1 id="addMiscLabel">Add Equipment</h1>
+            </div>
+
+            <div class = "misc-item-name-div">
             <label for = "miscItemName">Item Name:</label><br>
             <input type="text" id="miscItemName"><br>
+            </div>
 
+            <div class = "misc-item-description-div">
             <label for="miscItemDescription">Item Description:</label><br>
             <input type="text" id="miscItemDescription"><br>
+            </div>
 
             <button id="saveMisc">Save Item</button>
         </div>
