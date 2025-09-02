@@ -440,26 +440,46 @@ document.getElementById("confirmRemove").addEventListener("click", function(){
 
 //listen for the save item command
 document.getElementById("saveItem").addEventListener("click", function(){
-    console.log("Save Item Pressed")
+    console.log("Save Item Pressed") 
     let renderLocation = ""
     let newItem = new Item(imageReference, itemName.value, itemClassification.value, itemDescription.value)
-    try {
-        renderLocation = classify(newItem)
-    } catch(error) {
-        console.error("Inventory is Full")
-        return
-    }
-    //it needs to get the classification of where the item was placed
-    let slot = getSlotsfromContainerID(renderLocation)    
-    //change this, create a map that makes it so that 
-    
-    if (slot) {
-        slot.renderLastItem(renderLocation)
-    }
-    else {
-        console.error("Invalid Classification", newItem.classification)
+    console.log("new item's classification is" + newItem.classification)
+    if (newItem.classification == "misc") {
+        let MiscItem = newItem
+        MiscItem.id = standardSlots.miscArmorSize
+        try{
+            standardSlots.miscArmor.push(MiscItem)
+            standardSlots.miscArmorSize++
+        }
+        catch{
+            console.error("Not able to append")
+        }
+
+        //generation works. rendering Last doesn't. id doesn't
+
+        standardSlots.renderLastMisc()
+        //saveToStorage()        
     }
 
+    else {
+        try {
+            renderLocation = classify(newItem)
+        } catch(error) {
+            console.error("Inventory is Full")
+            return
+        }
+        //it needs to get the classification of where the item was placed
+        let slot = getSlotsfromContainerID(renderLocation)    
+        //change this, create a map that makes it so that 
+        
+        if (slot) {
+            slot.renderLastItem(renderLocation)
+        }
+        else {
+            console.error("Invalid Classification", newItem.classification)
+        }
+
+    }  
     saveToStorage()
 
     //clear the fields
