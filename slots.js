@@ -634,8 +634,8 @@ export class StandardSlots extends Slots{
         })
 
     
-        let utilDiv = this.renderMiscUtility()
-        miscEquipmentContainer.appendChild(utilDiv)
+        //let utilDiv = this.renderMiscUtility()
+        //miscEquipmentContainer.appendChild(utilDiv)
 
         return miscEquipmentDiv
     }
@@ -726,7 +726,7 @@ export class StandardSlots extends Slots{
         })
 
         let removeItemButton = document.createElement("button")
-        removeItemButton.innerText = "X"
+
         removeItemButton.classList.add("hidden", "misc-delete-button")
 
         removeItemButton.addEventListener("click", (event) => {

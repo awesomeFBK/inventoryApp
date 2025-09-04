@@ -161,11 +161,19 @@ export class Item{
         name.contentEditable = false
         description.contentEditable = false
     
-        //checkbox for remove item
+        //checkbox INPUT for remove item
         let removeItemCheckbox = document.createElement("input") //create the checkbox for removing data
         removeItemCheckbox.type = "checkbox"
         removeItemCheckbox.classList.add("hidden", "remove-element", "remove-checkbox")//don't kill remove element
         console.log("found", removeItemCheckbox)
+
+        //checkbox styling for remove item
+        //let removeCheckboxSpan = document.createElement("span")
+        //removeCheckboxSpan.classList.add("remove-checkbox")
+
+        //label for remove checkbox
+        //let removeCheckboxLabel = document.createElement("label")
+
 
         let editButton = document.createElement("button") //create the button for editing
         editButton.innerText = "Edit"

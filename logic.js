@@ -444,6 +444,8 @@ document.getElementById("saveItem").addEventListener("click", function(){
     let renderLocation = ""
     let newItem = new Item(imageReference, itemName.value, itemClassification.value, itemDescription.value)
     console.log("new item's classification is" + newItem.classification)
+
+    //for misc items
     if (newItem.classification == "misc") {
         let MiscItem = newItem
         MiscItem.id = standardSlots.miscArmorSize
