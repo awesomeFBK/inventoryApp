@@ -434,15 +434,15 @@ body {
   background-repeat: repeat-y;
   height: fit-content;
   display: grid;
-  grid-template-columns: 150px 1fr 30px 30px 30px;
+  grid-template-columns: 150px 1fr 5px 25px 25px 25px 5px;
   grid-template-rows: 15px 40px 20px 40px 20px 15px;
   grid-template-areas: 
-  '. .   . . .'
-  'picture itemname .  . .'
-  'picture itemclass . . .'
-  'picture itemdesc .  . .'
-  'picture itemdesc  editbutton editbutton editbutton'
-  '. .  editbutton editbutton editbutton';
+  '. . .  . . . .'
+  'picture itemname . .  . . .'
+  'picture itemclass  . . . . .'
+  'picture itemdesc . . . . .'
+  'picture itemdesc . editbutton editbutton editbutton .'
+  '. . . editbutton editbutton editbutton .';
   box-sizing: border-box;
 }
 
@@ -507,30 +507,47 @@ body {
   grid-area: editbutton;
   z-index: 1;
   justify-self: center;
-  width: 80%;
+  width: 100%;
   align-self: center;
   height: 80%;
   border: black 2px solid;
+  background-color: rgba(0,0,0,0.4);
 }
 
-.remove-checkbox-label{
-  position: absolute;
-  top: 1px;
-  right: 1px;
-  aspect-ratio: 1/1;
-  width: 20px;
-  background-color: rgba(0,0,0,0.4);
-  z-index: 1;
-}
 .remove-checkbox{
   position: absolute;
-  top: 1px;
-  right: 1px;
+  cursor: pointer;
+  z-index: 2;
+
+}
+
+.remove-checkbox-label {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  aspect-ratio: 1/1;
+  width: 20px;
+  border: solid rgb(0,0,0) 1.5px;
+  z-index: 3;
+}
+
+.remove-checkbox-span {
+  position: absolute;
   aspect-ratio: 1/1;
   width: 20px;
   background-color: rgba(0,0,0,0.4);
-  z-index: 1;
+  z-index: 3;
 }
+
+.remove-checkbox-span:hover {
+  cursor: pointer;
+  background-color: rgb(205, 187, 187, 0.3);
+}
+
+.remove-checkbox-label input:checked + .remove-checkbox-span {
+  background-color: red;
+}
+
 
 .item-div {
   display: grid;

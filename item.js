@@ -164,15 +164,21 @@ export class Item{
         //checkbox INPUT for remove item
         let removeItemCheckbox = document.createElement("input") //create the checkbox for removing data
         removeItemCheckbox.type = "checkbox"
-        removeItemCheckbox.classList.add("hidden", "remove-element", "remove-checkbox")//don't kill remove element
+        removeItemCheckbox.classList.add("hidden", "remove-checkbox")//don't kill remove element
         console.log("found", removeItemCheckbox)
 
         //checkbox styling for remove item
-        //let removeCheckboxSpan = document.createElement("span")
-        //removeCheckboxSpan.classList.add("remove-checkbox")
+        let removeCheckboxSpan = document.createElement("span")
+        removeCheckboxSpan.classList.add("remove-checkbox-span")
 
         //label for remove checkbox
-        //let removeCheckboxLabel = document.createElement("label")
+        let removeCheckboxLabel = document.createElement("label")
+        removeCheckboxLabel.classList.add("remove-checkbox-label", "hidden", "remove-element")
+
+
+        //put the checkbox and the styling in the same level
+        removeCheckboxLabel.appendChild(removeItemCheckbox)
+        removeCheckboxLabel.appendChild(removeCheckboxSpan)
 
 
         let editButton = document.createElement("button") //create the button for editing
@@ -229,7 +235,7 @@ export class Item{
         itemDiv.appendChild(description)
         itemDiv.appendChild(saveButton)
         itemDiv.appendChild(editButton)
-        itemDiv.appendChild(removeItemCheckbox)
+        itemDiv.appendChild(removeCheckboxLabel)
         //edit this so that it gets the element of the container
         document.getElementById(containerID).appendChild(itemDiv)
         itemDiv.classList.add("slot-item")
