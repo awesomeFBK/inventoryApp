@@ -228,7 +228,7 @@ export class Item{
         itemDiv.appendChild(itemDivOverlay)
 
         //append yo shit
-        itemLabel.classList.add("item-picture")
+        itemLabel.classList.add("item-label-picture")
         itemDiv.appendChild(itemLabel)
         itemDiv.appendChild(name)
         itemDiv.appendChild(classification)
@@ -244,7 +244,10 @@ export class Item{
 
 }
 
-export const emptyItem = new Item("", "", "tiny", "An empty slot.")
+export function createEmptyItem() {
+    const emptyItem = new Item("", "", "tiny", "An empty slot.") 
+    return emptyItem
+}
 
 export class CoinPouch{
     constructor() {

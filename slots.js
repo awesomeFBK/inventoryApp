@@ -1,4 +1,4 @@
-import { CoinPouch,emptyItem, Item } from "./item.js"
+import { CoinPouch, createEmptyItem, Item } from "./item.js"
 import { 
     smallSlots, 
     mediumSlots, 
@@ -46,12 +46,12 @@ export class Slots{
 export class StandardSlots extends Slots{
     constructor(){
         super(0) //run the max size as 0
-        this.armorSlot = emptyItem
-        this.helmetSlot = emptyItem
-        this.mainHand = emptyItem
-        this.offHand = emptyItem
-        this.rangedWeapon = emptyItem
-        this.backpack = emptyItem
+        this.armorSlot = createEmptyItem()
+        this.helmetSlot = createEmptyItem()
+        this.mainHand = createEmptyItem()
+        this.offHand = createEmptyItem()
+        this.rangedWeapon = createEmptyItem()
+        this.backpack = createEmptyItem()
         this.rangedWeaponFlag = true //if you are using a ranged weapon or converting it into two small slots
         this.twoHandedFlag = false //if you are using two hands
         this.miscArmor = [] //for miscallaneous enchanted items
@@ -479,9 +479,9 @@ export class StandardSlots extends Slots{
         rangedDiv.classList.add("equipment-slot", "ranged-weapon-slot")
         backpackDiv.classList.add("equipment-slot", "backpack-slot")
 
-        //misc equipment array
 
-        let miscEquipmentDiv = document.createElement("div")
+
+
 
 
 

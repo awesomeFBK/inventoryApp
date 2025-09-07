@@ -1,4 +1,4 @@
-import {emptyItem,Item, classify} from './item.js'
+import {createEmptyItem,Item, classify} from './item.js'
 import { getSlotClassification, Slots, addItem, removeItem, StandardSlots} from './slots.js';
 import { uploadImage, uploadImageToStandard } from './utils.js';
 
@@ -189,8 +189,8 @@ function clearSlots(){
     smallSlots.currentSize = 0
     tinySlots.items = []
     tinySlots.currentSize = 0
-    clearStandardSlots()
     derenderSlots()
+    clearStandardSlots()
 }
 
 function derenderSlots(){
@@ -203,12 +203,12 @@ function derenderSlots(){
 }
 
 function clearStandardSlots(){
-    standardSlots.armorSlot = emptyItem
-    standardSlots.helmetSlot = emptyItem
-    standardSlots.mainHand = emptyItem
-    standardSlots.offHand = emptyItem
-    standardSlots.rangedWeapon = emptyItem
-    standardSlots.backpack = emptyItem
+    standardSlots.armorSlot = createEmptyItem()
+    standardSlots.helmetSlot = createEmptyItem()
+    standardSlots.mainHand = createEmptyItem()
+    standardSlots.offHand = createEmptyItem()
+    standardSlots.rangedWeapon = createEmptyItem()
+    standardSlots.backpack = createEmptyItem()
     standardSlots.twoHandedFlag = false
     standardSlots.rangedWeaponFlag = false
     standardSlots.miscArmor = []
@@ -689,16 +689,6 @@ document.getElementById("strengthModifierDisplay").addEventListener("blur", () =
 
 document.getElementById("saveMisc").addEventListener("click", () => {
     standardSlots.saveMiscItem()
-})
-
-document.getElementById("testGrid").addEventListener("click", function(){
-    let modal = document.getElementById("iconGridModal")
-    modal.style.display = "block"
-
-    window.onclick = function(event) { //closes if you touch outside the modal
-        if (event.target == modal) {
-        modal.style.display = "none"
-    }}
 })
 
 function openIconMenu() {

@@ -249,8 +249,8 @@ body {
 
 .character-info {
   display: grid;
-  grid-template-rows: 50px 50px;
-  grid-template-columns: 3fr 2.5fr 150px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 3fr 2.5fr 1fr;
   grid-template-areas: 
   'name remaininggrid additem'
   'strength remaininggrid removeitem';
@@ -259,11 +259,10 @@ body {
   background-repeat: repeat-y;
   background-size: 100% auto;
   position: relative;
-  height: auto;
-  min-height: 110px;
+  height: 65%;
   width: 70vw;
   border: 5px solid black;
-  padding: 10px;
+  padding: 5px;
 }
 
 .character-name-div {
@@ -298,7 +297,7 @@ body {
   border: solid rgb(205, 187, 187) 3px;
   min-width: fit-content;
   justify-content: center;
-  gap: 3%;
+  gap: 1%;
   align-items: center;
 }
 
@@ -381,7 +380,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
 }
 
@@ -460,6 +460,18 @@ body {
 }
 
 .item-picture{
+  align-self: center;
+  justify-self: center;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+
+.item-picture:hover{
+  cursor: pointer;
+  background-color: rgba(202, 200, 189, 0.5);  
+}
+
+.item-label-picture{
   grid-area: picture;
   background-color: rgba(0,0,0,0.5);
   align-self: center;
@@ -468,12 +480,7 @@ body {
   aspect-ratio: 1/1;
   border: black 3px solid;
   box-sizing: border-box;
-  z-index: 1;
-}
-
-.item-picture:hover{
-  cursor: pointer;
-  background-color: rgba(202, 200, 189, 0.5);  
+  z-index: 1;  
 }
 
 .item-name{
@@ -510,7 +517,7 @@ body {
   width: 100%;
   align-self: center;
   height: 80%;
-  border: black 2px solid;
+  border: black 1px solid;
   background-color: rgba(0,0,0,0.4);
 }
 
@@ -882,10 +889,22 @@ border-radius: 3px;
 .inventory-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  align-self: center;
+  justify-items: center;
+  justify-self: center;
   gap: 5px;
-  height: fit-content;
+  height: 10vh;
   padding: 10px;
+  width: 100%;
+  max-width: 90vw;
+}
+
+.cycle-button {
+  background-image: url("pager2.jpeg");
+  background-size: 100%;
+  border: solid rgba(0,0,0) 5px;
+  height: 80%;
 }
 
 
@@ -1089,4 +1108,61 @@ border-radius: 3px;
 
 .tabcontent {
   display: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: smaller;
+  }
+
+  .item-name {
+    height: 20px;
+    font-size: small;
+  }
+
+  .item-desc {
+    height: 20px;
+    font-size: smaller;
+  }
+
+  .item-class {
+    height: 20px;
+    font-size: smaller;
+  }
+
+  .item-container{
+    width: 95vw;
+    max-height: 95vh;
+  }
+
+  .item-div{
+    border-left: 0px;
+    border-right: 0px;
+  }
+
+  .container-label {
+    width: 40%;
+  }
+  
+  .slot-item {
+    grid-template-columns: 5px 0.3fr 5px 1fr 1px 0.05fr 0.05fr  1px;
+    grid-template-rows: 1px 20px 20px 20px 20px 1px;  
+    grid-template-areas: 
+    '. . . . .  . . . '
+    '. picture . itemname . .  . .'
+    '. picture . itemclass  . . . . '
+    '. picture . itemdesc . . . . '
+    '. picture . itemdesc . editbutton editbutton  .'
+    '. . . . . . . . '; 
+    height: fit-content; 
+  }
+
+  .edit-button {
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .item-label-picture {
+    height: 100%;
+  }
 }
