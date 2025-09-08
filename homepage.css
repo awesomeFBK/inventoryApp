@@ -247,22 +247,51 @@ body {
   top: 100%;
 }
 
+.inventory-header {
+  display: grid;
+  margin: 10px;
+  grid-template-columns: 1px 0.2fr 5fr 0.2fr 1px;
+  grid-template-rows: 1px 100px 1px;
+  grid-template-areas: 
+  '. . .   .  .'
+  '. cycleLeft  characterInfo  cycleRight .'
+  '. . . . .  ';
+  max-height: 102px;
+  width: 100%;
+  max-width: 80vw;
+  
+  background-color: blue;
+  border: solid black 5px;
+}
+
+.cycle-button {
+  background-image: url("pager2.jpeg");
+  background-size: 100%;
+  height: 100%;
+}
+
+#cycleRight {
+  grid-area: cycleRight;
+}
+
+#cycleLeft {
+  grid-area: cycleLeft;
+}
+
 .character-info {
+  grid-area: characterInfo;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 3fr 2.5fr 1fr;
   grid-template-areas: 
   'name remaininggrid additem'
   'strength remaininggrid removeitem';
-  gap: 5px;
   background-image: url("pager2.jpeg");
   background-repeat: repeat-y;
   background-size: 100% auto;
   position: relative;
-  height: 65%;
-  width: 70vw;
-  border: 5px solid black;
-  padding: 5px;
+  height: 100%;
+  width: 100%;
 }
 
 .character-name-div {
@@ -271,8 +300,6 @@ body {
   background-color: rgba(0,0,0,0.8);
   text-align: center;
   align-content: center;
-  padding-left: 1%;
-  padding-right: 1%;
   min-width: fit-content;
 }
 
@@ -291,19 +318,20 @@ body {
 
 .remaining-label-div {
   grid-area: remaininggrid;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-areas: 
+  '. . . . . . . . .'
+  '. words . large . medium . small .'
+  '. . . . . . . . .';
+  grid-template-columns: 1px 1fr 1px 1fr 1px 1fr 1px 1fr 1px;
+  grid-template-rows: 1px 1fr 1px;
   background-color: rgba(0,0,0,0.8);
   border: solid rgb(205, 187, 187) 3px;
-  min-width: fit-content;
-  justify-content: center;
-  gap: 1%;
-  align-items: center;
+  min-width: 65%;
 }
 
-.large-counter-div, .medium-counter-div, .small-counter-div, .remaining-label {
+.large-counter-div, .medium-counter-div, .small-counter-div{
   height: 100%;
-  width: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -313,21 +341,30 @@ body {
 }
 
 .remaining-label {
+  grid-area: words;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  font-size: 20px;  
   color: white;
   text-align: center;
-  padding-left: 3%;
 }
 
 .large-counter-div {
-  box-sizing: border-box;
+  grid-area: large;
   overflow: hidden;
 }
 
 .medium-counter-div {
+  grid-area: medium;
   overflow: hidden;
 }
 
 .small-counter-div {
+  grid-area: small;
   overflow: hidden;
 }
 
@@ -341,11 +378,7 @@ body {
 
 .counter-label {
   position: relative;
-  margin-top: 5px;
-  width: 80%;
-  height: auto;
-  background-color: black ;
-  border: solid rgb(205, 187, 187) 3px;
+  font-size: 100%;
 }
 
 .add-item-div {
@@ -360,7 +393,7 @@ body {
 }
 
 .add-item {
-  width: 150px;
+  width: 100%;
   position: relative;
   height: 100%;
   background-color: black;
@@ -886,26 +919,6 @@ border-radius: 3px;
 }
 
 
-.inventory-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-self: center;
-  justify-items: center;
-  justify-self: center;
-  gap: 5px;
-  height: 10vh;
-  padding: 10px;
-  width: 100%;
-  max-width: 90vw;
-}
-
-.cycle-button {
-  background-image: url("pager2.jpeg");
-  background-size: 100%;
-  border: solid rgba(0,0,0) 5px;
-  height: 80%;
-}
 
 
 
@@ -1110,6 +1123,30 @@ border-radius: 3px;
   display: none;
 }
 
+@media (max-width: 900px) {
+  .character-info {
+    grid-template-columns: 1fr 2.5fr 1fr;
+  }
+  .remaining-label-div {
+    grid-template-areas: 
+    '. . . . . . .'
+    '. words words words words words .'
+    '. . . . . . .'
+    '. large . medium . small .'
+    '. . . . . . .';
+    grid-template-columns: 1px 1fr 1px 1fr 1px 1fr 1px;
+    grid-template-rows: 1px 0.05fr 1px 1fr 1px;
+  }
+
+  .remaining-label {
+    font-size: 75%;
+  }
+
+  .counter-label {
+    font-size: 75%;
+  }
+}
+
 @media (max-width: 600px) {
   body {
     font-size: smaller;
@@ -1131,8 +1168,12 @@ border-radius: 3px;
   }
 
   .item-container{
-    width: 95vw;
-    max-height: 95vh;
+    width: 100vw;
+    max-height: 100vh;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .item-div{
@@ -1164,5 +1205,20 @@ border-radius: 3px;
 
   .item-label-picture {
     height: 100%;
+  }
+
+  .inventory-header {
+    max-width: 100vw;
+    margin: 0px;
+    height: 77px;
+    grid-template-rows: 1px 75px 1px; 
+  }
+
+  .character-info {
+    grid-template-columns: 1fr 2.5fr 1fr;
+  }
+
+  .counter-label {
+    font-size: 40%;
   }
 }
