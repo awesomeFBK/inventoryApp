@@ -260,7 +260,7 @@ body {
   width: 100%;
   max-width: 80vw;
   
-  background-color: blue;
+  background-color: solid black;
   border: solid black 5px;
 }
 
@@ -1264,4 +1264,38 @@ border-radius: 3px;
     font-size: x-small;
   }
 
+  .settings-menu {
+    min-width: 300px
+  }
+
+  .add-item-image {
+    height: 100px;
+  }
+
+  .add-item-modal {
+    width: 300px;
+    min-width: 300px;
+    height: 50vh;
+    grid-template-columns: 5px 1fr 5px;
+    grid-template-rows: 5px 100px 1fr 1fr 1fr 5px 0.5fr 5px;
+    row-gap: 10px;
+    grid-template-areas: 
+    '. . .'
+    '. itemImage .'
+    '. itemName .'
+    '. itemClass .'
+    '. itemDescription .'
+    '. . .'
+    '. saveItem .'
+    '. . .';
+  }
+
+  .add-name-div, .add-class-div, .add-desc-div {
+    justify-self: center;
+  }
+
+  .initialize-menu {
+    min-width: 300px;
+    border-radius: 10px;
+  }
 }
