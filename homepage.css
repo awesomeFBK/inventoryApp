@@ -1169,7 +1169,7 @@ border-radius: 3px;
 
   .item-container{
     width: 100vw;
-    max-height: 100vh;
+    height: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 0px;
@@ -1179,6 +1179,8 @@ border-radius: 3px;
   .item-div{
     border-left: 0px;
     border-right: 0px;
+    grid-template-columns: 0.5fr 1fr 10px 1fr 10px 1fr 0.5fr;
+    grid-template-rows: 5px 25px 150px repeat(3, 15px) 150px repeat(3, 15px) 2fr;
   }
 
   .container-label {
@@ -1220,5 +1222,16 @@ border-radius: 3px;
 
   .counter-label {
     font-size: 40%;
+  }
+
+  .settings-button-div {
+    width: 20px;
+    position: relative;
+    margin-bottom: 5px;
+
+  }
+  
+  .body-formatting {
+    margin-top: 0px;
   }
 }
