@@ -1169,7 +1169,7 @@ border-radius: 3px;
 
   .item-container{
     width: 100vw;
-    height: 100%;
+    height: 95%;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 0px;
@@ -1298,4 +1298,43 @@ border-radius: 3px;
     min-width: 300px;
     border-radius: 10px;
   }
+
+  .item-icon {
+    aspect-ratio: 1/1;
+    width: 36px !important;
+  }
+
+  .icon-grid {
+    width: 300px;
+    min-width: 300px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+    'select'
+    'icons';
+  }
+
+  .icon-nav-bar {
+    flex-direction: row;
+    overflow-x: scroll;
+    height: 50px;
+    overflow-y: hidden;
+    border-right: 0px;
+    border-bottom: 3px black solid;
+  }
+
+  .icon-nav-bar button {
+    height: 50px;
+    width: 50px;
+    font-size: small;
+    font-weight: 300;
+
+  }
+
+  .icon-nav-bar button:hover {
+    width: 75px;
+    height: 90%;
+  }
+
+
 }
