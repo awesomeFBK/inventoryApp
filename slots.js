@@ -848,36 +848,27 @@ function reassignID(slot){
     })
 }
 
-export function removeItem(){
+export function removeItem(buttonElement){
     //what the fuck did i chatgpt here
     //you need to have it find the parent container and inncrement from there
-    let toRemove = document.querySelectorAll(".remove-checkbox:checked")
 
-    let slotSet = new Set()
+    let itemDiv = buttonElement.closest(".itemDiv")
+    if (!itemDiv) return
 
-    toRemove.forEach(element => {
-        let itemDiv = element.closest(".itemDiv")
-        let itemID = parseInt(itemDiv.dataset.id)
+    let itemID = parseInt(itemDiv.dataset.id)
+    let containerID = itemDiv.closest(".item-container").id
+    let classification = getClassificationfromContainerID(containerID) //this allows you to update counter
+    let slot = getSlotClassification(classification) //this gets the slot and deletes em
 
-        let containerID = itemDiv.closest(".item-container").id
-        let classification = getClassificationfromContainerID(containerID) //this allows you to update counter
-        let slot = getSlotClassification(classification) //this gets the slot and deletes em
+    if(slot){
+        let toDelete = slot.items.findIndex(item => item.id === itemID)
+        slot.items.splice(toDelete, 1)
+        slot.currentSize--
+        itemDiv.remove()
 
-        if(slot){
-            slotSet.add(slot)
-            let toDelete = slot.items.findIndex(item => item.id === itemID)
-            slot.items.splice(toDelete, 1)
-            slot.currentSize--
-            itemDiv.remove()
-
-            updateCounter(`${classification}SlotCounter`)
-        }
-
-    })
-
-    slotSet.forEach(slot => reassignID(slot))
-    slotSet.clear()
-
+        updateCounter(`${classification}SlotCounter`)
+        reassignID(slot)
+    }
 
     saveToStorage()
 }

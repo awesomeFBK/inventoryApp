@@ -11,7 +11,7 @@ import {
     itemReference,
     replaceImage,
     getSlotsfromContainerID} from "./logic.js"
-import { getSlotClassification } from "./slots.js"
+import { getSlotClassification, removeItem } from "./slots.js"
 import { uploadImage, uploadImageToStandard } from './utils.js';
 //classifier function 
 //do a re-read of this/review eventually pls
@@ -162,7 +162,7 @@ export class Item{
         description.contentEditable = false
     
         //checkbox INPUT for remove item
-        let removeItemCheckbox = document.createElement("input") //create the checkbox for removing data
+        let removeItemCheckbox = document.createElement("button") //create the checkbox for removing data
         removeItemCheckbox.type = "checkbox"
         removeItemCheckbox.classList.add("hidden", "remove-checkbox")//don't kill remove element
         console.log("found", removeItemCheckbox)
@@ -170,6 +170,8 @@ export class Item{
         //checkbox styling for remove item
         let removeCheckboxSpan = document.createElement("span")
         removeCheckboxSpan.classList.add("remove-checkbox-span")
+
+        removeCheckboxSpan.innerText = "X"
 
         //label for remove checkbox
         let removeCheckboxLabel = document.createElement("label")
@@ -195,6 +197,17 @@ export class Item{
             description.contentEditable = true
             editButton.classList.add("hidden")
             saveButton.classList.remove("hidden")
+        })
+
+        removeItemCheckbox.addEventListener("click", function(){
+            let choice = confirm("Do you want to delete this item?")
+            if (!choice){
+                return
+            }
+            else {
+                removeItem(this)
+                saveToStorage()
+            }
         })
 
         console.log(this.classification)

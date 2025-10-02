@@ -433,10 +433,6 @@ let arrayPointer = 0
 document.getElementById("addItem").addEventListener("click", addItem)
 document.getElementById("removeItemBtn").addEventListener("click", toggleRemoveItems)
 
-document.getElementById("confirmRemove").addEventListener("click", function(){
-    removeItem()
-    toggleRemoveItems()
-})
 
 //listen for the save item command
 document.getElementById("saveItem").addEventListener("click", function(){
